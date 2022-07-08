@@ -34,6 +34,7 @@ function App() {
       projects={projects}
       setShader={setShader}
       shader={shader}
+      setDisplayedProject={setDisplayedProject}
       />
     </div>
   );

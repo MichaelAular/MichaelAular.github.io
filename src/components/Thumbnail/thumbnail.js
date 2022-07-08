@@ -10,6 +10,7 @@ const Thumbnail = ({
   rightIndex,
   startTrigger,
   setShader,
+  setDisplayedProject
 }) => {
   const size = useWindowSize();
   const [modalState, setModalState] = useState(false);
@@ -55,7 +56,9 @@ const Thumbnail = ({
       leftIndex={leftIndex}
       rightIndex={rightIndex}
       startTrigger={startTrigger}
+      setDisplayedProject={setDisplayedProject}
       className="thumb_minimodal"
+
 
       />
 

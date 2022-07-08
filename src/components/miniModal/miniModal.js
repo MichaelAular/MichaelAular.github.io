@@ -13,6 +13,7 @@ const MiniModal = ({
   index,
   leftIndex,
   rightIndex,
+  setDisplayedProject
 }) => {
   if (!modalState) { return null }
   if (!hovered) { return null }
@@ -57,7 +58,8 @@ const MiniModal = ({
         <div className="modal-buttonContainer"
         style={{ width: size.itemWidth + 1.3 +"vw" }}>
           <MiniModalButton
-          size={size}/>
+          size={size}
+          setDisplayedProject={setDisplayedProject}/>
         </div>
       </div>
     </div>

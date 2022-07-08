@@ -6,7 +6,7 @@ import CarouselItems from "./CarouselItems";
 import ArrowLeftRight from "../../assets/icons/arrowLeftRight";
 import CurvedArrowDown from "../../assets/icons/curverdArrowDown";
 
-const Carousel = ({ projects, setShader, shader }) => {
+const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [startTrigger, setStarttrigger] = useState(false);
   const [animationState, setAnimationState] = useState(false);
@@ -106,6 +106,7 @@ const Carousel = ({ projects, setShader, shader }) => {
             activeIndex={activeIndex}
             setShader={setShader}
             shader={shader}
+            setDisplayedProject={setDisplayedProject}
           />
         </div>
         <div className="indicators" style={{ top: "15vw" }}>
