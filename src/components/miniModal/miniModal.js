@@ -59,7 +59,8 @@ const MiniModal = ({
         style={{ width: size.itemWidth + 1.3 +"vw" }}>
           <MiniModalButton
           size={size}
-          setDisplayedProject={setDisplayedProject}/>
+          setDisplayedProject={setDisplayedProject}
+          index={index}/>
         </div>
       </div>
     </div>

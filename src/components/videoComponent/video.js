@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./video.scss"
 
 export default function App( {project}) {
+
 let MyVideo = require("../../assets/video/" + project.video)
 
   const videoEl = useRef(null);

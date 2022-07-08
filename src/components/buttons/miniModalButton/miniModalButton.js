@@ -1,8 +1,12 @@
 import "./miniModalButton.scss";
 
-const clickEvent =()=> {console.log("hello world")}
 
-const MiniModalButton = ({ size, setDisplayedProject }) => {
+
+const MiniModalButton = ({ size, setDisplayedProject, index}) => {
+    const clickEvent =()=> {
+        setDisplayedProject(index)
+    }
+
     return(
     <button className="miniModal_button font_marker"
     style={{
