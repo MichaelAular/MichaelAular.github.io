@@ -1,0 +1,76 @@
+.colorSelector {
+    z-index: 10;
+    display: flex;
+    position: relative;
+    height: inherit;
+    width: fit-content;
+}
+
+.colorButton {
+    height: 50px;
+    width: 35px;
+    border: 2px solid var(--shadow);
+    transform: skewX(-15deg);
+    transition-duration: 400ms;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.colorSet1 {
+    background-color: var(--maincolor1);
+    box-shadow: inset -1px -1px 15px var(--accentcolor1),
+                inset  1px  1px 7px var(--light);
+    border-radius: 30% 0 0 0;
+    &:hover{
+        filter: grayscale(0%);
+        box-shadow: inset -5px -5px 20px var(--accentcolor1),
+                    inset  1px  1px 5px var(--light);
+    }
+}
+
+.colorSet2 {
+    background-color: var(--maincolor2);
+    box-shadow: inset -1px -1px 15px var(--accentcolor2),
+                inset  0px  1px 2px var(--light);
+    &:hover{
+        filter: grayscale(0%);
+        box-shadow: inset -5px -5px 20px var(--accentcolor2),
+                    inset  0px  2px 7px var(--light);
+    }
+}
+
+.colorSet3 {
+    background-color: var(--maincolor3);
+    box-shadow: inset -1px -1px 15px var(--accentcolor3),
+                inset  0px  1px 2px var(--light);
+    border-radius: 0 0 30% 0;
+    &:hover{
+        filter: grayscale(0%);
+        box-shadow: inset -5px -5px 20px var(--accentcolor3),
+                    inset  0px  1px 5px var(--light);
+    }
+}
+
+.grayscaleOff {
+    filter: grayscale(0%);
+}
+
+.colorselector_subTextContainer {
+    position: absolute;
+    right: -280px;
+    width: 280px;
+    height: 60px;
+}
+
+.subtext_arrow {
+    position: absolute;
+    transform: rotate(180deg);
+    height: 40px;
+}
+
+.subtext_text {
+    position: relative;
+    transform:translateX(30px) translateY(0px) rotate(-8deg);
+    font-size: 0.6em;
+    text-shadow: none;
+}

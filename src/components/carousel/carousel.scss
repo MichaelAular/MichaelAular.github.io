@@ -1,0 +1,117 @@
+.carousel {
+  padding-top: 15vw;
+  padding-bottom: 5vh;
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  pointer-events: none;
+  z-index: 500;
+  &:hover {
+    z-index: 999;
+    .carouselBackBlock{
+      transition-duration: .2s;
+      background-color: transparent;
+    }
+    .indicatorContainer{
+      background-color: transparent;
+      transition-duration: .2s;
+      }
+  }
+}
+
+.carouselBackBlock {
+  position: absolute;
+  width: 100vw;
+  background-color: var(--tonecolor);
+}
+
+.carouselLane {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  z-index: 15;
+  pointer-events: all;
+  &:hover {
+    .carousel {pointer-events: all;}
+  }
+}
+
+.carouselItem {
+  position: absolute;
+  display: inline-flex;
+}
+
+.indicators {
+  position: absolute;
+  width: 100vw;
+  left: 0px;
+}
+
+.prevButton {
+  left: 0px;
+  cursor: pointer;
+  pointer-events: all;
+
+}
+
+.nextButton {
+  right: 0px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.indicatorContainer {
+  overflow: hidden;
+  position: absolute;
+  background-color: var(--tonecolorTransp);
+  border: none;
+  &:hover {
+    transition-duration: 400ms;
+    background-color: transparent;
+    .arrowContainer {
+      opacity: .8;
+      transition-duration: .5s;
+    }
+  }
+}
+
+.carouselItemInCarousel {
+  z-index: 150;
+  position: absolute;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 1vw;
+  opacity: 0.2;
+}
+
+.leftRight {
+  position: absolute;
+  width: 60%;
+  height: 50%;
+  transform: rotate(3deg);
+  right:0px;
+}
+
+.doodleText {
+  position: absolute;
+  font-size: 0.6vw;
+  text-shadow: none;
+  transform: rotate(340deg);
+  margin-top: 50%;
+  margin-left: 40%;
+  width: 60%;
+}
+
+.curvedArrowDown {
+  position: absolute;
+  height: 60%;
+  width: 50%;
+  transform: rotate(25deg);
+  margin-top: 35%;
+
+}
+
+.carouselDoodleContainer {
+  position: absolute;
+}

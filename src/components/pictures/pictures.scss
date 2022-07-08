@@ -1,0 +1,51 @@
+.pictures {
+  z-index:1;
+}
+
+.pictures_img_Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100.5%;
+  margin-top: 1vw;
+}
+
+.pictures_img {
+  border-radius: 0.2vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+  cursor: pointer;
+}
+
+.pictures_doodle {
+  position: absolute;
+  width: 8vw;
+  height: 5vw;
+  left: -7.2vw;
+  bottom: 6vh;
+  transform: rotate(23deg);
+}
+
+.pictures_subText{
+  transform: rotate(12deg) translateY(-60%);
+  font-size: 80%;
+  text-shadow: none;
+  width: 80%;
+  height: 80%;
+  margin-left: 7%;
+}
+.camera {
+  width: 50%;
+  height: 50%;
+  transform: rotate(-10deg) translateY(40%);
+}
+
+.pictures_handDrawnRigth {
+  position: relative;
+  width: 40%;
+  margin-top: 20%;
+  margin-left: 55%;
+  background-size: cover;
+  transform: rotate(-50deg);
+}

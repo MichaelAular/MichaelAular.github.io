@@ -1,0 +1,37 @@
+.thumbnail {
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: justify;
+  border-left: 0.3vw solid var(--maincolor);
+  margin-right: 0.5vw;
+  padding-left: 0.5vw;
+  background-clip: text;
+  background-size: cover;
+  color: transparent;
+  font-size: 0.5em;
+  word-spacing: -0.03em;
+  letter-spacing: -0.03em;
+  line-height: 0.7em;
+}
+
+@keyframes wrapperAnimation {
+  0%{
+    font-size: 0.8em;
+    letter-spacing: -0.3em;
+    line-height: 0.7;
+  }
+  80%{
+    letter-spacing: -0.3em;;
+  }
+  100%{
+    font-size: 40em;
+    letter-spacing: -0.4em;
+    line-height: 0.2;
+    text-align: center;
+  }
+}

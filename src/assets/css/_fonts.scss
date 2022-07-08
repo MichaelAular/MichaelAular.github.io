@@ -1,0 +1,22 @@
+.font_bangers {
+  font-family: 'Six Caps', sans-serif;
+  font-size: 52px;
+  color: var(--blackish);
+  font-weight: 500;
+  text-shadow: 0.15vw -0.15vw 0.2vw var(--halfshadow);
+}
+
+.font_normal {
+  font-family: 'PT Sans Caption', sans-serif;
+  color: var(--text);
+  font-size: 13px;
+}
+
+.font_marker {
+  position: absolute;
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.4vw;
+  transition-duration: 0.2s;
+  font-weight: 100;
+  color: var(--doodle);
+}

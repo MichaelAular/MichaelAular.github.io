@@ -1,0 +1,141 @@
+.modal-container {
+  position: absolute;
+  background-color: var(--tonecolor);
+  z-index: 999;
+  animation: imgGrow 300ms ease-in;
+  animation-fill-mode: forwards;
+  text-align: justify;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -2px 2px 20px var(--shadow), inset 5px -5px 5px var(--light);
+}
+
+.modal-container_left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tonecolor);
+  z-index: 1;
+  animation: imgGrowLeft 300ms ease-in;
+  animation-fill-mode: forwards;
+  text-align: justify;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -2px 2px 20px var(--shadow), inset 5px -5px 5px var(--light);
+}
+
+.modal-container_right {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--tonecolor);
+  z-index: 1;
+  animation: imgGrowRight 300ms ease-in;
+  animation-fill-mode: forwards;
+  text-align: justify;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: -2px 2px 20px var(--shadow), inset 5px -5px 5px var(--light);
+}
+
+.modal-image {
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  font-size: 0.8em;
+  word-spacing: -0.03em;
+  letter-spacing: -0.04em;
+  line-height: 0.7em;
+  animation: imgAnimation 1.6s ease-in;
+  animation-delay: 300ms;
+  animation-fill-mode: forwards;
+}
+
+.modal-content {
+  overflow: hidden;
+  padding: 0.5vw;
+  color: var(--text);
+  animation: contentGrow 180ms ease-out;
+  animation-delay: 120ms;
+  animation-fill-mode: forwards;
+}
+
+.modal-title {
+  margin-top: 0.1vw;
+  margin-bottom: 0.5vw;
+  padding-top: 0.2vw;
+}
+
+.modal-buttonContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 1vw;
+}
+
+.typewriter {
+  font-size: 2em;
+  font-weight: 700;
+  margin-right: 0.1vw;
+  overflow: hidden;
+  border-right: 0.3em solid var(--accentcolor);
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: typing 2.25s steps(40, end), blink-caret 0.75s step-end infinite;
+
+}
+
+.modal-project-description {
+  font-size: 0.7em;
+  max-height: 5vw;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {width: 0;}
+  to {width: 85%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {border-color: transparent;}
+  50% {border-color: var(--accentcolor);}
+}
+
+@keyframes imgGrow {
+  from { transform: translateY(-0.6vw) }
+  to { transform: scale(120%) translateY(-9vw) }
+}
+
+@keyframes imgGrowLeft {
+  from { transform: translateX(0.6vw) translateY(-0.6vw) }
+  to { transform: scale(120%) translateX(2.03vw) translateY(-9vw) }
+}
+
+@keyframes imgGrowRight {
+  from { transform: translateX(-1.8vw) translateY(-0.6vw) }
+  to { transform: scale(120%) translateX(-2.8vw) translateY(-9vw) }
+}
+
+@keyframes imgAnimation {
+  0% {
+    font-size: 0.8em;
+    letter-spacing: -0.3em;
+    line-height: 0.7;
+  }
+  80% {
+    letter-spacing: -0.3em;
+  }
+  100% {
+    font-size: 40em;
+    letter-spacing: -0.4em;
+    line-height: 0.2;
+    text-align: center;
+  }
+}
+
+@keyframes contentGrow {
+  from { height: 0 }
+}

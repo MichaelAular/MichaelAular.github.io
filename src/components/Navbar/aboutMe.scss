@@ -1,0 +1,65 @@
+.aboutMe_Container {
+  position: relative;
+}
+
+.bioBlock_container {
+  position: absolute;
+  background-color: var(--element);
+  border-radius: .2vw;
+  padding: 1vw;
+  box-shadow: -4px 4px 8px var(--shadow);
+  transition-delay: 0.5s;
+  height: fit-content;
+}
+
+.aboutMe_Button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-size: 84px;
+  margin-bottom: 12px;
+  font-weight: 10;
+  cursor: pointer;
+  &:hover {
+    color: var(--maincolor);
+    transition-duration: 0.7s;
+    text-shadow: 1px 1px 3px var(--shadow)
+                  -1px -1px 3px var(--accentcolor);
+  }
+}
+
+.bioBlock_title {
+  margin-bottom: 0.3em;
+}
+
+.BeardIconContainer {
+  position: absolute;
+  width: 5vh;
+  transform: rotate(10deg);
+  margin-left: 9vw;
+}
+
+.beard {
+  position: relative;
+  height: 100%;
+  left: 145%;
+}
+
+.CurvedArrownDown {
+  position: absolute;
+  transform: rotate(290deg);
+  width: 110%;
+  height: 100%;
+  margin-top: -140%;
+  margin-left: 20%;
+}
+
+.bio_doodle {
+  position: absolute;
+  left: 150%;
+  top: 70%;
+  font-size: 50%;
+  text-shadow: none;
+  transform: rotate(-20deg);
+  color: var(--doodle);
+}

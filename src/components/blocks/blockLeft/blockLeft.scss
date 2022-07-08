@@ -1,0 +1,53 @@
+.bigBlock_container {
+    position: absolute;
+    background: linear-gradient(
+        30deg,
+        var(--tonecolor) 10%,
+        var(--element) 100%
+      );
+    border-right: .3vw solid var(--maincolor);
+    top: 10vh;
+    padding: 1vw;
+    border-radius: .2vw;
+}
+
+.blockLeft_video {
+  border-radius: 0.2vw;
+}
+
+.blockLeft_pictures{
+  position: absolute;
+}
+
+.Bigblock_doodle {
+  position: absolute;
+  width: 6.5vw;
+  height: 6vw;
+  transform: translateX(-6vw);
+}
+
+.videoIcon{
+  position: relative;
+  width: 40%;
+  transform: rotate(-13deg);
+  top: 70%;
+  left: 45%;
+}
+
+.doodle_light {
+  font-size: .8vw;
+  top: 5%;
+  transform: rotate(20deg) translateX(1vw);
+}
+
+.doodle_camera {
+  font-size: .9vw;
+  top: 30%;
+  transform: rotate(-7deg);
+}
+
+.doodle_action {
+  font-size: 1vw;
+  top: 50%;
+  transform: rotate(-20deg)
+}

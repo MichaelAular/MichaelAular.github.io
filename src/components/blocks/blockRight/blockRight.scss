@@ -1,0 +1,38 @@
+.blockRight_container {
+  background: linear-gradient(30deg, var(--tonecolor) 10%, var(--element) 100%);
+  border-right: 0.3vw solid var(--maincolor);
+  padding: 1vw;
+  margin-bottom: 0.8vw;
+  overflow: hidden;
+  border-radius: 0.2vw;
+  text-align: justify;
+}
+
+.blockRight_projectTitle {
+  margin-top: 3vh;
+  margin-left: 1vw;
+}
+
+.blockRight_subTitle {
+  transform: translateY(-1.5vh) translateX(-1vw) rotate(-7deg);
+  font-size: 1vw;
+  font-weight: lighter;
+  color: var(--blackish);
+}
+
+.blockRight_projectInfo {
+  margin-top: 1.5vh;
+  margin-left: 1vw;
+  margin-bottom: 2vw;
+  margin-right:3vw;
+}
+
+.blockRight_text {
+  margin-top: 1vh;
+}
+
+.blockRight_doodle {
+  position: absolute;
+  width: 58px;
+  transform: translateX(140px) translateY(-50px);
+}

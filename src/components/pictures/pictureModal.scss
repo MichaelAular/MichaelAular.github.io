@@ -1,0 +1,39 @@
+.pictureModal_Container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--transparent);
+  top: -65vh;
+  left: -6.33vw;
+  z-index: 999;
+  border-radius: 0.2vw;
+  transition-duration: .5s;
+  overflow: hidden;
+}
+
+.pictureModal_Picture {
+ background-size: contain;
+ background-repeat: no-repeat;
+  margin-top: 80px;
+  margin-left: 10vw;
+  width: 80vw;
+  height: 100%;
+  border-radius: .2vw;
+}
+
+.pictureModal_PictureDescription {
+  position: relative;
+  font-size: 14px;
+  top: -3vw;
+  left: 1vw;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(10%)
+}
+
+.show {
+  opacity: 1;
+}
