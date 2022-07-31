@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./aboutMe.scss";
 import Beard from "../../assets/icons/beardIcon";
 import CurvedArrowDown from "../../assets/icons/curverdArrowDown";
-import useWindowSize from "../../hooks/windowsize";
 import BioModal from "./bioModal";
 
 const AboutMe = () => {

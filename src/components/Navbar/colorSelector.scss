@@ -57,9 +57,11 @@
 
 .colorselector_subTextContainer {
     position: absolute;
-    right: -280px;
+    right: -250px;
+    top: 85px;
     width: 280px;
     height: 60px;
+    transform: rotate(25deg);
 }
 
 .subtext_arrow {

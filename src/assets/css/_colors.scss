@@ -9,23 +9,29 @@
   --blackish: rgba(40, 40, 40, 1);
   --transparent: rgba(0, 0, 0, 0);
 
+  /// alpha ///
+  --alpha: 1;
+
 
   /// colorset 1 ///
-  --maincolor1: rgba(0, 150, 150, 1);
+  --maincolor1: rgb(0, 150, 150);
+  --doodle1: 0, 150, 150;
   --accentcolor1: rgba(0, 255, 255, 1);
   --tonecolor1: rgba(185, 190, 210, 1);
   --tonecolor1_Transp: rgba(185, 190, 210, 0.7);
   --darkcolor1: rgba(0, 25, 75, 1);
 
   /// colorset 2 ///
-  --maincolor2: rgba(100, 0, 75, 1);
+  --maincolor2: rgb(100, 0, 75);
+  --doodle2: 100, 0, 75;
   --accentcolor2: rgba(255, 0, 100, 1);
   --tonecolor2: rgba(192, 192, 212, 1);
   --tonecolor2_Transp: rgba(192, 192, 212, 0.7);
   --darkcolor2: rgba(75, 0, 0, 1);
 
   /// colorset 3 ///
-  --maincolor3: rgba(150, 150, 0, 1);
+  --maincolor3: rgb(150, 150, 0);
+  --doodle3: 150, 150, 0;
   --accentcolor3: rgba(255, 255, 0, 1);
   --tonecolor3: rgba(195, 195, 215, 1);
   --tonecolor3_Transp: rgba(195, 195, 215, 0.7);
@@ -37,7 +43,7 @@
   --tonecolor: var(--tonecolor1);
   --tonecolorTransp: var(--tonecolor1_Transp);
   --darkcolor: var(--darkcolor1);
-  --doodle: var(--maincolor);
+  --doodle: rgba(var(--doodle1), var(--alpha));
   --doodleNegative: var(--blackish);
   --doodlePositive: var(--maincolor);
 }

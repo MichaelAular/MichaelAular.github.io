@@ -13,7 +13,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
   const [clickable, setClickable] = useState(true);
   const size = useWindowSize();
   const projectLength = Object.keys(projects).length;
-  const fullLaneLength = projectLength + size.length * 2;
+  const fullLaneLength = projectLength + (size.length * 2);
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
@@ -44,7 +44,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
   };
 
   const checkIndexNext = (newIndex) => {
-    if (newIndex > fullLaneLength - size.length - 1) {
+    if (newIndex > fullLaneLength - (size.length*2) ) {
       setAnimationState(false);
       setActiveIndex(size.length * 2 - (fullLaneLength - newIndex));
     }

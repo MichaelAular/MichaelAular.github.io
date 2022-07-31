@@ -48,6 +48,7 @@ const CarouselItems = ({
     firstLane.unshift(trueLane[trueLane.length - i]);
   }
 
+
   return (
     <div className="carouselItemContainer">
       <div className="carouselItem">

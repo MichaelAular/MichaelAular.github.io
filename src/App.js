@@ -11,6 +11,7 @@ function App() {
   const [colorSet, setColorSet] = useState(1);
   const [shader , setShader] = useState(false);
   const [doodle, setDoodle] = useState(false);
+  const [startup, setStartup] = useState(true);
   const [displayedProject, setDisplayedProject] = useState(0)
 
   return (
@@ -23,6 +24,8 @@ function App() {
       setColorSet={setColorSet}
       doodle={doodle}
       setDoodle={setDoodle}
+      startup={startup}
+      setStartup={setStartup}
       />
       <Blocks
       projects={projects}
