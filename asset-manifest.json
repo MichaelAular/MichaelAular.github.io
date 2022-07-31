@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9350c4cc.css",
+    "main.js": "/static/js/main.7b2b1bad.js",
+    "static/media/NetflixProject.mp4": "/static/media/NetflixProject.f5c1c158e6055f47dc2d.mp4",
+    "static/media/BioMe.mp4": "/static/media/BioMe.920d7eb77e624512eda1.mp4",
+    "static/media/projectNetflix02.png": "/static/media/projectNetflix02.f999d2c902402132aaad.png",
+    "static/media/projectNetflix03.png": "/static/media/projectNetflix03.c5eb74e5e1c99e50dad2.png",
+    "static/media/bio01.png": "/static/media/bio01.cc0fcaa50e733d5d424e.png",
+    "static/media/projectNetflix01.png": "/static/media/projectNetflix01.72e2494e6585d1bdbd61.png",
+    "static/media/bio00.png": "/static/media/bio00.f78e8178ef04b5a7a1bc.png",
+    "static/media/bio02.png": "/static/media/bio02.1c4bf433eecaa35e935b.png",
+    "static/media/guitar5.jpg": "/static/media/guitar5.708853bb51c496e00ba8.jpg",
+    "static/media/guitar2.jpg": "/static/media/guitar2.20723d13a832a2a93f3b.jpg",
+    "static/media/guitar3.jpg": "/static/media/guitar3.e2c3de94e21923393eac.jpg",
+    "static/media/guitar4.jpg": "/static/media/guitar4.9a1bf0edc0d1be3ff259.jpg",
+    "static/media/guitar1.jpg": "/static/media/guitar1.111fb2f62f7b029c8aef.jpg",
+    "static/media/projectNetflix00.png": "/static/media/projectNetflix00.77a65fe367d9d3770c68.png",
+    "static/media/bio03.png": "/static/media/bio03.806e52d6e829e6472a24.png",
+    "static/media/csm_Boulderlounge_1b494ac647.jpg": "/static/media/csm_Boulderlounge_1b494ac647.806e52d6e829e6472a24.jpg",
+    "index.html": "/index.html",
+    "main.9350c4cc.css.map": "/static/css/main.9350c4cc.css.map",
+    "main.7b2b1bad.js.map": "/static/js/main.7b2b1bad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9350c4cc.css",
+    "static/js/main.7b2b1bad.js"
+  ]
+}
