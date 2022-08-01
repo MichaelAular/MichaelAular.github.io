@@ -42,7 +42,7 @@ const Pictures = ({ project, setShader, shader }) => {
               require("../../assets/img/photo/" + project.image1) +
               ")",
             width: `${size.itemWidth}vw`,
-            height: `${size.itemHeight * 1.3}vw`}}
+            height: `${size.itemHeight * 1.1}vw`}}
           onClick={() => {setPicOpen1(!picOpen1); setShader(!shader)}}>
           <PictureModal
             picOpen={picOpen1}
@@ -61,7 +61,7 @@ const Pictures = ({ project, setShader, shader }) => {
               require("../../assets/img/photo/" + project.image2) +
               ")",
             width: `${size.itemWidth}vw`,
-            height: `${size.itemHeight * 1.3}vw`}}
+            height: `${size.itemHeight * 1.1}vw`}}
           onClick={() => {setPicOpen2(!picOpen2);  setShader(!shader)}}>
           <PictureModal
             picOpen={picOpen2}
@@ -79,7 +79,7 @@ const Pictures = ({ project, setShader, shader }) => {
               require("../../assets/img/photo/" + project.image3) +
               ")",
             width: `${size.itemWidth}vw`,
-            height: `${size.itemHeight * 1.3}vw`}}
+            height: `${size.itemHeight * 1.1}vw`}}
           onClick={() => {setPicOpen3(!picOpen3);  setShader(!shader)}}>
           <PictureModal
             picOpen={picOpen3}
