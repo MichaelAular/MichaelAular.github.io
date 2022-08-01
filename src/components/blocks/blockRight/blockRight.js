@@ -11,7 +11,6 @@ const BlockRight = ({ project }) => {
       style={{
         height: `calc(82vh - ${size.itemHeight + 1.2}vw)`,
         width: `calc(${size.itemWidth}vw * 3 + 1vw)`,
-        // backgroundImage: "url(" + require("../../../assets/img/photo/profile.jfif") + ")",
         }}
     >
       <div className="blockRight_projectTitle font_bangers">
