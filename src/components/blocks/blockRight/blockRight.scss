@@ -36,3 +36,14 @@
   width: 58px;
   transform: translateX(140px) translateY(-50px);
 }
+
+.githubLinkContainer {
+  position: absolute;
+  display: flex;
+  width: 37vw;
+  margin-left: 1vw;
+  gap: 10px;
+  align-content: center;
+  align-items: center;
+}
+

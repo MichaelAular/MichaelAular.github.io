@@ -1,6 +1,7 @@
 import "./blockRight.scss";
 import useWindowSize from "../../../hooks/windowsize";
 import LearnMore from "../../../assets/icons/learnMore";
+import GitHubLogo from "../../../assets/icons/GitHubLogo";
 
 const BlockRight = ({ project }) => {
   const size = useWindowSize();
@@ -30,6 +31,7 @@ const BlockRight = ({ project }) => {
       <div className="blockRight_subTitle font_marker">About:</div>The Project</div>
       <div className="blockRight_doodle"> <LearnMore /> </div>
       <div className="blockRight_projectInfo font_normal">{project.description}</div>
+      <div className="githubLinkContainer font_normal"><GitHubLogo/>{project.git}</div>
 
     </div>
   );
