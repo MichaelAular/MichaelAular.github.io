@@ -21,16 +21,15 @@ let MyVideo = require("../../assets/video/" + project.video)
 
   return (
     <div className="video_container">
-        <video
+        <video 
+          muted
           style={{ width: "101%",  margin: "-.15vw auto"}}
           playsInline
           loop
-          muted
-          controls
           alt="All the devices"
           src= {MyVideo}
-
           ref={videoEl}
+          autoPlay
         />
     </div>
   );
