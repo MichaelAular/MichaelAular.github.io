@@ -3,6 +3,7 @@ import "./navBar.scss";
 import ColorSelector from "./colorSelector";
 import AboutMe from "./aboutme";
 import DoodleSwitch from "./doodleSwittch";
+import useWindowSize from "../../hooks/windowsize";
 
 const NavBar = ({
   colorSet,
@@ -13,10 +14,8 @@ const NavBar = ({
   setStartup
  }) => {
 
-  const sleep = (milliseconds) => {
-    return new Promise((resolve) => setTimeout(resolve, milliseconds));
-  };
-
+  const size = useWindowSize();
+  const sleep = (milliseconds) => { return new Promise((resolve) => setTimeout(resolve, milliseconds)) };
   const startupRun = async ()=> {
     await sleep(5000)
     setStartup(false)
@@ -28,21 +27,27 @@ const NavBar = ({
 
   return (
     <div className="navBar">
-      <div className="ColorSelector">
+      <div className="navItemContainer">
+      <div
+        className="navItemblock"
+        style={{ left: `calc(${size.itemWidth * 0.5}vw)` }}
+        >
         <ColorSelector colorSet={colorSet} setColorSet={setColorSet} />
+        <div className="naw font_pressStart">
+          michael@aular.nl<br/>
+          michael.aular@yacht.nl<br/>
+          06-14368872
+        </div>
       </div>
-      <div className="doodleSwitch">
-        <DoodleSwitch
-        doodle={doodle}
-        setDoodle={setDoodle}
-        />
+
+      <div
+        className="navItemblock navitemright"
+         >
+        <DoodleSwitch doodle={doodle} setDoodle={setDoodle} />
+        <AboutMe />
+        </div>
       </div>
-      <div className="naw font_pressStart">
-        michael@aular.nl<br/>
-        michael.aular@yacht.nl<br/>
-        06-14368872<br/>
-      </div>
-      <div className="aboutMe"> <AboutMe /> </div>
+
     </div>
   );
 };

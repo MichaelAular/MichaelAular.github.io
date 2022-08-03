@@ -1,15 +1,11 @@
 import "./colorSelector.scss";
 import HandDrawnOutlineRight from "../../assets/icons/handDrawnOutLineRight";
-import useWindowSize from "../../hooks/windowsize";
 
 const ColorSelector = ({colorSet, setColorSet}) => {
-  const size = useWindowSize();
+
 
   return (
-    <div className="colorSelector"
-    style={{
-      left: `calc(${size.itemWidth * .5}vw)`
-    }}>
+    <div className="colorSelector">
       <button
         className={`colorSet1 colorButton ${
         colorSet === 1 ? "grayscaleOff" : "" }`}

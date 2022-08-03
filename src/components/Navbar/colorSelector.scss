@@ -1,11 +1,3 @@
-.colorSelector {
-    z-index: 10;
-    display: flex;
-    position: relative;
-    height: inherit;
-    width: fit-content;
-}
-
 .colorButton {
     height: 50px;
     width: 35px;
@@ -57,8 +49,8 @@
 
 .colorselector_subTextContainer {
     position: absolute;
-    right: -250px;
-    top: 85px;
+    right: -40px;
+    top: 90px;
     width: 280px;
     height: 60px;
     transform: rotate(25deg);

@@ -1,43 +1,59 @@
 .navBar {
-    position: fixed;
-    display: flex;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 70px;
-    background-color: var(--element);
-    z-index: 500;
-    font-size: 2em;
-    align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  background-color: var(--element);
+  z-index: 500;
+  font-size: 2em;
 }
 
-.aboutMe {
-    position: absolute;
-    right: 6vw;
-}
-
-.doodleSwitch {
-    position: absolute;
-    right: 18vw;
+.navItemContainer {
+  height: 80px;
 }
 
 .doodleSwitch_Container {
-    position: relative;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    top: -3px;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  top: -3px;
 }
 
 .doodleswitch_top {
-    margin-bottom: -20px;
-    font-size: 40px;
+  margin-bottom: -20px;
+  font-size: 40px;
 }
 .doodleswitch_bottom {
-    font-size: 40px;
+  font-size: 40px;
 }
-.naw {
-    position: relative;
-    left: 8vw
+
+.navItemblock {
+    // border: 1px solid red;
+  height: inherit;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  gap: 1.5vw;
 }
+
+.navitemright {
+    right: 7vw;
+}
+
+@media only screen and (max-width: 800px) {
+    .navItemContainer {
+        height: 160px;
+      }
+    .navbar {
+        align-items: flex-start;
+    }
+    .navitemright {
+        left: 12vw;
+        transform: translateY(60px);
+    }
+    .navItemblock{
+        height: 100px;
+    }
+    }

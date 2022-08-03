@@ -12,19 +12,17 @@ const Blocks = ({ projects, setShader, shader,displayedProject }) => {
   return (
     <div className="blockContainer">
 
-      <div className="blockLeft"><BlockLeft
+      <div className="blockLeft">
+        <BlockLeft
       project={currentproject}
       shader={shader}
       setShader={setShader}
       />
       </div>
 
-      <div className="blockRight"
-      style={{
-        top: "10vh",
-        left: `calc((${size.itemWidth}vw * 4) - 2.4vw)`,}}
-      >
-        <BlockRight project={currentproject}/>
+      <div className="blockRight" style={{ top: "10vh", left: `calc((${size.itemWidth}vw * 4) - 2.4vw)`,}} >
+        <BlockRight
+        project={currentproject}/>
       </div>
 
       </div>

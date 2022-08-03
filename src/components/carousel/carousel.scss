@@ -1,7 +1,8 @@
 .carousel {
+  position: fixed;
+  bottom: 0px;
   padding-top: 15vw;
   padding-bottom: 5vh;
-  position: absolute;
   overflow: hidden;
   width: 100vw;
   pointer-events: none;

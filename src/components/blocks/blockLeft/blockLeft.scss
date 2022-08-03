@@ -1,22 +1,21 @@
-.bigBlock_container {
+.blockLeft_container {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(
         30deg,
         var(--tonecolor) 10%,
         var(--element) 100%
       );
     border-right: .3vw solid var(--maincolor);
-    top: 10vh;
+    top: 95px;
     padding: 1vw;
     border-radius: .2vw;
+    margin-bottom: 50vw;
 }
 
 .blockLeft_video {
   border-radius: 0.2vw;
-}
-
-.blockLeft_pictures{
-  position: absolute;
 }
 
 .Bigblock_doodle {
@@ -50,4 +49,10 @@
   font-size: 1vw;
   top: 50%;
   transform: rotate(-20deg)
+}
+
+@media only screen and (max-width: 800px) {
+  .blockLeft_container {
+    top: 175px;
+  }
 }

@@ -1,13 +1,9 @@
-.pictures {
-  z-index:1;
-}
-
 .pictures_img_Container {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100.5%;
-  margin-top: 1vw;
+  margin-top: .8vw;
 }
 
 .pictures_img {

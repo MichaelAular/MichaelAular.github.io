@@ -14,13 +14,6 @@ const Pictures = ({ project, setShader, shader }) => {
 
 
   return (
-    <div
-      className="pictures"
-      style={{
-        height: `calc(${size.itemHeight + 2}vw)`,
-        width: `calc(${size.itemWidth}vw * 3 + 1.5vw)`,
-      }}
-    >
       <div className="pictures_img_Container">
         <div className="pictures_doodle">
           <div className="pictures_subText font_marker">
@@ -41,8 +34,9 @@ const Pictures = ({ project, setShader, shader }) => {
               "url(" +
               require("../../assets/img/photo/" + project.image1) +
               ")",
-            width: `${size.itemWidth}vw`,
-            height: `${size.itemHeight * 1.1}vw`}}
+            width: `${size.pictureWidth}vw`,
+            height: `${size.pictureWidth * .55}vw`
+          }}
           onClick={() => {setPicOpen1(!picOpen1); setShader(!shader)}}>
           <PictureModal
             picOpen={picOpen1}
@@ -52,7 +46,6 @@ const Pictures = ({ project, setShader, shader }) => {
         </div>
 
 
-
         <div
           className="pictures_img"
           style={{
@@ -60,8 +53,9 @@ const Pictures = ({ project, setShader, shader }) => {
               "url(" +
               require("../../assets/img/photo/" + project.image2) +
               ")",
-            width: `${size.itemWidth}vw`,
-            height: `${size.itemHeight * 1.1}vw`}}
+              width: `${size.pictureWidth}vw`,
+              height: `${size.pictureWidth * .55}vw`
+          }}
           onClick={() => {setPicOpen2(!picOpen2);  setShader(!shader)}}>
           <PictureModal
             picOpen={picOpen2}
@@ -78,8 +72,9 @@ const Pictures = ({ project, setShader, shader }) => {
               "url(" +
               require("../../assets/img/photo/" + project.image3) +
               ")",
-            width: `${size.itemWidth}vw`,
-            height: `${size.itemHeight * 1.1}vw`}}
+              width: `${size.pictureWidth}vw`,
+              height: `${size.pictureWidth * .55}vw`
+          }}
           onClick={() => {setPicOpen3(!picOpen3);  setShader(!shader)}}>
           <PictureModal
             picOpen={picOpen3}
@@ -93,7 +88,6 @@ const Pictures = ({ project, setShader, shader }) => {
 
 
       </div>
-    </div>
   );
 };
 
