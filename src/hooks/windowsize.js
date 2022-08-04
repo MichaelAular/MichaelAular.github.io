@@ -9,6 +9,7 @@ function useWindowSize() {
     pictureModalPosition: "",
     pictureWidth: "",
     pictureHeight: "",
+    blockRightWidth: "",
 
   });
   useEffect(() => {
@@ -59,6 +60,13 @@ function useWindowSize() {
          : 2.75;
      }
 
+     function setBlockRightWidth() {
+      return window.innerWidth < 1000 ? 10
+         : window.innerWidth < 1400 ? 73.65
+         : window.innerWidth < 1800 ? 76.8
+         : 80.4;
+     }
+
 
       function handleResize() {
       setWindowSize({
@@ -69,6 +77,7 @@ function useWindowSize() {
         pictureWidth: setPictureWidth(),
         pictureHeight: setPictureHeight(),
         pictureModalPosition: setPictureModalPosition(),
+        blockRightWidth: setBlockRightWidth()
       });
     }
 

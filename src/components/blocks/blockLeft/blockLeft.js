@@ -11,8 +11,8 @@ const BlockLeft = ({ project, shader, setShader }) => {
     <div
       className="blockLeft_container"
       style={{
-        width: `calc((${size.itemWidth}vw *3) + 1.7vw)`,
-        left: `calc((${size.itemWidth} * 0.5vw) - 0.33vw)`,
+        width: `calc((${size.itemWidth}vw *3) + 2vw)`,
+        minHeight: `calc(80vh - ${size.itemHeight}vw)`,
       }}
     >
       <div className="blockLeft_video">

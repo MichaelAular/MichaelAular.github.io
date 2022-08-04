@@ -5,11 +5,9 @@ import NavBar from "./components/Navbar/navBar";
 import Carousel from "./components/carousel/carousel"
 import Blocks from "./components/blocks/blocks";
 import Shader from "./components/shader/shader";
-import useWindowSize from "./hooks/windowsize";
 
 function App() {
   const projects = projectData;
-  const size=useWindowSize()
   const [colorSet, setColorSet] = useState(1);
   const [shader , setShader] = useState(false);
   const [doodle, setDoodle] = useState(false);
@@ -17,10 +15,7 @@ function App() {
   const [displayedProject, setDisplayedProject] = useState(0)
 
   return (
-    <div className="App"
-    style={{ paddingBottom:`${size.itemHeight}vw`
-    }}
-    >
+    <div className="App" >
       <Shader
       shader={shader}
       />

@@ -1,4 +1,13 @@
 .blockRight {
     position: relative;
     z-index: -1;
+    top: 95px;
+}
+
+.blockContainer {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1vw;
+    justify-content: center;
 }
