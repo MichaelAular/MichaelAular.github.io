@@ -10,8 +10,9 @@ const Pictures = ({ project, setShader, shader }) => {
   const [picOpen1, setPicOpen1] = useState(false);
   const [picOpen2, setPicOpen2] = useState(false);
   const [picOpen3, setPicOpen3] = useState(false);
-
-
+  const [titleOpen1, setTitleOpen1] = useState(false);
+  const [titleOpen2, setTitleOpen2] = useState(false);
+  const [titleOpen3, setTitleOpen3] = useState(false);
 
   return (
       <div className="pictures_img_Container">
@@ -37,12 +38,16 @@ const Pictures = ({ project, setShader, shader }) => {
             width: `${size.pictureWidth}vw`,
             height: `${size.pictureWidth * .55}vw`
           }}
-          onClick={() => {setPicOpen1(!picOpen1); setShader(!shader)}}>
-          <PictureModal
+          onClick={() => {setPicOpen1(!picOpen1); setShader(!shader); setTitleOpen1(!titleOpen1)}}>
+          <div className="PictureModal"
+          style={{ left: `-${size.pictureModalPosition}vw`}}>
+            <PictureModal
             picOpen={picOpen1}
             img={project.image1}
             imageDescription={project.image1_descr}
+            titleOpen={titleOpen1}
             />
+            </div>
         </div>
 
 
@@ -56,12 +61,16 @@ const Pictures = ({ project, setShader, shader }) => {
               width: `${size.pictureWidth}vw`,
               height: `${size.pictureWidth * .55}vw`
           }}
-          onClick={() => {setPicOpen2(!picOpen2);  setShader(!shader)}}>
-          <PictureModal
+          onClick={() => {setPicOpen2(!picOpen2); setShader(!shader); setTitleOpen2(!titleOpen2)}}>
+        <div className="PictureModal"
+          style={{ left: `-${size.pictureModalPosition}vw`}}>
+            <PictureModal
             picOpen={picOpen2}
             img={project.image2}
             imageDescription={project.image2_descr}
+            titleOpen={titleOpen2}
             />
+            </div>
         </div>
 
 
@@ -75,16 +84,17 @@ const Pictures = ({ project, setShader, shader }) => {
               width: `${size.pictureWidth}vw`,
               height: `${size.pictureWidth * .55}vw`
           }}
-          onClick={() => {setPicOpen3(!picOpen3);  setShader(!shader)}}>
-          <PictureModal
+          onClick={() => {setPicOpen3(!picOpen3);  setShader(!shader); setTitleOpen3(!titleOpen3)}}>
+          <div className="PictureModal"
+          style={{ left: `-${size.pictureModalPosition}vw`}}>
+            <PictureModal
             picOpen={picOpen3}
             img={project.image3}
             imageDescription={project.image3_descr}
+            titleOpen={titleOpen3}
             />
+            </div>
         </div>
-
-
-
 
 
       </div>

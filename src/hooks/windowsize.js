@@ -6,7 +6,10 @@ function useWindowSize() {
     itemWidth: "",
     itemHeight: "",
     indicatorWidth: "",
-    modalDistance: "",
+    pictureModalPosition: "",
+    pictureWidth: "",
+    pictureHeight: "",
+
   });
   useEffect(() => {
     function setLaneLength() {
@@ -49,6 +52,14 @@ function useWindowSize() {
          : 7;
      }
 
+     function setPictureModalPosition() {
+      return window.innerWidth < 1000 ? 10
+         : window.innerWidth < 1400 ? 6
+         : window.innerWidth < 1800 ? 5
+         : 2.75;
+     }
+
+
       function handleResize() {
       setWindowSize({
         length: setLaneLength(),
@@ -56,7 +67,8 @@ function useWindowSize() {
         itemHeight: setLaneItemHeight(),
         indicatorWidth: setIndicatorWidth(),
         pictureWidth: setPictureWidth(),
-        pictureHeight: setPictureHeight()
+        pictureHeight: setPictureHeight(),
+        pictureModalPosition: setPictureModalPosition(),
       });
     }
 
