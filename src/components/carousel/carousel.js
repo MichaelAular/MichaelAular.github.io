@@ -94,7 +94,6 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
             transition: `${animationState ? " transform 0.7s" : "undefined"}`,
             paddingLeft: `${`${size.itemWidth * 0.5 - 0.5}vw`}`,
             height: `${size.itemHeight}vw`,
-
           }}
         >
           <CarouselItems
@@ -119,12 +118,17 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
                   ? updateIndexPrev(activeIndex - size.length)
                   : console.log(null);
               }}
+              onMouseLeave={() => {
+                setShader(false) }}
+              onMouseEnter={() => {
+                setShader(true) }}
             >
               <div className="arrowContainer arrowLeft"
               style={{
                 height: `${size.itemHeight}vw`,
                 width: `${size.itemHeight * 0.5}vw`,
-              }}>
+              }}
+              >
                 <ArrowLeft className="indicatorArrow"/>
               </div>
             </button>
@@ -138,6 +142,10 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
                 ? updateIndexNext(activeIndex + size.length)
                 : console.log(null);
             }}
+            onMouseLeave={() => {
+              setShader(false) }}
+            onMouseEnter={() => {
+              setShader(true) }}
           >
             <div
               className="arrowContainer arrowright"

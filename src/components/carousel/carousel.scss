@@ -10,8 +10,7 @@
   &:hover {
     z-index: 999;
     .carouselBackBlock{
-      transition-duration: .2s;
-      background-color: transparent;
+    background-color: var(--darkCarousel);
     }
     .indicatorContainer{
       background-color: transparent;
@@ -83,7 +82,7 @@
 .arrowContainer {
   position: absolute;
   top: 1vw;
-  opacity: 0.2;
+  opacity: .4;
 }
 
 .leftRight {
