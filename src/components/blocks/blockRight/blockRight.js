@@ -11,7 +11,7 @@ const BlockRight = ({ project }) => {
       className="blockRight_container"
       style={{
         width: `calc( ${size.blockRightWidth}vw - (${size.itemWidth}vw *3) )`,
-        height: `calc(90vh - ${size.itemHeight * 2}vh - 100px)`,
+        height: `calc(98vh - (${size.itemHeight}vw) - 180px)`
         }}
     >
       <div className="blockRight_projectTitle font_bangers">

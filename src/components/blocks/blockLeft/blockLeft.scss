@@ -1,6 +1,4 @@
 .blockLeft_container {
-    position: relative;
-    display: flex;
     flex-direction: column;
     background: linear-gradient(
         30deg,
@@ -11,7 +9,6 @@
     top: 95px;
     padding: 1vw;
     border-radius: .2vw;
-    overflow: hidden;
     overflow-y: scroll;
 }
 

@@ -24,8 +24,7 @@ const BlockLeft = ({
       className="blockLeft_container"
       style={{
         width: `calc((${size.itemWidth}vw *3) + 2vw)`,
-        height: `calc(90vh - ${size.itemHeight * 2}vh - 100px)`,
-        msOverflowX: "scroll",
+        height: `calc(98vh - (${size.itemHeight}vw) - 180px)`,
       }}
     >
       <div className="blockLeft_video">

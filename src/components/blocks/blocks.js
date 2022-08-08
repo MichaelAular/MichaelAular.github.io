@@ -1,3 +1,4 @@
+import useWindowSize from "../../hooks/windowsize";
 import BlockLeft from "./blockLeft/blockLeft";
 import BlockRight from "./blockRight/blockRight";
 import "./blocks.scss";
@@ -17,10 +18,14 @@ const Blocks = ({
   }) => {
 
   const currentproject = projects[displayedProject];
+  const size=useWindowSize()
 
   return (
-    <div className="blockContainer">
-      <div className="blockLeft col">
+    <div className="blockContainer"
+    style={{
+      height: `calc(98vh - ${size.itemHeight}vw - 95px - 2vw)`,
+    }}>
+      <div className="blockLeft">
         <BlockLeft
           project={currentproject}
           shader={shader}
@@ -35,7 +40,7 @@ const Blocks = ({
         />
       </div>
 
-      <div className="blockRight col" >
+      <div className="blockRight" >
         <BlockRight project={currentproject} />
       </div>
     </div>
