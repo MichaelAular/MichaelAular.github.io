@@ -121,7 +121,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
               onMouseLeave={() => {
                 setShader(false) }}
               onMouseEnter={() => {
-                setShader(true) }}
+                  setShader(true) }}
             >
               <div className="arrowContainer arrowLeft"
               style={{

@@ -1,11 +1,14 @@
 .blockRight_container {
   position: relative;
+  top: 95px;
   background: linear-gradient(30deg, var(--tonecolor) 10%, var(--element) 100%);
   border-right: 0.3vw solid var(--maincolor);
   padding: 1vw;
-  overflow: hidden;
   border-radius: 0.2vw;
   text-align: justify;
+  aspect-ratio: 2 / 1.64;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .blockRight_projectTitle {
@@ -32,7 +35,7 @@
 }
 
 .githubLinkContainer {
-  position: absolute;
+  position: relative;
   display: flex;
   width: 37vw;
   margin-left: 1vw;

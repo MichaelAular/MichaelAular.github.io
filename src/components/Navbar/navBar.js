@@ -34,9 +34,7 @@ const NavBar = ({
         >
         <ColorSelector colorSet={colorSet} setColorSet={setColorSet} />
         <div className="naw font_pressStart">
-          michael@aular.nl<br/>
-          michael.aular@yacht.nl<br/>
-          06-14368872
+          michael.aular<br/>@yacht.nl<br/>
         </div>
       </div>
 

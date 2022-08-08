@@ -4,7 +4,19 @@ import VideoComponent from "../../videoComponent/video";
 import Video from "../../../assets/icons/video";
 import Pictures from "../../pictures/pictures";
 
-const BlockLeft = ({ project, shader, setShader }) => {
+const BlockLeft = ({
+  project,
+  shader,
+  setShader,
+  setPicOpen1,
+  setPicOpen2,
+  setPicOpen3,
+  setTitleOpen1,
+  setTitleOpen2,
+  setTitleOpen3,
+  setModalProject
+  }) => {
+
   const size = useWindowSize();
 
   return (
@@ -12,7 +24,8 @@ const BlockLeft = ({ project, shader, setShader }) => {
       className="blockLeft_container"
       style={{
         width: `calc((${size.itemWidth}vw *3) + 2vw)`,
-        minHeight: `calc(80vh - ${size.itemHeight}vw)`,
+        height: `calc(90vh - ${size.itemHeight * 2}vh - 100px)`,
+        msOverflowX: "scroll",
       }}
     >
       <div className="blockLeft_video">
@@ -27,7 +40,18 @@ const BlockLeft = ({ project, shader, setShader }) => {
 
         <VideoComponent project={project} />
       </div>
-      <Pictures project={project} setShader={setShader} shader={shader} />
+      <Pictures
+        project={project}
+        setShader={setShader}
+        shader={shader}
+        setPicOpen1={setPicOpen1}
+        setPicOpen2={setPicOpen2}
+        setPicOpen3={setPicOpen3}
+        setTitleOpen1={setTitleOpen1}
+        setTitleOpen2={setTitleOpen2}
+        setTitleOpen3={setTitleOpen3}
+        setModalProject={setModalProject}
+      />
     </div>
   );
 };

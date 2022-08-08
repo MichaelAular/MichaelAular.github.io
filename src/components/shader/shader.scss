@@ -7,8 +7,11 @@
     z-index: 750;
     opacity: 0.7;
     pointer-events: none;
+    transition-duration: .5s;
+    transition-delay: .2s;
 }
 
 .hideshader {
     opacity: 0;
+    transition-duration: 0s;
 }
