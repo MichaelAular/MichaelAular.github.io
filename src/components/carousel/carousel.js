@@ -62,6 +62,8 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
     width: `${size.itemWidth * size.indicatorWidth}vw`,
   };
 
+  console.log("shader: ",shader)
+
   return (
     <div className="carouselContainer">
 
@@ -70,6 +72,10 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
         style={{
           height: `${size.itemHeight}vw`,
         }}
+        onMouseLeave={() => {
+          setShader(false) }}
+        onMouseEnter={() => {
+          setShader(true) }}
       >
         <div className="carouselText font_marker"
           style={{
@@ -99,7 +105,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
         <div
           className="carouselBackBlock"
           style={{ height: `calc(${size.itemHeight}vw + 32px)` }}
-          />
+        />
         <div
           className="carouselLane"
           style={{

@@ -38,10 +38,10 @@ const Thumbnail = ({
       className="Thumbnail"
       onMouseLeave={() => {
         setHovered(false)
-        setShader(false) }}
+      }}
       onMouseEnter={() => {
         setHovered(true)
-        setShader(true) }}
+      }}
     >
 <div className="miniModal">
       <MiniModal

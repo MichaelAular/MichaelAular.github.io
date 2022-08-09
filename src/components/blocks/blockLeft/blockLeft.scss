@@ -1,15 +1,11 @@
 .blockLeft_container {
-    flex-direction: column;
-    background: linear-gradient(
-        30deg,
-        var(--tonecolor) 10%,
-        var(--element) 100%
-      );
-    border-right: .3vw solid var(--maincolor);
-    top: 95px;
-    padding: 1vw;
-    border-radius: .2vw;
-    overflow-y: scroll;
+  flex-direction: column;
+  background: linear-gradient(30deg, var(--tonecolor) 10%, var(--element) 100%);
+  border-right: 0.3vw solid var(--maincolor);
+  top: 95px;
+  padding: 1vw;
+  border-radius: 0.2vw;
+  overflow-y: scroll;
 }
 
 .blockLeft_video {
@@ -23,7 +19,7 @@
   transform: translateX(-6vw);
 }
 
-.videoIcon{
+.videoIcon {
   position: relative;
   width: 40%;
   transform: rotate(-13deg);
@@ -32,13 +28,13 @@
 }
 
 .doodle_light {
-  font-size: .8vw;
+  font-size: 0.8vw;
   top: 5%;
   transform: rotate(20deg) translateX(1vw);
 }
 
 .doodle_camera {
-  font-size: .9vw;
+  font-size: 0.9vw;
   top: 30%;
   transform: rotate(-7deg);
 }
@@ -46,7 +42,7 @@
 .doodle_action {
   font-size: 1vw;
   top: 50%;
-  transform: rotate(-20deg)
+  transform: rotate(-20deg);
 }
 
 @media only screen and (max-width: 800px) {
@@ -60,5 +56,10 @@
     overflow: visible;
     min-height: fit-content;
   }
+}
 
+@media only screen and (max-width: 800px) {
+  .blockLeft_container {
+    margin-top: 90px;
+  }
 }

@@ -15,9 +15,7 @@ const Pictures = ({
   setModalProject
  }) => {
 
-
   const size = useWindowSize();
-  console.log("size length: ",size.length)
 
   return (
       <div className="pictures_img_Container">

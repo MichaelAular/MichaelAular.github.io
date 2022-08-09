@@ -1,7 +1,7 @@
 .carousel {
   position: fixed;
   bottom: 1vh;
-  padding-top: 15vw;
+  padding-top: 50vw;
   padding-bottom: 32px;
   overflow: hidden;
   width: 100vw;
@@ -10,12 +10,11 @@
   &:hover {
     z-index: 999;
     .carouselBackBlock{
-      transition-delay: .2s;
-      transition-duration: .5s;
+      transition-duration: 2s;
       background-color: var(--darkCarousel);
     }
     .indicatorContainer{
-      transition-duration: 1s;
+      transition-duration: .6s;
       background-color: transparent;
     }
   }
@@ -32,9 +31,6 @@
   margin-bottom: 16px;
   z-index: 15;
   pointer-events: all;
-  &:hover {
-    .carousel {pointer-events: all;}
-  }
 }
 
 .carouselItem {
@@ -46,6 +42,7 @@
   position: absolute;
   width: 100vw;
   left: 0px;
+  margin-top: 35vw;
 }
 
 .prevButton {

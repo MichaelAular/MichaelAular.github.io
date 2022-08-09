@@ -1,5 +1,4 @@
 .modal-container {
-  border: 1px solid lime;
   position: absolute;
   background-color: var(--tonecolor);
   z-index: 999;
@@ -84,7 +83,6 @@
   white-space: nowrap;
   letter-spacing: 0.15em;
   animation: typing 2.25s steps(40, end), blink-caret 0.75s step-end infinite;
-
 }
 
 .modal-project-description {
@@ -106,18 +104,43 @@
 }
 
 @keyframes imgGrow {
-  from { transform: translateY(-0.6vw) }
-  to { transform: scale(120%) translateY(-9vw) }
+  from {
+    transform:
+    translateY(-30px)
+  }
+  to {
+    bottom: 30px;
+    transform:
+    scale(120%)
+  }
 }
 
 @keyframes imgGrowLeft {
-  from { transform: translateX(0.6vw) translateY(-0.6vw) }
-  to { transform: scale(120%) translateX(2.03vw) translateY(-9vw) }
+  from {
+    transform:
+    translateX(0.6vw)
+    translateY(-30px)
+  }
+  to {
+    bottom: 30px;
+    transform:
+    scale(120%)
+    translateX(2.03vw)
+  }
 }
 
 @keyframes imgGrowRight {
-  from { transform: translateX(-1.8vw) translateY(-0.6vw) }
-  to { transform: scale(120%) translateX(-2.8vw) translateY(-9vw) }
+  from {
+    transform:
+    translateX(-0.6vw)
+    translateY(-30px)
+  }
+  to {
+    bottom: 30px;
+    transform:
+    scale(120%)
+    translateX(-2.03vw)
+  }
 }
 
 @keyframes imgAnimation {
