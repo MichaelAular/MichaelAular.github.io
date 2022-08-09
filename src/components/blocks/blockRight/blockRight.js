@@ -29,11 +29,23 @@ const BlockRight = ({ project }) => {
       </div>
 
       <div className="blockRight_projectTitle font_bangers">
-      <div className="blockRight_subTitle font_marker">About:</div>The Project</div>
-      <div className="blockRight_doodle"> <LearnMore /> </div>
-      <div className="blockRight_projectInfo font_normal">{project.description}</div>
-      <div className="githubLinkContainer font_normal"><GitHubLogo/>{project.git}</div>
-
+        <div className="blockRight_subTitle font_marker">
+          About:
+        </div>
+        The Project
+      </div>
+      <div className="blockRight_doodle">
+        <LearnMore />
+      </div>
+      <div className="blockRight_projectInfo font_normal">
+        {project.description}
+      </div>
+      <div className="githubLinkContainer font_normal">
+        <GitHubLogo/>
+          <div className="gitHubLink">
+            {project.git}
+          </div>
+      </div>
     </div>
   );
 };

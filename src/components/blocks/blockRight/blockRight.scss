@@ -48,6 +48,13 @@
   align-items: center;
 }
 
+.gitHubLink{
+  cursor: pointer;
+  &:hover {
+    color: var(--accentcolor);
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .blockRight_container {
    width: 80vw;
