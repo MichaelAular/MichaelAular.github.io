@@ -23,10 +23,11 @@ const BlockLeft = ({
     <div
       className="blockLeft_container"
       style={{
-        width: `calc((${size.itemWidth}vw *3) + 2vw)`,
-        height: `calc(98vh - (${size.itemHeight}vw) - 180px)`,
-      }}
-    >
+        width: size.blockWidthBig ? `calc((${size.itemWidth}vw *3) + 2vw)`
+        : `calc(100vw - (${size.itemWidth}vw + 2vw + 4px))`,
+        height: size.blockWidthBig ? `calc(98vh - (${size.itemHeight}vw) - 180px)` : `auto`
+      }}>
+
       <div className="blockLeft_video">
         <div className="Bigblock_doodle">
           <p className="doodle_light font_marker">Ligth...</p>

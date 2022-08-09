@@ -68,7 +68,6 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
         className="carousel"
         style={{
           height: `${size.itemHeight}vw`,
-          bottom: 0,
         }}
       >
 

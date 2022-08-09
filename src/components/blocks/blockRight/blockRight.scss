@@ -1,5 +1,4 @@
 .blockRight_container {
-
   background: linear-gradient(30deg, var(--tonecolor) 10%, var(--element) 100%);
   border-right: 0.3vw solid var(--maincolor);
   padding: 1vw;
@@ -42,5 +41,12 @@
   gap: 10px;
   align-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 1400px) {
+  .blockRight_container {
+   border: 1px solid lime;
+   width: 80vw;
+  }
 }
 

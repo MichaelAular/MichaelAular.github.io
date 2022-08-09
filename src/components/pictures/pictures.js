@@ -15,9 +15,9 @@ const Pictures = ({
   setModalProject
  }) => {
 
-  // setModalProject(project)
 
   const size = useWindowSize();
+  console.log("size length: ",size.length)
 
   return (
       <div className="pictures_img_Container">
@@ -37,8 +37,8 @@ const Pictures = ({
           className="pictures_img"
           style={{
             backgroundImage: "url("+require("../../assets/img/photo/"+project.image1)+")",
-            width: `${size.pictureWidth}vw`,
-            height: `${size.pictureWidth * .55}vw`
+            width: size.length===4 ? `${size.pictureWidth * 1.33}vw` : `${size.pictureWidth}vw`,
+            height:  size.length===4 ? `${size.pictureWidth * .8}vw` : `${size.pictureWidth * .52}vw`,
           }}
           onClick={() => {setPicOpen1(true); setShader(true); setTitleOpen1(true); setModalProject(project)}}>
         </div>
@@ -47,8 +47,8 @@ const Pictures = ({
           className="pictures_img"
           style={{
             backgroundImage: "url("+require("../../assets/img/photo/"+project.image2)+")",
-            width: `${size.pictureWidth}vw`,
-            height: `${size.pictureWidth * .55}vw`
+            width: size.length===4 ? `${size.pictureWidth * 1.33}vw` : `${size.pictureWidth}vw`,
+            height:  size.length===4 ? `${size.pictureWidth * .8}vw` : `${size.pictureWidth * .52}vw`,
           }}
           onClick={() => {setPicOpen2(true); setShader(true); setTitleOpen2(true); setModalProject(project)}}>
         </div>
@@ -57,8 +57,8 @@ const Pictures = ({
           className="pictures_img"
           style={{
             backgroundImage: "url("+require("../../assets/img/photo/"+project.image3)+")",
-            width: `${size.pictureWidth}vw`,
-            height: `${size.pictureWidth * .55}vw`
+            width: size.length===4 ? `${size.pictureWidth * 1.33}vw` : `${size.pictureWidth}vw`,
+            height:  size.length===4 ? `${size.pictureWidth * .8}vw` : `${size.pictureWidth * .52}vw`,
           }}
           onClick={() => {setPicOpen3(true); setShader(true); setTitleOpen3(true); setModalProject(project)}}>
         </div>
