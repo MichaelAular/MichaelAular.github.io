@@ -1,5 +1,5 @@
 .pictureModal_Container {
-  position: absolute;
+  position: fixed;
   width: 90vw;
   height: 90vh;
   left: 5vw;
@@ -7,6 +7,7 @@
   z-index: 999;
   border-radius: 0.2vw;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .pictureModal_Picture {

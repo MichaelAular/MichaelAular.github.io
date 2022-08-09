@@ -11,6 +11,7 @@
     z-index: 999;
     .carouselBackBlock{
       transition-duration: 2s;
+      transition-delay: 1s;
       background-color: var(--darkCarousel);
     }
     .indicatorContainer{
