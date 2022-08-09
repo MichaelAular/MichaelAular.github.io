@@ -58,7 +58,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
   };
 
   var styleIndicatorcontainer = {
-    height: `${size.itemHeight + 2}vw`,
+    height:`calc(${size.itemHeight}vw + 32px)`,
     width: `${size.itemWidth * size.indicatorWidth}vw`,
   };
 
@@ -85,7 +85,8 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
 
         <div
           className="carouselBackBlock"
-          style={{ height: `${size.itemHeight + 2}vw` }}/>
+          style={{ height: `calc(${size.itemHeight}vw + 32px)` }}
+          />
         <div
           className="carouselLane"
           style={{

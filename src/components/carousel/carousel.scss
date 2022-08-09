@@ -1,8 +1,8 @@
 .carousel {
   position: fixed;
-  bottom: 0px;
+  bottom: 1vh;
   padding-top: 15vw;
-  padding-bottom: 5vh;
+  padding-bottom: 32px;
   overflow: hidden;
   width: 100vw;
   pointer-events: none;
@@ -28,8 +28,8 @@
 }
 
 .carouselLane {
-  margin-top: 1vw;
-  margin-bottom: 1vw;
+  margin-top: 16px;
+  margin-bottom: 16px;
   z-index: 15;
   pointer-events: all;
   &:hover {
@@ -81,7 +81,7 @@
 
 .arrowContainer {
   position: absolute;
-  top: 1vw;
+  top: 16px;
   opacity: .4;
 }
 
@@ -114,4 +114,10 @@
 
 .carouselDoodleContainer {
   position: absolute;
+}
+
+@media only screen and (max-width: 1400px) {
+  .carousel {
+    bottom: 0;
+  }
 }
