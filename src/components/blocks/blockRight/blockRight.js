@@ -6,6 +6,11 @@ import GitHubLogo from "../../../assets/icons/GitHubLogo";
 const BlockRight = ({ project }) => {
   const size = useWindowSize();
 
+  const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+    console.log("you clicked that link hard!")
+  };
+
   return (
     <div
       className="blockRight_container"
@@ -42,7 +47,9 @@ const BlockRight = ({ project }) => {
       </div>
       <div className="githubLinkContainer font_normal">
         <GitHubLogo/>
-          <div className="gitHubLink">
+          <div className="gitHubLink"
+          onClick={() => openInNewTab('https://'+project.git)}
+          >
             {project.git}
           </div>
       </div>

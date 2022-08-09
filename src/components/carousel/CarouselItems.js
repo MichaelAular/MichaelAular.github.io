@@ -32,7 +32,7 @@ const CarouselItems = ({
           }
           startTrigger={startTrigger}
           setShader={setShader}
-          setDisplayedProject={setDisplayedProject}    
+          setDisplayedProject={setDisplayedProject}
         />
       );
     });

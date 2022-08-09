@@ -62,8 +62,6 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
     width: `${size.itemWidth * size.indicatorWidth}vw`,
   };
 
-  console.log("shader: ",shader)
-
   return (
     <div className="carouselContainer">
 
