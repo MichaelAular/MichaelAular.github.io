@@ -22,34 +22,49 @@ const PictureModal = ({
 
     <div className={`pictureModal_Container ${picOpen1 ? "show" : "hide"}`}>
       <div className="pictureModal_Picture"
-      style={{
+        style={{
         backgroundImage: "url("+require("../../assets/img/photo/"+project.image1)+")" }}
-        onClick={() => {setPicOpen1(false); setShader(false); setTitleOpen1(false)}}
-      /></div>
+        onClick={() => {
+          setPicOpen1(false);
+          setShader(false);
+          setTitleOpen1(false);
+        }}/>
+    </div>
+
     <div className="pictureModal_PictureDescription font_normal"
-    style ={{opacity: `${titleOpen1 ? "1" : "0"}`}}>
-      {project.image1_descr}
+        style ={{opacity: `${titleOpen1 ? "1" : "0"}`}}>
+        {project.image1_descr}
     </div>
 
     <div className={`pictureModal_Container ${picOpen2 ? "show" : "hide"}`}>
       <div className="pictureModal_Picture"
-      style={{
+        style={{
         backgroundImage: "url("+require("../../assets/img/photo/"+project.image2)+")" }}
-        onClick={() => {setPicOpen2(false); setShader(false); setTitleOpen2(false)}}
-      /></div>
+        onClick={() => {
+          setPicOpen2(false);
+          setShader(false);
+          setTitleOpen2(false);
+        }}/>
+    </div>
+
     <div className="pictureModal_PictureDescription font_normal"
-    style ={{opacity: `${titleOpen2 ? "1" : "0"}`}}>
+      style ={{opacity: `${titleOpen2 ? "1" : "0"}`}}>
       {project.image2_descr}
     </div>
 
     <div className={`pictureModal_Container ${picOpen3 ? "show" : "hide"}`}>
       <div className="pictureModal_Picture"
-      style={{
+        style={{
         backgroundImage: "url("+require("../../assets/img/photo/"+project.image3)+")" }}
-        onClick={() => {setPicOpen3(false); setShader(false); setTitleOpen3(false)}}
-      /></div>
+        onClick={() => {
+          setPicOpen3(false);
+          setShader(false);
+          setTitleOpen3(false);
+        }}/>
+    </div>
+
     <div className="pictureModal_PictureDescription font_normal"
-    style ={{opacity: `${titleOpen3 ? "1" : "0"}`}}>
+      style ={{opacity: `${titleOpen3 ? "1" : "0"}`}}>
       {project.image3_descr}
     </div>
 

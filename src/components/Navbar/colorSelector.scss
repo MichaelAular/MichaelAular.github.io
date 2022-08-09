@@ -49,22 +49,19 @@
 
 .colorselector_subTextContainer {
     position: absolute;
-    right: -40px;
-    top: 90px;
-    width: 280px;
-    height: 60px;
+    right: 1vw;
+    top: 1vw;
     transform: rotate(25deg);
 }
 
 .subtext_arrow {
     position: absolute;
     transform: rotate(180deg);
-    height: 40px;
+    width: 90%;
 }
 
 .subtext_text {
     position: relative;
-    transform:translateX(30px) translateY(0px) rotate(-8deg);
-    font-size: 0.6em;
-    text-shadow: none;
+    transform:translateX(5vw) translateY(1vw) rotate(-8deg);
+    font-size: 30px;
 }

@@ -36,7 +36,7 @@
   position: absolute;
   width: 8vh;
   transform: rotate(10deg);
-  margin-left:0vw;
+  margin-left:-2vw;
 }
 
 .beard {
@@ -58,8 +58,6 @@
   position: absolute;
   left: 150%;
   top: 70%;
-  font-size: 50%;
-  text-shadow: none;
+  font-size: 38px;
   transform: rotate(-20deg);
-  color: var(--doodle);
 }

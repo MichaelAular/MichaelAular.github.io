@@ -3,7 +3,6 @@ import HandDrawnOutlineRight from "../../assets/icons/handDrawnOutLineRight";
 
 const ColorSelector = ({colorSet, setColorSet}) => {
 
-
   return (
     <div className="colorSelector">
       <button
@@ -42,10 +41,10 @@ const ColorSelector = ({colorSet, setColorSet}) => {
 
       <div className="colorselector_subTextContainer">
         <div className="subtext_arrow">
-        <HandDrawnOutlineRight/>
+          <HandDrawnOutlineRight/>
         </div>
         <div className="subtext_text font_marker">
-        #COLORS
+          #COLORS
         </div>
       </div>
     </div>

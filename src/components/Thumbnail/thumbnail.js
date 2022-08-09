@@ -43,7 +43,7 @@ const Thumbnail = ({
         setHovered(true)
         setShader(true) }}
     >
-
+<div className="miniModal">
       <MiniModal
       thumbImage={thumbImage}
       modalState={modalState}
@@ -58,9 +58,8 @@ const Thumbnail = ({
       startTrigger={startTrigger}
       setDisplayedProject={setDisplayedProject}
       className="thumb_minimodal"
-
-
       />
+      </div>
 
       <div
         className="wrapper"

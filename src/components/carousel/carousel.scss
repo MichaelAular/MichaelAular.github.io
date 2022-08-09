@@ -116,6 +116,12 @@
   position: absolute;
 }
 
+.carouselText {
+  position: absolute;
+  transform: rotate(-7deg);
+  font-size: 1.3vw;
+}
+
 @media only screen and (max-width: 1400px) {
   .carousel {
     bottom: 0;

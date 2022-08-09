@@ -64,19 +64,32 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
 
   return (
     <div className="carouselContainer">
+
       <div
         className="carousel"
         style={{
           height: `${size.itemHeight}vw`,
         }}
       >
+        <div className="carouselText font_marker"
+          style={{
+          marginLeft: `calc(${size.itemWidth * .15}vw)`,
+          marginTop: "-2.6vw",
+          zIndex: 1,
+          }}
+        >
+          You can find other <br/>
+          Projects <i>right</i><br/>
+          HERE! </div>
 
-        <div className="carouselDoodleContainer" style={{
+        <div className="carouselDoodleContainer"
+          style={{
           width: `${size.itemWidth*.45}vw`,
           height: `${size.itemHeight}vw`,
           transform:`translateY(-${size.itemHeight}vw)`,
           marginLeft: `calc(100vw - ${size.itemWidth * .5}vw)`
-        }}>
+          }}
+        >
         <div className="leftRight"><ArrowLeftRight/></div>
         <div className="doodleText font_marker">lane you can move left & right!</div>
         <div className="curvedArrowDown"><CurvedArrowDown/></div>
