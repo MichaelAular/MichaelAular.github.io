@@ -10,7 +10,8 @@ const BlockRight = ({ project }) => {
     <div
       className="blockRight_container"
       style={{
-        width: `calc( ${size.blockRightWidth}vw - (${size.itemWidth}vw *3) )`,
+        width: size.blockWidthBig ? `calc( ${size.blockRightWidth}vw - (${size.itemWidth}vw *3))`
+        : `calc(100vw - (${size.itemWidth}vw + 2vw + 4px))`,
         height: `calc(98vh - (${size.itemHeight}vw) - 180px)`
         }}
     >
