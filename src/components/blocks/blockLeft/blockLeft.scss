@@ -14,40 +14,56 @@
 
 .Bigblock_doodle {
   position: absolute;
-  width: 6.5vw;
-  height: 6vw;
-  transform: translateX(-6vw);
+  width: 140px;
+  height: 140px;
+  left: 5px;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .videoIcon {
   position: relative;
-  width: 40%;
+  width: 50%;
   transform: rotate(-13deg);
-  top: 70%;
+  top: 75%;
   left: 45%;
 }
 
 .doodle_light {
-  font-size: 0.8vw;
-  top: 5%;
-  transform: rotate(20deg) translateX(1vw);
+  font-size: 20px;
+  top: -10%;
+  left: 10%;
+  rotate: 10deg;
 }
 
 .doodle_camera {
-  font-size: 0.9vw;
-  top: 30%;
-  transform: rotate(-7deg);
+  font-size: 20px;
+  top: 18%;
+  rotate: -7deg;
 }
 
 .doodle_action {
-  font-size: 1vw;
-  top: 50%;
-  transform: rotate(-20deg);
+  font-size: 24px;
+  top: 42%;
+  rotate: -20deg;
 }
 
 @media only screen and (max-width: 800px) {
   .blockLeft_container {
     top: 175px;
+  }
+  .Bigblock_doodle {
+    height: 100px;
+    width: 100px;
+  }
+  .doodle_light {
+    font-size: 18px;
+  }
+  .doodle_camera {
+    font-size: 18px;
+  }
+  .doodle_action {
+    font-size: 21px;
   }
 }
 

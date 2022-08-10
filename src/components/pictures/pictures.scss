@@ -16,26 +16,52 @@
 
 .pictures_doodle {
   position: absolute;
-  width: 10vw;
-  height: 10vw;
-  bottom: 6vh;
-  transform: rotate(23deg);
+  width: 500px;
+  height: 120px;
+  bottom: .8vw;
+  pointer-events: none;
 }
 
 .pictures_subText{
-  transform: rotate(12deg) translateY(-60%);
-  font-size: 28px;
-  margin-left: 7%;
+  position: relative;
+  rotate: 12deg;
+  font-size: 22px;
+  text-align: center;
+  top: -40%;
+  left: -5%;
 }
 .camera {
-  width: 50%;
-  height: 45%;
-  transform: rotate(-5deg) translateY(20%);
+  position: relative;
+  width: 16%;
+  height: 55%;
+  rotate: -5deg;
+  bottom: -40%;
 }
 
 .pictures_handDrawnRigth {
   position: relative;
-  width: 40%;
-  margin-top: 30%;
-  margin-left: 55%;
+  width: 25%;
+  height: 80%;
+  rotate: -50deg;
+  bottom: 100%;
+  left: 75%;
+}
+
+@media only screen and (max-width: 800px) {
+  .pictures_doodle {
+    position: absolute;
+    width: 80vw;
+    height: 20vw;
+    bottom: 0px;
+  }
+  .pictures_subText{
+    font-size: 3vw;
+    left: -10%;
+  }
+    .pictures_handDrawnRigth {
+      rotate: -40deg;
+      height: 60%;
+      bottom: 80%;
+      left: 60%;
+  }
 }
