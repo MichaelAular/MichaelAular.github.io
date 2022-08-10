@@ -8,7 +8,6 @@ const BlockRight = ({ project }) => {
 
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noopener,noreferrer');
-    console.log("you clicked that link hard!")
   };
 
   return (
@@ -16,7 +15,7 @@ const BlockRight = ({ project }) => {
       className="blockRight_container"
       style={{
         width: size.blockWidthBig ? `calc( ${size.blockRightWidth}vw - (${size.itemWidth}vw *3))`
-        : `calc(100vw - (${size.itemWidth}vw + 2vw + 4px))`,
+        : `calc(100vw - (${size.itemWidth}vw + 44px))`,
         height: `calc(98vh - (${size.itemHeight}vw) - 180px)`
         }}
     >
