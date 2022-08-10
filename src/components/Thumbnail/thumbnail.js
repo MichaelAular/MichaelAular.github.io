@@ -27,8 +27,7 @@ const Thumbnail = ({
   useEffect(() => {
     const hovermodal = async () => {
       await sleep(500);
-      if (hovered) { setModalState(true) }
-      if (!hovered) { setModalState(false) }
+      hovered ? setModalState(true) : setModalState(false)
     };
     hovermodal();
   }, [hovered]);

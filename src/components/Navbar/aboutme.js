@@ -15,16 +15,22 @@ const AboutMe = () => {
       onMouseLeave={() => { setAboutMeOpen(false) }}
       onMouseEnter={() => { setAboutMeOpen(true) }}
       >michael aular</div>
+
       <div className="BeardIconContainer">
+
         <div className="beard">
           <Beard />
         </div>
+
         <div className="CurvedArrownDown">
           <CurvedArrowDown />
         </div>
-        <div className="bio_doodle font_marker">this is me! read more...</div>
-      </div>
-     <BioModal aboutMeOpen={aboutMeOpen}/>
+
+        <div className="bio_doodle font_marker">
+          this is me! read more...</div>
+        </div>
+
+        <BioModal aboutMeOpen={aboutMeOpen}/>
     </div>
   );
 };

@@ -23,7 +23,7 @@ const NavBar = ({
     setDoodle(false)
   }
 
-  if (startup === true) startupRun();
+  startup && startupRun();
 
   return (
     <div className="navBar">

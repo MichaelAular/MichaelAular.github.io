@@ -34,30 +34,47 @@
 
 .BeardIconContainer {
   position: absolute;
-  width: 8vh;
-  transform: rotate(10deg);
-  margin-left:-2vw;
+  width: 250px;
+  height: 250px;
+  pointer-events: none;
 }
 
 .beard {
   position: relative;
-  height: 100%;
-  left: 145%;
+  top: 5%;
+  left:5%;
+  height: 50%;
+  width: 50%;
+  left: 5%;
+  rotate: 8deg;
 }
 
 .CurvedArrownDown {
-  position: absolute;
-  transform: rotate(290deg);
-  width: 110%;
-  height: 100%;
-  margin-top: -140%;
-  margin-left: 20%;
+  position: relative;
+  top: -55%;
+  left:-25%;
+  height: 40%;
+  width: 40%;
+  rotate: -10deg;
 }
 
 .bio_doodle {
-  position: absolute;
-  left: 150%;
-  top: 70%;
-  font-size: 38px;
-  transform: rotate(-20deg);
+  position: relative;
+  top: -48%;
+  left:25%;
+  height: 40%;
+  width: 40%;
+  rotate: -20deg;
+  font-size: 26px;
+}
+
+@media only screen and (max-width: 800px) {
+  .BeardIconContainer {
+    width: 120px;
+    height: 120px;
+    right: -60px;
+  }
+  .bio_doodle {
+    font-size: 16px;
+  }
 }

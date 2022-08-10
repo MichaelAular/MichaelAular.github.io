@@ -53,7 +53,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    translate: 25px -30px;
+    translate: 25% -25%;
     rotate: 15deg;
     width: 280px;
 }
@@ -74,14 +74,12 @@
 
 @media only screen and (max-width: 800px) {
     .colorselector_subTextContainer {
-        translate: 80px -70px;
+        translate: 30% -100%;
         rotate: -5deg;
-    }
-    .colorselector_subTextContainer{
-        width: 200px;
+        width: 220px;
     }
     .subtext_text{
-        font-size: 100%;;
+        font-size: 28px;
     }
 
 }

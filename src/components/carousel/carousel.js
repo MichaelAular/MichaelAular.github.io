@@ -57,7 +57,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
     }
   };
 
-  var styleIndicatorcontainer = {
+let styleIndicatorcontainer = {
     height:`calc(${size.itemHeight}vw + 32px)`,
     width: `${size.itemWidth * size.indicatorWidth}vw`,
   };
@@ -131,9 +131,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
               className="prevButton indicatorContainer"
               style={styleIndicatorcontainer}
               onClick={() => {
-                clickable
-                  ? updateIndexPrev(activeIndex - size.length)
-                  : console.log(null);
+                clickable && updateIndexPrev(activeIndex - size.length);
               }}
               onMouseLeave={() => {
                 setShader(false) }}
@@ -155,9 +153,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
             className="nextButton indicatorContainer"
             style={styleIndicatorcontainer}
             onClick={() => {
-              clickable
-                ? updateIndexNext(activeIndex + size.length)
-                : console.log(null);
+              clickable && updateIndexNext(activeIndex + size.length);
             }}
             onMouseLeave={() => {
               setShader(false) }}

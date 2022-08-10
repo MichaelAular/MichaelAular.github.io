@@ -16,7 +16,7 @@
   position: absolute;
   width: 140px;
   height: 140px;
-  left: 5px;
+  left: 30px;
   pointer-events: none;
   z-index: 2;
 }
@@ -65,17 +65,14 @@
   .doodle_action {
     font-size: 21px;
   }
+  .blockLeft_container {
+    margin-top: 90px;
+  }
 }
 
 @media only screen and (max-width: 1400px) {
   .blockLeft_container {
     overflow: visible;
     min-height: fit-content;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .blockLeft_container {
-    margin-top: 90px;
   }
 }

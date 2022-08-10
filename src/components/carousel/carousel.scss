@@ -83,45 +83,84 @@
   opacity: .4;
 }
 
-.leftRight {
+.carouselDoodleContainer {
   position: absolute;
-  width: 60%;
-  height: 50%;
-  transform: rotate(3deg);
-  right:0px;
+  bottom: 100px;
+  right: 1px;
+  pointer-events: none;
+}
+
+.leftRight {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  left: 0px;
+  top: 0px;
+  rotate: 10deg;
 }
 
 .doodleText {
-  position: absolute;
-  font-size: 0.6vw;
-  text-shadow: none;
-  transform: rotate(340deg);
-  margin-top: 50%;
-  margin-left: 40%;
-  width: 60%;
+  position: relative;
+  width: 100%;
+  height: 60%;
+  left: 5px;
+  top: 0px;
+  rotate: -3deg;
+  font-size: 20px;
 }
 
 .curvedArrowDown {
   position: absolute;
+  width: 60%;
   height: 60%;
-  width: 50%;
-  transform: rotate(25deg);
-  margin-top: 35%;
-
-}
-
-.carouselDoodleContainer {
-  position: absolute;
+  left: -65%;
+  bottom: -50%;
+  rotate: 5deg;
 }
 
 .carouselText {
   position: absolute;
+  bottom: 30px;
   transform: rotate(-7deg);
-  font-size: 1.3vw;
+  font-size: 24px;
 }
 
 @media only screen and (max-width: 1400px) {
   .carousel {
     bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .carouselText {
+    font-size: 18px;
+  }
+  .doodleText{
+    font-size: 15px;
+    height: 80%;
+    left: 1px;
+    width: 80%;
+  }
+  .carouselDoodleContainer {
+    bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 624px) {
+  .carouselText {
+    font-size: 14px;
+  }
+  .doodleText{
+    font-size: 14px;
+    height: 80%;
+    left: 1px;
+    width: 80%;
+  }
+  .carouselDoodleContainer {
+    bottom: 120px;
+  }
+  .curvedArrowDown {
+    bottom: -180%;
+    left: -80%;
   }
 }
