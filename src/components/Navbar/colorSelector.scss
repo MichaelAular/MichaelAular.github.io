@@ -49,20 +49,39 @@
 
 .colorselector_subTextContainer {
     position: absolute;
-    right: 1vw;
-    top: 1vw;
-    transform: rotate(25deg);
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    translate: 25px -30px;
+    rotate: 15deg;
+    width: 280px;
 }
 
 .subtext_arrow {
-    position: absolute;
+    position: relative;
     transform: rotate(180deg);
-    width: 90%;
-    pointer-events: none;
+    width: 35%;
 }
 
 .subtext_text {
     position: relative;
-    transform:translateX(5vw) translateY(1vw) rotate(-8deg);
-    font-size: 30px;
+    transform: rotate(-8deg);
+    width: 60%;
+    text-align: center;
+    font-size: 125%;
+    }
+
+@media only screen and (max-width: 800px) {
+    .colorselector_subTextContainer {
+        translate: 80px -70px;
+        rotate: -5deg;
+    }
+    .colorselector_subTextContainer{
+        width: 200px;
+    }
+    .subtext_text{
+        font-size: 100%;;
+    }
+
 }
