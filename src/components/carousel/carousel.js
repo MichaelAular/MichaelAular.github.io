@@ -104,7 +104,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
           className="carouselLane"
           style={{
             transform: `translateX(-${(activeIndex * (size.itemWidth + 1.3))}vw)`,
-            transition: `${animationState ? " transform 0.7s" : "undefined"}`,
+            transition: `${animationState && "transform 0."+ size.length +"s"}`,
             paddingLeft: `${`${(size.itemWidth * 0.5)}vw`}`,
           }}
         >
@@ -125,7 +125,6 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
             <button
               className="prevButton indicatorContainer"
               style={{
-              border: `1px solid lime`,
               height:`calc(${size.itemHeight}vw + 32px)`,
               width: `${size.itemWidth * .5}vw`,
               left: `-.3vw`
@@ -154,7 +153,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
             style={{
               height:`calc(${size.itemHeight}vw + 32px)`,
               width: `${((size.itemWidth * .5) + ((6 - size.length) * .2))}vw`,
-              right: `-.6vw`,
+              right: `-.7vw`,
             }}
             onClick={() => {
               clickable && updateIndexNext(activeIndex + size.length);
