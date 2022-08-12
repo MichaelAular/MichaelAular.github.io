@@ -2,13 +2,17 @@
   position: relative;
 }
 
+.shiftText {
+  pointer-events: none;
+}
+
 .wrapper {
   position: relative;
   cursor: pointer;
   overflow: hidden;
   text-align: justify;
-  border-left: 0.3vw solid var(--maincolor);
-  margin-right: 0.5vw;
+  border-right: 0.3vw solid var(--maincolor);
+  padding-right: 0.5vw;
   padding-left: 0.5vw;
   background-clip: text;
   background-size: cover;

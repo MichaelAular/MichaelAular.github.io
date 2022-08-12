@@ -57,10 +57,6 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
     }
   };
 
-let styleIndicatorcontainer = {
-    height:`calc(${size.itemHeight}vw + 32px)`,
-    width: `${size.itemWidth * size.indicatorWidth}vw`,
-  };
 
   return (
     <div className="carouselContainer">
@@ -107,10 +103,9 @@ let styleIndicatorcontainer = {
         <div
           className="carouselLane"
           style={{
-            transform: `translateX(-${activeIndex * (size.itemWidth + 1.3)}vw)`,
+            transform: `translateX(-${(activeIndex * (size.itemWidth + 1.3))}vw)`,
             transition: `${animationState ? " transform 0.7s" : "undefined"}`,
-            paddingLeft: `${`${size.itemWidth * 0.5 - 0.5}vw`}`,
-            height: `${size.itemHeight}vw`,
+            paddingLeft: `${`${(size.itemWidth * 0.5)}vw`}`,
           }}
         >
           <CarouselItems
@@ -129,7 +124,12 @@ let styleIndicatorcontainer = {
           {startTrigger && (
             <button
               className="prevButton indicatorContainer"
-              style={styleIndicatorcontainer}
+              style={{
+              border: `1px solid lime`,
+              height:`calc(${size.itemHeight}vw + 32px)`,
+              width: `${size.itemWidth * .5}vw`,
+              left: `-.3vw`
+            }}
               onClick={() => {
                 clickable && updateIndexPrev(activeIndex - size.length);
               }}
@@ -141,7 +141,7 @@ let styleIndicatorcontainer = {
               <div className="arrowContainer arrowLeft"
               style={{
                 height: `${size.itemHeight}vw`,
-                width: `${size.itemHeight * 0.5}vw`,
+                width: `${(size.itemHeight * 0.5)}vw`,
               }}
               >
                 <ArrowLeft className="indicatorArrow"/>
@@ -151,7 +151,11 @@ let styleIndicatorcontainer = {
 
           <button
             className="nextButton indicatorContainer"
-            style={styleIndicatorcontainer}
+            style={{
+              height:`calc(${size.itemHeight}vw + 32px)`,
+              width: `${((size.itemWidth * .5) + ((6 - size.length) * .2))}vw`,
+              right: `-.6vw`,
+            }}
             onClick={() => {
               clickable && updateIndexNext(activeIndex + size.length);
             }}

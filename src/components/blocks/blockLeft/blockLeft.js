@@ -14,20 +14,20 @@ const BlockLeft = ({
   setTitleOpen1,
   setTitleOpen2,
   setTitleOpen3,
-  setModalProject
-  }) => {
-
+  setModalProject,
+}) => {
   const size = useWindowSize();
 
   return (
     <div
       className="blockLeft_container"
       style={{
-        width: size.blockWidthBig ? `calc((${size.itemWidth}vw *3) + 2vw)`
-        : `calc(100vw - (${size.itemWidth}vw + 2vw + 4px))`,
-        height: size.blockWidthBig ? `calc(98vh - (${size.itemHeight}vw) - 180px)` : `auto`
-      }}>
-
+        width: size.blockWidthBig
+          ? `calc((${size.itemWidth}vw *3) + 2vw)`
+          : `calc(100vw - (${size.itemWidth}vw + 2vw + 4px))`,
+        height: size.blockWidthBig && `calc(98vh - (${size.itemHeight}vw) - 180px)`
+      }}
+    >
       <div className="blockLeft_video">
         <div className="Bigblock_doodle">
           <p className="doodle_light font_marker">Ligth...</p>
@@ -40,7 +40,9 @@ const BlockLeft = ({
 
         <VideoComponent project={project} />
       </div>
-      <Pictures
+
+      <div className="blockLeft_pictures">
+        <Pictures
         project={project}
         setShader={setShader}
         shader={shader}
@@ -52,6 +54,7 @@ const BlockLeft = ({
         setTitleOpen3={setTitleOpen3}
         setModalProject={setModalProject}
       />
+      </div>
     </div>
   );
 };

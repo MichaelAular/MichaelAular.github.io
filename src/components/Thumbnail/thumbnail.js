@@ -9,7 +9,6 @@ const Thumbnail = ({
   leftIndex,
   rightIndex,
   startTrigger,
-  setShader,
   setDisplayedProject
 }) => {
   const size = useWindowSize();
