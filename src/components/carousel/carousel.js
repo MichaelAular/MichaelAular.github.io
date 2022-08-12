@@ -104,7 +104,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
           className="carouselLane"
           style={{
             transform: `translateX(-${(activeIndex * (size.itemWidth + 1.3))}vw)`,
-            transition: `${animationState && "transform 0."+ size.length +"s"}`,
+            transition: `${animationState && "transform 0." + size.length + "s"}`,
             paddingLeft: `${`${(size.itemWidth * 0.5)}vw`}`,
           }}
         >
