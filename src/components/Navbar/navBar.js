@@ -29,8 +29,8 @@ const NavBar = ({
     <div className="navBar">
       <div className="navItemContainer">
       <div
-        className="navItemblock"
-        style={{ left: `calc(${size.itemWidth * 0.5}vw)` }}
+        className="navItemblock navitemleft"
+        style={{ left: `calc(${size.itemWidth} * .5vw)`}}
         >
         <ColorSelector colorSet={colorSet} setColorSet={setColorSet} />
         <div className="naw font_pressStart">
@@ -40,6 +40,9 @@ const NavBar = ({
 
       <div
         className="navItemblock navitemright"
+        style={{ left:  window.innerWidth<800 && `calc(${size.itemWidth} * .5vw)`,
+                  right: window.innerWidth>800 && `calc(${size.itemWidth} * .5vw)`
+              }}
          >
         <DoodleSwitch doodle={doodle} setDoodle={setDoodle} />
         <AboutMe />

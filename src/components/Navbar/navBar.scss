@@ -2,7 +2,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 100vw;
+  width: 100%;
   background-color: var(--element);
   z-index: 500;
   font-size: 2em;
@@ -36,9 +36,14 @@
   position: absolute;
   align-items: center;
 }
+.navitemleft {
+  margin-left: 5px;
+  z-index: 1;
+}
 
 .navitemright {
-    right: 6.2vw;
+  right: 6.2vw;
+  width: fit-content;
 }
 
 .naw {
@@ -46,17 +51,16 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .navItemContainer {
-        height: 160px;
-      }
-    .navbar {
-        align-items: flex-start;
-    }
-    .navitemright {
-        left: 12vw;
-        transform: translateY(60px);
-    }
-    .navItemblock{
-        height: 100px;
-    }
-    }
+  .navItemContainer {
+    height: 130px;
+  }
+  .navitemright {
+    top: 42px;
+  }
+  .navitemleft {
+    margin-top: 5px;
+  }
+  .navItemblock {
+    height: fit-content;
+  }
+}

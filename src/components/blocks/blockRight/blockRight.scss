@@ -62,7 +62,13 @@
 
 @media only screen and (max-width: 1000px) {
   .blockRight_container {
-    margin-bottom: 18vw;
+    margin-bottom: 180px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .blockRight_container {
+    margin-bottom: 180px;
   }
 }
 

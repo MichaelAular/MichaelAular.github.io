@@ -13,7 +13,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
   const [clickable, setClickable] = useState(true);
   const size = useWindowSize();
   const projectLength = Object.keys(projects).length;
-  const fullLaneLength = projectLength + (size.length * 2);
+  const fullLaneLength = projectLength + size.length * 2;
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
@@ -44,7 +44,7 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
   };
 
   const checkIndexNext = (newIndex) => {
-    if (newIndex > fullLaneLength - (size.length*2) ) {
+    if (newIndex > fullLaneLength - size.length * 2) {
       setAnimationState(false);
       setActiveIndex(size.length * 2 - (fullLaneLength - newIndex));
     }
@@ -57,43 +57,52 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
     }
   };
 
-
   return (
     <div className="carouselContainer">
-
       <div
         className="carousel"
         style={{
           height: `${size.itemHeight}vw`,
         }}
         onMouseLeave={() => {
-          setShader(false) }}
+          setShader(false);
+        }}
         onMouseEnter={() => {
-          setShader(true) }}
+          setShader(true);
+        }}
       >
-        <div className="carouselText font_marker"
+        <div
+          className="carouselText font_marker"
           style={{
-          marginLeft: `calc(${size.itemWidth * .15}vw)`,
-          marginTop: "-2.6vw",
-          zIndex: 1,
+            marginLeft: `calc(${size.itemWidth * 0.15}vw)`,
+            marginTop: "-2.6vw",
+            zIndex: 1,
           }}
         >
-          You can find other <br/>
-          Projects <i>right</i><br/>
-          HERE! </div>
+          You can find other <br />
+          Projects <i>right</i>
+          <br />
+          HERE!{" "}
+        </div>
 
-        <div className="carouselDoodleContainer"
+        <div
+          className="carouselDoodleContainer"
           style={{
-          width: `${size.itemWidth*.45}vw`,
-          height: `${size.itemHeight}vw`,
-          transform:`translateY(-${size.itemHeight}vw)`,
-          marginLeft: `calc(100vw - ${size.itemWidth * .5}vw)`
+            width: `${size.itemWidth * 0.45}vw`,
+            height: `${size.itemHeight}vw`,
+            transform: `translateY(-${size.itemHeight}vw)`,
+            marginLeft: `calc(100vw - ${size.itemWidth * 0.5}vw)`,
           }}
         >
-        <div className="leftRight"><ArrowLeftRight/></div>
-        <div className="doodleText font_marker">lane you can move left & right!</div>
-        <div className="curvedArrowDown"><CurvedArrowDown/></div>
-
+          <div className="leftRight">
+            <ArrowLeftRight />
+          </div>
+          <div className="doodleText font_marker">
+            lane you can move left & right!
+          </div>
+          <div className="curvedArrowDown">
+            <CurvedArrowDown />
+          </div>
         </div>
 
         <div
@@ -103,9 +112,11 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
         <div
           className="carouselLane"
           style={{
-            transform: `translateX(-${(activeIndex * (size.itemWidth + 1.3))}vw)`,
-            transition: `${animationState && "transform 0." + size.length + "s"}`,
-            paddingLeft: `${`${(size.itemWidth * 0.5)}vw`}`,
+            transform: `translateX(-${activeIndex * (size.itemWidth + 1.3)}vw)`,
+            transition: `${
+              animationState && "transform 0." + size.length + "s"
+            }`,
+            paddingLeft: `${`${size.itemWidth * 0.5}vw`}`,
           }}
         >
           <CarouselItems
@@ -125,25 +136,28 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
             <button
               className="prevButton indicatorContainer"
               style={{
-              height:`calc(${size.itemHeight}vw + 32px)`,
-              width: `${size.itemWidth * .5}vw`,
-              left: `-.3vw`
-            }}
+                height: `calc(${size.itemHeight}vw + 32px)`,
+                width: `${size.itemWidth * 0.5}vw`,
+                left: `-.3vw`,
+              }}
               onClick={() => {
                 clickable && updateIndexPrev(activeIndex - size.length);
               }}
               onMouseLeave={() => {
-                setShader(false) }}
-              onMouseEnter={() => {
-                  setShader(true) }}
-            >
-              <div className="arrowContainer arrowLeft"
-              style={{
-                height: `${size.itemHeight}vw`,
-                width: `${(size.itemHeight * 0.5)}vw`,
+                setShader(false);
               }}
+              onMouseEnter={() => {
+                setShader(true);
+              }}
+            >
+              <div
+                className="arrowContainer arrowLeft"
+                style={{
+                  height: `${size.itemHeight}vw`,
+                  width: `${size.itemHeight * 0.5}vw`,
+                }}
               >
-                <ArrowLeft className="indicatorArrow"/>
+                <ArrowLeft className="indicatorArrow" />
               </div>
             </button>
           )}
@@ -151,29 +165,33 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
           <button
             className="nextButton indicatorContainer"
             style={{
-              height:`calc(${size.itemHeight}vw + 32px)`,
-              width: `${((size.itemWidth * .5) + ((6 - size.length) * .2))}vw`,
+              height: `calc(${size.itemHeight}vw + 32px)`,
+              width: `${size.itemWidth * 0.5 + (6 - size.length) * 0.2}vw`,
               right: `-.7vw`,
             }}
             onClick={() => {
               clickable && updateIndexNext(activeIndex + size.length);
             }}
             onMouseLeave={() => {
-              setShader(false) }}
+              setShader(false);
+            }}
             onMouseEnter={() => {
-              setShader(true) }}
+              setShader(true);
+            }}
           >
             <div
               className="arrowContainer arrowright"
               style={{
                 height: `${size.itemHeight}vw`,
                 width: `${size.itemHeight * 0.5}vw`,
-                transform:  `rotate(180deg) translateX(-${size.itemWidth *.16}vw)`
+                transform: `rotate(180deg) translateX(-${
+                  size.itemWidth * 0.16
+                }vw)`,
               }}
             >
-              <ArrowLeft className="indicatorArrow"/>
+              <ArrowLeft className="indicatorArrow" />
             </div>
-           </button>
+          </button>
         </div>
       </div>
     </div>

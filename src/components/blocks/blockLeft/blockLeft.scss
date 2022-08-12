@@ -55,7 +55,7 @@
 
 @media only screen and (max-width: 800px) {
   .blockLeft_container {
-    top: 175px;
+    margin-top: 60px;
     overflow: unset;
   }
   .Bigblock_doodle {
@@ -70,9 +70,6 @@
   }
   .doodle_action {
     font-size: 21px;
-  }
-  .blockLeft_container {
-    margin-top: 90px;
   }
 }
 
