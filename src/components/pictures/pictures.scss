@@ -1,17 +1,22 @@
 .pictures_img_Container {
   position: relative;
   display: flex;
+
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 1.2vw;
+  margin-top: 20px;
+  gap: 1vw;
 }
 
 .pictures_img {
+  position: relative;
   border-radius: 0.2vw;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: 50%;
   cursor: pointer;
+  width: 33%;
+  aspect-ratio: 16/9;
 }
 
 .pictures_doodle {
@@ -22,7 +27,7 @@
   pointer-events: none;
 }
 
-.pictures_subText{
+.pictures_subText {
   position: relative;
   rotate: 12deg;
   font-size: 22px;
@@ -54,14 +59,22 @@
     height: 20vw;
     bottom: 0px;
   }
-  .pictures_subText{
+  .pictures_subText {
     font-size: 3vw;
     left: -10%;
   }
-    .pictures_handDrawnRigth {
-      rotate: -40deg;
-      height: 60%;
-      bottom: 80%;
-      left: 60%;
+  .pictures_handDrawnRigth {
+    rotate: -40deg;
+    height: 60%;
+    bottom: 80%;
+    left: 60%;
+  }
+  .pictures_img_Container {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .pictures_img {
+    width: 100%;
   }
 }

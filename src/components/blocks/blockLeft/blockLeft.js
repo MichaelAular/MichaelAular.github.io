@@ -18,14 +18,18 @@ const BlockLeft = ({
 }) => {
   const size = useWindowSize();
 
+  console.log(size.itemWidth)
+  console.log(100 - (size.itemWidth + 2))
+
   return (
     <div
       className="blockLeft_container"
       style={{
         width: size.blockWidthBig
-          ? `calc((${size.itemWidth}vw *3) + 2vw)`
-          : `calc(100vw - (${size.itemWidth}vw + 2vw + 4px))`,
-        height: size.blockWidthBig && `calc(98vh - (${size.itemHeight}vw) - 180px)`
+          ? `calc((${size.itemWidth + .3}vw *3))`
+          : `calc(100vw - (${size.itemWidth}vw + 44px))`,
+        height: size.blockWidthBig ? `calc(98vh - (${size.itemHeight}vw) - 180px)`
+          : `auto`
       }}
     >
       <div className="blockLeft_video">
