@@ -56,7 +56,6 @@
 @media only screen and (max-width: 800px) {
   .blockLeft_container {
     margin-top: 60px;
-    overflow: unset;
   }
   .Bigblock_doodle {
     height: 100px;
@@ -75,7 +74,7 @@
 
 @media only screen and (max-width: 1400px) {
   .blockLeft_container {
-    overflow: visible;
+    overflow: unset;
     min-height: fit-content;
   }
 }
