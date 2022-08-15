@@ -1,5 +1,4 @@
 import "./pictures.scss";
-import useWindowSize from "../../hooks/windowsize";
 import HandDrawnRight from "../../assets/icons/handDrawnRight";
 import Camera from "../../assets/icons/camera";
 
