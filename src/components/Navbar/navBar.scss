@@ -69,7 +69,7 @@
   }
 }
 
-@media only screen and (max-width: 624px) {
+@media only screen and (max-width: 600px) {
   .navitemleft {
     transform: translateX(-12vw);
   }
@@ -77,4 +77,25 @@
     transform: translateX(-12vw);
   }
 
+}
+
+@media only screen and (max-width: 420px) {
+  .navitemright {
+    display: flex;
+    position: absolute;
+    transform: scale(.5)
+    translateX(-80vw)
+    translateY(-175px);
+    width: 400px;
+  }
+  .navitemleft{
+    position: absolute;
+    display: flex;
+    transform: scale(.5)
+    translateX(-81vw);
+    width: 400px;
+  }
+  .navItemblock{
+    position: relative;
+  }
 }
