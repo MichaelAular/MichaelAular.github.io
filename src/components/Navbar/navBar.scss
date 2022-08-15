@@ -37,7 +37,7 @@
   align-items: center;
 }
 .navitemleft {
-  margin-left: 5px;
+  margin-left:1vw;
   z-index: 1;
 }
 
@@ -63,4 +63,14 @@
   .navItemblock {
     height: fit-content;
   }
+}
+
+@media only screen and (max-width: 624px) {
+  .navitemleft {
+    transform: translateX(-12vw);
+  }
+  .navitemright {
+    transform: translateX(-12vw);
+  }
+
 }
