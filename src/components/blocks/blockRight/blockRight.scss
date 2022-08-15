@@ -55,20 +55,18 @@
 @media only screen and (max-width: 1400px) {
   .blockRight_container {
     width: 80vw;
-    margin-bottom: 14vw;
-    margin-top: 1vw;
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
   .blockRight_container {
-    margin-bottom: 180px;
+    margin-top: 1vw;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .blockRight_container {
-    margin-bottom: 180px;
+    margin-top: calc(1vw + 60px);
   }
 }
 

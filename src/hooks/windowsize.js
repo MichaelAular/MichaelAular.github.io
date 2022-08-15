@@ -9,6 +9,7 @@ function useWindowSize() {
     pictureWidth: "",
     pictureHeight: "",
     blockWidthBig: "",
+    blockWidthMobal: "",
   });
   useEffect(() => {
     function setLaneLength() {
@@ -80,6 +81,10 @@ function useWindowSize() {
     function setBlockWidthBig() {
       return window.innerWidth < 1400 ? false : true;
     }
+    function setBlockWidthMobal() {
+      return window.innerWidth > 600 ? false : true;
+    }
+
     function handleResize() {
       setWindowSize({
         length: setLaneLength(),
@@ -89,6 +94,7 @@ function useWindowSize() {
         pictureModalPosition: setPictureModalPosition(),
         blockRightWidth: setBlockRightWidth(),
         blockWidthBig: setBlockWidthBig(),
+        blockWidthMobal: setBlockWidthMobal(),
       });
     }
     window.addEventListener("resize", handleResize);

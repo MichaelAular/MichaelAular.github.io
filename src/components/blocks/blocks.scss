@@ -12,7 +12,13 @@
 @media only screen and (max-width: 1400px) {
     .blockContainer {
         flex-direction: column;
-        padding-bottom: 200px;
         justify-content: flex-start;
+    }
+    .blockLeft{
+        order: 2;
+    }
+    .blockRight{
+        order: 1;
+        margin-bottom: 1vw;
     }
 }

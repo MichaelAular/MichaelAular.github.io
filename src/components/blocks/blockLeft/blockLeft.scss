@@ -54,9 +54,6 @@
 }
 
 @media only screen and (max-width: 800px) {
-  .blockLeft_container {
-    margin-top: 60px;
-  }
   .Bigblock_doodle {
     height: 100px;
     width: 100px;
@@ -76,5 +73,24 @@
   .blockLeft_container {
     overflow: unset;
     min-height: fit-content;
+    margin-bottom: 15vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .blockLeft_container {
+    margin-bottom: 19vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .blockLeft_container {
+    margin-bottom: calc(25vw);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .blockLeft_container {
+    margin-bottom: calc(36vw);
   }
 }

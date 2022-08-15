@@ -6,16 +6,12 @@ body {
   margin: 0;
   background-color: var(--background);
   color: var(--text);
-  min-height: 100vh;
+  min-height: 100%;
   font-family: 'Amiri';
   font-weight: 600;
   line-height: 1;
   max-width: 100%;
   overflow: hidden;
-}
-
-.tempname {
-  opacity: .4;
 }
 
 @media only screen and (max-width: 1400px) {

@@ -24,6 +24,7 @@ const BlockLeft = ({
       style={{
         width: size.blockWidthBig
           ? `calc((${size.itemWidth + .3}vw *3))`
+          : size.blockWidthMobal ? `calc(80vw)`
           : `calc(100vw - (${size.itemWidth}vw + 44px))`,
         height: size.blockWidthBig ? `calc(98vh - (${size.itemHeight}vw) - 180px)`
           : `auto`

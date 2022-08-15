@@ -33,13 +33,15 @@ const NavBar = ({
         style={{ left: `calc(${size.itemWidth} * .5vw)`}}
         >
         <ColorSelector colorSet={colorSet} setColorSet={setColorSet} />
-        <div className="naw font_pressStart">
+        <div className="naw font_pressStart"
+        onClick={() => window.location = 'mailto:yourmail@gmail.com'}>
+
           michael.aular<br/>@yacht.nl<br/>
         </div>
       </div>
 
       <div
-        className="navItemblock navitemright"
+        className="navItemblock navitemright" 
         style={{ left:  window.innerWidth<800 && `calc(${size.itemWidth} * .5vw)`,
                   right: window.innerWidth>800 && `calc(${size.itemWidth} * .5vw)`
               }}
