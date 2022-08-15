@@ -1,5 +1,6 @@
 .miniModal_button {
   position: relative;
+  display: flex;
     background-color: var(--maincolor);
     border: 1px solid var(--light);
     color: var(--text);
@@ -7,21 +8,25 @@
     transform: skewX(-10deg);
     box-shadow: inset -1px 1px .8vw var(--halfshadow),
                 inset 0.1vw -0.1vw .3vw var(--light);
-    animation: cssAnimation 0s 300ms forwards;
+    animation: cssAnimation 0s 500ms forwards;
     visibility: hidden;
-    font-size: 0.8vw;
     cursor: pointer;
     transition-duration: 200ms;
     &:hover{
-        color: var(--light); box-shadow: 1px -1px .6vw var(--halfshadow),
+        box-shadow: 1px -1px .6vw var(--halfshadow),
         inset -2px 2px .6vw var(--light);
-        &:active{
-          color: var(--accentcolor)
-        }
     }
 }
 
+.miniModal_button svg {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
 
-  @keyframes cssAnimation {
-    to   { visibility: visible; }
+@keyframes cssAnimation {
+  to {
+    visibility: visible;
   }
+}
+

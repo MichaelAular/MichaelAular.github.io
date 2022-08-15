@@ -18,9 +18,6 @@ const BlockLeft = ({
 }) => {
   const size = useWindowSize();
 
-  console.log(size.itemWidth)
-  console.log(100 - (size.itemWidth + 2))
-
   return (
     <div
       className="blockLeft_container"
