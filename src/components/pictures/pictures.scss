@@ -25,6 +25,7 @@
   height: 120px;
   bottom: 2vw;
   pointer-events: none;
+  z-index: 2;
 }
 
 .pictures_subText {
@@ -34,7 +35,6 @@
   text-align: center;
   top: -40%;
   left: -5%;
-  z-index: 2;
 }
 .camera {
   position: relative;
