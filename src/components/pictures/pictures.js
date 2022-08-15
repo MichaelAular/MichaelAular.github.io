@@ -14,7 +14,6 @@ const Pictures = ({
   setTitleOpen3,
   setModalProject,
 }) => {
-  const size = useWindowSize();
 
   return (
     <div className="pictures_img_Container">
