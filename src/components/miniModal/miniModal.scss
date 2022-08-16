@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--tonecolor);
-  z-index: 1;
+  z-index: 999;
   animation: imgGrowRight 250ms ease-in;
   animation-fill-mode: forwards;
   text-align: justify;
@@ -161,4 +161,23 @@
 
 @keyframes contentGrow {
   from { height: 0 }
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+@keyframes imgGrow {
+  from {
+    transform:
+    translateY(-30px)
+  }
+  to {
+    bottom: 30px;
+    transform:
+    scale(110%)
+    translateX(-3vw)
+  }
+}
 }

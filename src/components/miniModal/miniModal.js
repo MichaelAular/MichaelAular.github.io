@@ -21,6 +21,7 @@ const MiniModal = ({
   const dots = () => {if (`${projectDescription.length}` > 360) {return "..."}};
 
   const modPos =()=> {
+      if (size.length === 1) return "modal-container";
       if (index === leftIndex) return "modal-container_left";
       if (index === rightIndex) return "modal-container_right";
       if (startTrigger === false & index === size.length -1) return "modal-container_right";
