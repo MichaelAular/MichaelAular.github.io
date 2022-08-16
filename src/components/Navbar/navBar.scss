@@ -83,16 +83,15 @@
   .navitemright {
     display: flex;
     position: absolute;
-    transform: scale(.5)
-    translateX(-80vw)
-    translateY(-175px);
+    transform:
+    translateX(-18vw)
+    translateY(-60px);
     width: 400px;
   }
   .navitemleft{
     position: absolute;
     display: flex;
-    transform: scale(.5)
-    translateX(-81vw);
+    transform: translateX(-18vw);
     width: 400px;
   }
   .navItemblock{
