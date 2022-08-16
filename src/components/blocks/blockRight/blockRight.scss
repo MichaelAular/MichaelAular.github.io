@@ -47,9 +47,20 @@
 }
 .gitHubLink {
   cursor: pointer;
+  animation-name: blink;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
   &:hover {
+    animation: none;
     color: var(--accentcolor);
   }
+}
+
+@keyframes blink {
+  0% {color: var(--blackish)}
+  25% {color: var(--maincolor)}
+  50% {color: var(--blackish)}
+  100% {color: var(--blackish)}
 }
 
 @media only screen and (max-width: 1400px) {

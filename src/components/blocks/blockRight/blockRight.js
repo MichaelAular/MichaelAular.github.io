@@ -39,7 +39,7 @@ const BlockRight = ({ project }) => {
             <GitHubLogo />
           </div>
           <div
-            className="gitHubLink font_bangers"
+            className="font_bangers gitHubLink"
             onClick={() => openInNewTab("https://" + project.git)}
           >
             github

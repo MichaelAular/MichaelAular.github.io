@@ -4,12 +4,8 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/MeIcon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="Portfolio MJA" content="Portfolio created with React" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,10 +13,64 @@
       rel="stylesheet"
     />
 
-    <title>Portfolio MJA</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      .loader-wrapper {
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+        background-color: #0b0b0b;
+        color: white;
+        font-size: 4.2vw;
+        font-family: Arial, Helvetica, sans-serif;
+        opacity: 1;
+      }
+
+      .loader {
+        position: relative;
+        border: 1vw solid #009696;
+        border-top: 1vw solid #0b0b0b;
+        border-radius: 50%;
+        width: 5vw;
+        height: 5vw;
+        animation: spin 1s linear infinite;
+      }
+
+      .title {
+        position: relative;
+        line-height: 0.8;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <title>Portfolio Michael Aular</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+    <div id="root">
+      <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="title"><b>Portfolio</b><br />Michael Aular</div>
+      </div>
+    </div>
   </body>
 </html>
