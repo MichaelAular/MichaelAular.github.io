@@ -16,7 +16,7 @@ const NavBar = ({
   const size = useWindowSize();
   const sleep = (milliseconds) => { return new Promise((resolve) => setTimeout(resolve, milliseconds)) };
   const startupRun = async ()=> {
-    await sleep(5000)
+    await sleep(3000)
     setStartup(false)
     document.documentElement.style.setProperty('--alpha', 0)
     setDoodle(false)
