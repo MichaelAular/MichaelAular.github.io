@@ -35,7 +35,7 @@
   font-family: "Permanent Marker", cursive;
   cursor: pointer;
   &:hover {
-    animation: buttonRoll .5s forwards;
+    animation: buttonRoll .4s forwards;
   }
 }
 .introButtonText{
@@ -162,17 +162,12 @@
 }
 
 @keyframes buttonRoll{
-  0% {
+  0% { 
     transform:
-    scale(1.2)
-    translateY(-4%)
-    translateX(-4%)
-  }
+    rotate(0deg)
+   }
   100% {
     transform:
-    scale(1.2)
-    translateY(-4%)
-    translateX(-4%)
     rotate(360deg)
   }
 }
