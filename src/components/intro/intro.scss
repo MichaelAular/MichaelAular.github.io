@@ -102,13 +102,12 @@
   100% {
     transform:
     translateX(30vw)
-    translateY(calc(50vh - 100%));
+    translateY(calc(47vh - 90%));
   }
 }
 @keyframes smallerName {
   0% {
-    font-size: 4.2vw
-    ;
+    font-size: 4.2vw;
   }
   100% {
     font-size: 2.62vw;
@@ -120,7 +119,6 @@
   0% {line-height: 0.8;}
   100% {line-height: 0.53;}
 }
-
 
 
 @keyframes goBlink {
@@ -197,7 +195,7 @@
     100% {
       transform:
       translateX(25vw)
-      translateY(calc(50vh - 110%))
+      translateY(calc(47vh - 100%))
       scale(1.3)
     }
   }
@@ -212,7 +210,7 @@
     100% {
       transform:
       translateX(17vw)
-      translateY(calc(50vh - 140%))
+      translateY(calc(47vh - 120%))
       scale(1.7)
     }
   }
