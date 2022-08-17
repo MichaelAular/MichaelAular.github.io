@@ -6,6 +6,8 @@ import Carousel from "./components/carousel/carousel";
 import Blocks from "./components/blocks/blocks";
 import Shader from "./components/shader/shader";
 import PictureModal from "./components/pictures/pictureModal";
+import Intro from "./components/intro/intro";
+
 
 const App = () => {
   const projects = projectData;
@@ -14,7 +16,6 @@ const App = () => {
   const [doodle, setDoodle] = useState(false);
   const [startup, setStartup] = useState(true);
   const [displayedProject, setDisplayedProject] = useState(0);
-
   const [picOpen1, setPicOpen1] = useState(false);
   const [picOpen2, setPicOpen2] = useState(false);
   const [picOpen3, setPicOpen3] = useState(false);
@@ -22,8 +23,12 @@ const App = () => {
   const [titleOpen2, setTitleOpen2] = useState(false);
   const [titleOpen3, setTitleOpen3] = useState(false);
   const [modalProject, setModalProject] = useState(projects[0]);
+  const [intro, setIntro] = useState(true);
 
   return (
+    intro ? <Intro
+    setIntro={setIntro}
+    /> :
     <div className="App">
       <Shader shader={shader} />
       <NavBar

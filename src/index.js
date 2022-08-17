@@ -2,14 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
+let root = ReactDOM.createRoot(document.getElementById('root'));
 
-window.addEventListener('load', () => {
-    console.log("fully loaded")
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App />
-)
-
-})
+    root.render(
+        <App/>
+    )

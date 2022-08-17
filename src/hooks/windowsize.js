@@ -11,6 +11,7 @@ function useWindowSize() {
     blockWidthBig: "",
     blockWidthMobal: "",
   });
+
   useEffect(() => {
     function setLaneLength() {
       return window.innerWidth < 600

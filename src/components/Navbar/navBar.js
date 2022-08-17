@@ -1,4 +1,3 @@
-
 import "./navBar.scss";
 import ColorSelector from "./colorSelector";
 import AboutMe from "./aboutme";
