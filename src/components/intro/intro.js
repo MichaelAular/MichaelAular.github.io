@@ -25,7 +25,7 @@ const Intro = ({ setIntro }) => {
         <div className="introTitle">
           <b>Portfolio</b>
           <br />
-          Michael Aular
+          <span className="name">Michael Aular</span>
         </div>
       </div>
 

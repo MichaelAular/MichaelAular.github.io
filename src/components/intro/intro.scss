@@ -12,6 +12,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.name{
+  font-size: 4.2vw;
+  animation: smallerName 1s forwards;
+  animation-delay: 1s;
+}
+
 .introStartButton {
   position: relative;
   z-index: 1;
@@ -27,10 +33,9 @@
   text-shadow: 1px 1px 3px var(--blackish);
   font-size: 4vw;
   font-family: "Permanent Marker", cursive;
-  animation: buttonGrow 1s forwards;
-  animation-delay: 1s;
+  cursor: pointer;
   &:hover {
-    color: var(--accentcolor1);
+    animation: buttonRoll .5s forwards;
   }
 }
 .introButtonText{
@@ -45,6 +50,8 @@
 .introTitle {
   position: relative;
   line-height: 0.8;
+  animation: lineHeight 1s forwards;
+  animation-delay: 1s;
 }
 
 .introStartButtonContainer {
@@ -90,26 +97,32 @@
   0% {
     transform:
     translateX(0vw)
-    translateY(0vh)
+    translateY(0vh);
   }
   100% {
     transform:
     translateX(30vw)
-    translateY(calc(50vh - 100%))
+    translateY(calc(50vh - 100%));
   }
 }
-@keyframes buttonGrow {
+@keyframes smallerName {
   0% {
-    transform:
-    scale(1)
+    font-size: 4.2vw
+    ;
   }
   100% {
-    transform:
-    scale(1.2)
-    translateY(-5%)
-    translateX(-5%)
+    font-size: 2.62vw;
+    padding-left: 0.1vw;
   }
 }
+
+@keyframes lineHeight {
+  0% {line-height: 0.8;}
+  100% {line-height: 0.53;}
+}
+
+
+
 @keyframes goBlink {
   0% {
     color: white
@@ -147,6 +160,22 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes buttonRoll{
+  0% {
+    transform:
+    scale(1.2)
+    translateY(-4%)
+    translateX(-4%)
+  }
+  100% {
+    transform:
+    scale(1.2)
+    translateY(-4%)
+    translateX(-4%)
+    rotate(360deg)
   }
 }
 
