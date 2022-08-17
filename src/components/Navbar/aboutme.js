@@ -12,8 +12,7 @@ const AboutMe = () => {
       className="aboutMe_Container"
     >
       <div className="aboutMe_Button font_bangers"
-      onMouseLeave={() => { setAboutMeOpen(false) }}
-      onMouseEnter={() => { setAboutMeOpen(true) }}
+      onClick={() => { setAboutMeOpen(true) }}
       >michael aular</div>
 
       <div className="BeardIconContainer">
@@ -30,7 +29,9 @@ const AboutMe = () => {
           this is me! read more...</div>
         </div>
 
-        <BioModal aboutMeOpen={aboutMeOpen}/>
+        <BioModal
+        aboutMeOpen={aboutMeOpen}
+        setAboutMeOpen={setAboutMeOpen}/>
     </div>
   );
 };
