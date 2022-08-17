@@ -26,10 +26,11 @@ const Intro = ({ setIntro }) => {
           <b>Portfolio</b>
           <br />
           <span className="name">Michael Aular</span>
+          <div className="introBottomBlock" />
         </div>
       </div>
 
-      <div className="introBottomBlock" />
+      
     </div>
   );
 };
