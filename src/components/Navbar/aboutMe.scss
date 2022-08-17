@@ -3,13 +3,16 @@
 }
 
 .bioBlock_container {
+  border: 1px solid lime;
   position: absolute;
   background-color: var(--element);
   border-radius: .2vw;
   padding: 1vw;
   box-shadow: -4px 4px 8px var(--shadow);
   transition-delay: 0.5s;
-  height: fit-content;
+  width: 80vw;
+  right: 2vw;
+  line-height: 2;
 }
 
 .aboutMe_Button {
@@ -26,10 +29,6 @@
     text-shadow: 1px 1px 3px var(--shadow)
                   -1px -1px 3px var(--accentcolor);
   }
-}
-
-.bioBlock_title {
-  margin-bottom: 0.3em;
 }
 
 .BeardIconContainer {
