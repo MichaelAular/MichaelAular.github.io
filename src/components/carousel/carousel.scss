@@ -10,7 +10,7 @@
   &:hover {
     z-index: 999;
     .carouselBackBlock{
-      transition-duration: 2s;
+      transition-duration: .5s;
       transition-delay: 1s;
       background-color: var(--darkCarousel);
     }

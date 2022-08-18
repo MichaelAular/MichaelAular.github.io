@@ -18,6 +18,7 @@
 .bioBlock_title{
   position: relative;
   z-index: 1;
+  margin-bottom: 2vw;
 }
 .bioBlock_text{
 position: relative;
@@ -27,7 +28,6 @@ z-index: 1;
 }
 
 .bioPic {
-  border: 1px solid lime;
   position: absolute;
   width: 100%;
   height: 180px;
@@ -36,8 +36,10 @@ z-index: 1;
   background-image: url("../../assets/img/photo/000/bio00.png");
   background-size: cover;
   background-position: center;
-  filter: grayscale(.6);
-  opacity: .4;
+  filter:
+  hue-rotate(180deg)
+  grayscale(.5);
+  opacity: .5;
 }
 
 .aboutMe_Button {
@@ -107,7 +109,18 @@ z-index: 1;
     left:-19vw;
   }
   .bioPic {
-    border: 1px solid red;
     height: 140px;
+  }
+}
+
+@media only screen and (max-width: 624px) {
+  .bioPic {
+    height: 110px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .bioPic {
+    height: 90px;
   }
 }

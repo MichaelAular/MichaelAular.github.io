@@ -7,7 +7,6 @@ const CarouselItems = ({
   size,
   startTrigger,
   activeIndex,
-  setShader,
   setDisplayedProject,
   }) => {
   const trueLane =
@@ -31,7 +30,6 @@ const CarouselItems = ({
               : rightIndex
           }
           startTrigger={startTrigger}
-          setShader={setShader}
           setDisplayedProject={setDisplayedProject}
         />
       );
