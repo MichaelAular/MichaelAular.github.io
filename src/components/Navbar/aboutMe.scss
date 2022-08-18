@@ -3,16 +3,41 @@
 }
 
 .bioBlock_container {
-  border: 1px solid lime;
   position: absolute;
   background-color: var(--element);
-  border-radius: .2vw;
-  padding: 1vw;
+  border-radius: .2vw; 
   box-shadow: -4px 4px 8px var(--shadow);
   transition-delay: 0.5s;
   width: 80vw;
-  right: 2vw;
+  right: -1vw;
   line-height: 2;
+  overflow-y: scroll;
+  padding: 3vw;
+  padding-top: 80px;
+}
+.bioBlock_title{
+  position: relative;
+  z-index: 1;
+}
+.bioBlock_text{
+position: relative;
+margin-right: 15vw;
+text-align: justify;
+z-index: 1;
+}
+
+.bioPic {
+  border: 1px solid lime;
+  position: absolute;
+  width: 100%;
+  height: 180px;
+  top: 0px;
+  right: 0px;
+  background-image: url("../../assets/img/photo/000/bio00.png");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(.6);
+  opacity: .4;
 }
 
 .aboutMe_Button {
@@ -75,5 +100,14 @@
   }
   .bio_doodle {
     font-size: 16px;
+  }
+  .bioBlock_container {
+    padding: 6vw;
+    right: auto;
+    left:-19vw;
+  }
+  .bioPic {
+    border: 1px solid red;
+    height: 140px;
   }
 }
