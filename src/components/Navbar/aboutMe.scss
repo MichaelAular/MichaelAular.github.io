@@ -27,6 +27,14 @@ text-align: justify;
 z-index: 1;
 }
 
+.linkedIn {
+  cursor: pointer;
+  transition-duration: .2s;
+  &:hover {
+    color: var(--maincolor)
+  }
+}
+
 .bioPic {
   position: absolute;
   width: 100%;

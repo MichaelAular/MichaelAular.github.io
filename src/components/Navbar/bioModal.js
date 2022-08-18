@@ -9,6 +9,10 @@ const BioModal = ({ aboutMeOpen, setAboutMeOpen }) => {
     return null;
   }
 
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div
       className="bioBlock_container font_normal"
@@ -20,7 +24,16 @@ const BioModal = ({ aboutMeOpen, setAboutMeOpen }) => {
       }}
     >
       <div className="bioBlock_title font_bangers">About me</div>
-      <div className="bioBlock_text font_normal">{bio.bio}</div>
+      <div className="bioBlock_text font_normal">
+        {bio.bio}
+        <span
+            className="font_bangers linkedIn"
+            onClick={() => openInNewTab("https://www.linkedin.com/in/michael-aular/")}
+          >
+           <br/>
+           Lets connect on linkedIn
+          </span>
+        </div>
       <div className="bioPic"/>
     </div>
   );
