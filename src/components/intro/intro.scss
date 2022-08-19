@@ -13,13 +13,13 @@
   top: 0;
   left: 0;
 }
-
 .name{
   font-size: 4.2vw;
-  animation: smallerName 1s forwards;
+  animation: smallerName;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
   animation-delay: 1s;
 }
-
 .introStartButton {
   position: relative;
   z-index: 1;
@@ -44,18 +44,17 @@
   rotate: -10deg;
   opacity: .9;
   color: white;
-  animation: goBlink 1s;
+  animation: goBlink 2s;
   animation-iteration-count: infinite;
-  animation-delay: 18s;
+  // animation-delay: 18s;
 }
-
 .introTitle {
   position: relative;
   line-height: 0.8;
   animation: lineHeight 1s forwards;
+  text-shadow: 1px 1px 2px var(--blackish);
   animation-delay: 1s;
 }
-
 .introStartButtonContainer {
   position: relative;
   z-index: 1;
@@ -63,23 +62,12 @@
   flex-direction: row;
   align-items: center;
   gap: 1vw;
-  animation: lowerButtonContainer 1s forwards;
-  animation-delay: 1s;
   margin-bottom: 14vw;
+  animation: lowerButtonContainer, raiseButtonContainer;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s, 1.5s;
+  animation-delay: 1s, 20s;
 }
-
-.introBottomBlock {
-  position: absolute;
-  z-index: -5;
-  width: 200vw;
-  height: 20vw;
-  min-height: 100px;
-  background-color: #0b0b0b;
-  opacity: .7;
-  right: -100vw;
-  top: -2vw;
-}
-
 .introVideoWrapper{
   position: absolute;
   display: flex;
@@ -88,11 +76,7 @@
   padding-top: -56.25%;
   top: auto;
   width: 100% ;
-  opacity: 0;
-  animation: videoFadein 2s forwards;
-  animation-delay: 2s;
 }
-
 
 @keyframes lowerButtonContainer {
   100% {
@@ -111,7 +95,6 @@
     }
   }
 }
-
 @media only screen and (max-width: 800px) {
   @keyframes lowerButtonContainer {
     100% {
@@ -133,51 +116,42 @@
     }
   }
 }
-
-
-@keyframes smallerName {
-  0% {
-    font-size: 4.2vw;
+@keyframes raiseButtonContainer {
+  100% {
+    transform:
+    translateX(0vw)
+    translateY(0vw)
+    scale(2)
   }
+}
+@keyframes smallerName {
   100% {
     font-size: 2.62vw;
     padding-left: 0.1vw;
   }
 }
-
 @keyframes lineHeight {
   0% {line-height: 0.8;}
   100% {line-height: 0.53;}
 }
-
-
 @keyframes goBlink {
   0% {
     color: white
   }
-  50% {
-    color: var(--accentcolor1)
+  10% {
+    color: var(--offWhite)
+  }
+  30% {
+    color: white
+  }
+  45% {
+    color: var(--offWhite)
+  }
+  60% {
+    color: white
   }
   100% {
     color: white
-  }
-}
-@keyframes startBackgroundMovie {
-  0% {
-    transform:
-    translateX(0vw)
-  }
-  100% {
-    transform:
-    translateX(-100vw)
-  }
-}
-@keyframes videoFadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
 
@@ -191,11 +165,9 @@
     rotate(360deg)
   }
 }
-
 @media (max-aspect-ratio: 8/5) {
   .introVideoWrapper{
     height: 100%;
     width: auto;
   }
 }
-
