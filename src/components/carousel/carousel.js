@@ -6,7 +6,14 @@ import CarouselItems from "./CarouselItems";
 import ArrowLeftRight from "../../assets/icons/arrowLeftRight";
 import CurvedArrowDown from "../../assets/icons/curverdArrowDown";
 
-const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
+const Carousel = ({
+  projects,
+  setShader,
+  shader,
+  setDisplayedProject,
+  carouselUp,
+  setCarouselUp
+}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [startTrigger, setStarttrigger] = useState(false);
   const [animationState, setAnimationState] = useState(false);
@@ -63,6 +70,8 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
         className="carousel"
         style={{
           height: `${size.itemHeight}vw`,
+          bottom: `${carouselUp ? "1vh" : `calc(${-size.itemHeight}vw - 1vw`}`,
+          transitionDuration: ".5s"
         }}
         onMouseLeave={() => {
           setShader(false);
@@ -71,6 +80,25 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
           setShader(true);
         }}
       >
+        <div className="showAndHideButton"
+        style = {{
+          bottom: `calc(${size.itemHeight}vw + 32px)`,
+        }}
+        onClick = {() => {  setCarouselUp(!carouselUp) }}
+        >
+          <div className="showhideArrow"
+          style = {{
+            rotate: `${carouselUp ? "-90deg" : "90deg"}`,
+            transitionDuration: ".5s",
+            }}>
+            <ArrowLeft className="shArrow"/>
+          </div>
+        </div>
+        <div className="smallBlock"
+         style={{
+          bottom: `calc(${size.itemHeight}vw + 10px)`,
+        }}/>
+
         <div
           className="carouselText font_marker"
           style={{

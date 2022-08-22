@@ -1,6 +1,6 @@
 .carousel {
   position: fixed;
-  bottom: 1vh;
+  // bottom: 1vh;
   padding-top: 70vw;
   padding-bottom: 32px;
   overflow: hidden;
@@ -9,19 +9,56 @@
   z-index: 500;
   &:hover {
     z-index: 999;
-    .indicatorContainer{
-      transition-duration: .5s;
+    .indicatorContainer {
+      transition-duration: 0.5s;
       background-color: transparent;
     }
   }
 }
 
+.smallBlock {
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  left: 1.5vw;
+  z-index: -1;
+  background-color: var(--showhide);
+}
+
+.showAndHideButton {
+  position: absolute;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  left: 1.5vw;
+  border-radius: 50%;
+  border: 8px solid var(--showhide);
+  background-color: var(--element);
+  justify-content: center;
+  align-items: center;
+  z-index: 60;
+  cursor: pointer;
+  pointer-events: all;
+  &:hover {
+    background-color: var(--maincolor);
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+  }
+}
+
+.showhideArrow {
+  height: 30px;
+  width: 22px;
+  rotate: -90deg;
+}
+
 .carouselBackBlock {
   position: absolute;
   width: 100vw;
-  transition-duration: .5s;
-  transition-delay: .5s;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
 }
+
 .removeCarouselShader {
   transition-duration: 0s;
   transition-delay: 0s;
@@ -50,7 +87,6 @@
   left: 0px;
   cursor: pointer;
   pointer-events: all;
-
 }
 
 .nextButton {
@@ -66,8 +102,8 @@
   border: none;
   &:hover {
     .arrowContainer {
-      opacity: .8;
-      transition-duration: .2s;
+      opacity: 0.8;
+      transition-duration: 0.2s;
     }
   }
 }
@@ -80,7 +116,7 @@
 .arrowContainer {
   position: absolute;
   top: 16px;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .carouselDoodleContainer {
@@ -136,7 +172,7 @@
   .carouselText {
     font-size: 18px;
   }
-  .doodleText{
+  .doodleText {
     font-size: 15px;
     height: 80%;
     left: 1px;
@@ -151,7 +187,7 @@
   .carouselText {
     font-size: 14px;
   }
-  .doodleText{
+  .doodleText {
     font-size: 14px;
     height: 80%;
     left: 1px;

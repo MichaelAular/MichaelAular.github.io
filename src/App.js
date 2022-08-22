@@ -24,6 +24,7 @@ const App = () => {
   const [titleOpen3, setTitleOpen3] = useState(false);
   const [modalProject, setModalProject] = useState(projects[0]);
   const [intro, setIntro] = useState(true);
+  const [carouselUp, setCarouselUp] = useState(true);
 
   return (
     intro ? <Intro
@@ -57,6 +58,8 @@ const App = () => {
         setShader={setShader}
         shader={shader}
         setDisplayedProject={setDisplayedProject}
+        carouselUp={carouselUp}
+        setCarouselUp={setCarouselUp}
       />
       <PictureModal
         project={modalProject}
