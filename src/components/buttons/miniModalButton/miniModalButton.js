@@ -2,9 +2,17 @@ import "./miniModalButton.scss";
 
 
 
-const MiniModalButton = ({ size, setDisplayedProject, index}) => {
+const MiniModalButton = ({
+    size,
+    setDisplayedProject,
+    setShader,
+    index,
+    setHovered
+}) => {
     const clickEvent =()=> {
         setDisplayedProject(index)
+        setShader(false)
+        setHovered(false)
     }
 
     return(

@@ -106,8 +106,11 @@ const Carousel = ({ projects, setShader, shader, setDisplayedProject }) => {
         </div>
 
         <div
-          className="carouselBackBlock"
-          style={{ height: `calc(${size.itemHeight}vw + 32px)` }}
+          className={`carouselBackBlock ${!shader ? "removeCarouselShader" : ""}`}
+          style={{
+            height: `calc(${size.itemHeight}vw + 32px)`,
+            backgroundColor: `${shader ? "var(--darkCarousel)" : "var(--tonecolor)"}`
+                }}
         />
         <div
           className="carouselLane"

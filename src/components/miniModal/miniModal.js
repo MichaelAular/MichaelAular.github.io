@@ -4,6 +4,7 @@ import MiniModalButton from "../buttons/miniModalButton/miniModalButton";
 const MiniModal = ({
   modalState,
   hovered,
+  setHovered,
   thumbImage,
   size,
   carouselText,
@@ -13,7 +14,8 @@ const MiniModal = ({
   index,
   leftIndex,
   rightIndex,
-  setDisplayedProject
+  setDisplayedProject,
+  setShader
 }) => {
   if (!modalState) { return null }
   if (!hovered) { return null }
@@ -61,6 +63,8 @@ const MiniModal = ({
           <MiniModalButton
           size={size}
           setDisplayedProject={setDisplayedProject}
+          setShader={setShader}
+          setHovered={setHovered}
           index={index}/>
         </div>
       </div>

@@ -8,6 +8,7 @@ const CarouselItems = ({
   startTrigger,
   activeIndex,
   setDisplayedProject,
+  setShader
   }) => {
   const trueLane =
     projects &&
@@ -31,6 +32,7 @@ const CarouselItems = ({
           }
           startTrigger={startTrigger}
           setDisplayedProject={setDisplayedProject}
+          setShader={setShader}
         />
       );
     });

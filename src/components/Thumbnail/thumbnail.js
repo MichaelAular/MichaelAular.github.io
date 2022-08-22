@@ -9,7 +9,8 @@ const Thumbnail = ({
   leftIndex,
   rightIndex,
   startTrigger,
-  setDisplayedProject
+  setDisplayedProject,
+  setShader
 }) => {
   const size = useWindowSize();
   const [modalState, setModalState] = useState(false);
@@ -46,6 +47,7 @@ const Thumbnail = ({
       thumbImage={thumbImage}
       modalState={modalState}
       hovered={hovered}
+      setHovered={setHovered}
       size={size}
       carouselText={carouselText}
       projectTitle={projectTitle}
@@ -55,6 +57,7 @@ const Thumbnail = ({
       rightIndex={rightIndex}
       startTrigger={startTrigger}
       setDisplayedProject={setDisplayedProject}
+      setShader={setShader}
       className="thumb_minimodal"
       />
       </div>

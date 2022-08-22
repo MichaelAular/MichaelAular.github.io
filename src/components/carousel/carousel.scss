@@ -9,13 +9,8 @@
   z-index: 500;
   &:hover {
     z-index: 999;
-    .carouselBackBlock{
-      transition-duration: .5s;
-      transition-delay: 1s;
-      background-color: var(--darkCarousel);
-    }
     .indicatorContainer{
-      transition-duration: .6s;
+      transition-duration: .5s;
       background-color: transparent;
     }
   }
@@ -24,7 +19,12 @@
 .carouselBackBlock {
   position: absolute;
   width: 100vw;
-  background-color: var(--tonecolor);
+  transition-duration: .5s;
+  transition-delay: 1s;
+}
+.removeCarouselShader {
+  transition-duration: 0s;
+  transition-delay: 0s;
 }
 
 .carouselLane {
