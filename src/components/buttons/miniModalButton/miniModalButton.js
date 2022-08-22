@@ -19,20 +19,10 @@ const MiniModalButton = ({
     <button className="font_marker miniModal_button"
     style={{
         width: "fit-content",
-        height: size.itemWidth * .1 +"vw"
+        height: size.itemWidth * .11 +"vw"
     }}
     onClick={clickEvent}>
-    <svg viewBox="30 -21 85 25"
-      style={{
-        width: size.itemWidth * .5 +"vw",
-    }}>
-     <text
-     style={{
-        color: "blue"
-     }}>
-        LEARN MORE
-        </text>
-    </svg>
+     LEARN MORE
     </button>)
 }
 
