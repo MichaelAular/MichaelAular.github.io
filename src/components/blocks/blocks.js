@@ -14,7 +14,8 @@ const Blocks = ({
   setTitleOpen1,
   setTitleOpen2,
   setTitleOpen3,
-  setModalProject
+  setModalProject,
+  carouselUp
   }) => {
 
   const currentproject = projects[displayedProject];
@@ -37,11 +38,15 @@ const Blocks = ({
           setTitleOpen2={setTitleOpen2}
           setTitleOpen3={setTitleOpen3}
           setModalProject={setModalProject}
+          carouselUp={carouselUp}
         />
       </div>
 
       <div className="blockRight" >
-        <BlockRight project={currentproject} />
+        <BlockRight
+        project={currentproject}
+        carouselUp={carouselUp}
+        />
       </div>
     </div>
   );

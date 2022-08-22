@@ -15,6 +15,7 @@ const BlockLeft = ({
   setTitleOpen2,
   setTitleOpen3,
   setModalProject,
+  carouselUp
 }) => {
   const size = useWindowSize();
 
@@ -22,11 +23,14 @@ const BlockLeft = ({
     <div
       className="blockLeft_container"
       style={{
+        transitionDuration: '.5s',
+        marginTop: carouselUp ? '0px' : 'calc(180px - 1vw)',
         width: size.blockWidthBig
           ? `calc((${size.itemWidth + .3}vw *3))`
           : size.blockWidthMobal ? `calc(80vw)`
           : `calc(100vw - (${size.itemWidth}vw + 44px))`,
-        height: size.blockWidthBig ? `calc(98vh - (${size.itemHeight}vw) - 180px)`
+        height: size.blockWidthBig & !carouselUp ? `calc(100vh - 180px)` :
+        size.blockWidthBig  & carouselUp ? `calc(98vh - (${size.itemHeight}vw) - 180px)`
           : `auto`
       }}
     >

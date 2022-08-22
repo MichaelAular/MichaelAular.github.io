@@ -24,7 +24,7 @@ const App = () => {
   const [titleOpen3, setTitleOpen3] = useState(false);
   const [modalProject, setModalProject] = useState(projects[0]);
   const [intro, setIntro] = useState(true);
-  const [carouselUp, setCarouselUp] = useState(true);
+  const [carouselUp, setCarouselUp] = useState(false);
 
   return (
     intro ? <Intro
@@ -52,6 +52,7 @@ const App = () => {
         setTitleOpen2={setTitleOpen2}
         setTitleOpen3={setTitleOpen3}
         setModalProject={setModalProject}
+        carouselUp={carouselUp}
       />
       <Carousel
         projects={projects}
