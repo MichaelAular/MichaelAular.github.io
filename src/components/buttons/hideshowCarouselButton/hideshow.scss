@@ -1,0 +1,40 @@
+.showAndHideButton {
+  position: absolute;
+  display: flex;
+  width: 23px;
+  height: 23px;
+  left: 1vw;
+  border-radius: 50%;
+  border: 5px solid var(--showhide);
+  background-color: var(--element);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: all;
+  z-index: 5;
+  transition-duration: 0.5s;
+  &:hover {
+    background-color: var(--maincolor);
+    box-shadow: inset -1px -1px 3px var(--accentcolor);
+  }
+}
+
+.smallBlock {
+  position: absolute;
+  width: 33px;
+  height: 17px;
+  left: calc(1vw);
+  z-index: -100;
+  background-color: var(--showhide);
+  pointer-events: none;
+  transition-duration: 0.5s;
+  z-index: 4;
+}
+
+.showhideArrow {
+  height: 20px;
+  width: 12px;
+  rotate: -90deg;
+  pointer-events: none;
+  opacity: 0.4;
+}

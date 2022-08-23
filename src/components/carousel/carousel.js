@@ -5,6 +5,7 @@ import useWindowSize from "../../hooks/windowsize";
 import CarouselItems from "./CarouselItems";
 import ArrowLeftRight from "../../assets/icons/arrowLeftRight";
 import CurvedArrowDown from "../../assets/icons/curverdArrowDown";
+import HideShowButton from "../buttons/hideshowCarouselButton/hideshow";
 
 const Carousel = ({
   projects,
@@ -67,45 +68,14 @@ const Carousel = ({
   return (
     <div className="carouselContainer">
       <div
-        className="showAndHideButton"
-        style={{
-          bottom: `${carouselUp ? `calc(${size.itemHeight}vw + 40px)` : `10px`}`,
-        }}
-        onClick={() => {
-          setCarouselUp(!carouselUp);
-        }}
-      >
-        <div
-          className="showhideArrow"
-          style={{
-            rotate: `${carouselUp ? "-90deg" : "90deg"}`,
-            transitionDuration: ".5s",
-          }}
-        >
-          <ArrowLeft />
-        </div>
-      </div>
-      <div
-        className="smallBlock"
-        style={{
-          bottom: `${carouselUp ? `calc(${size.itemHeight}vw + 25px)` : `-5px`}`,
-        }}
-      />
-
-      <div
         className="carousel"
         style={{
           height: `${size.itemHeight}vw`,
           bottom: `${carouselUp ? `0` : `calc(${-size.itemHeight}vw - 20px`}`,
           transitionDuration: ".5s",
         }}
-        onMouseLeave={() => {
-          setShader(false);
-        }}
-        onMouseEnter={() => {
-          setShader(true);
-        }}
       >
+        <HideShowButton carouselUp={carouselUp} setCarouselUp={setCarouselUp} />
         <div
           className="carouselText font_marker"
           style={{
@@ -185,12 +155,6 @@ const Carousel = ({
               onClick={() => {
                 clickable && updateIndexPrev(activeIndex - size.length);
               }}
-              onMouseLeave={() => {
-                setShader(false);
-              }}
-              onMouseEnter={() => {
-                setShader(true);
-              }}
             >
               <div
                 className="arrowContainer arrowLeft"
@@ -213,12 +177,6 @@ const Carousel = ({
             }}
             onClick={() => {
               clickable && updateIndexNext(activeIndex + size.length);
-            }}
-            onMouseLeave={() => {
-              setShader(false);
-            }}
-            onMouseEnter={() => {
-              setShader(true);
             }}
           >
             <div

@@ -53,12 +53,7 @@ const MiniModal = ({
         {carouselText}
       </div>
       <div
-        className="modal-content"
-        // style={{
-        //   height: size.itemHeight * 1.2 + "vw",
-        //   minHeight: "fit-content",
-        // }}
-      >
+        className="modal-content" >
         <div className="modal-title typewriter font_bangers">
           {projectTitle}
         </div>
