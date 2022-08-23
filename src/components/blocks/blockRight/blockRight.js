@@ -3,7 +3,10 @@ import useWindowSize from "../../../hooks/windowsize";
 import LearnMore from "../../../assets/icons/learnMore";
 import GitHubLogo from "../../../assets/icons/GitHubLogo";
 
-const BlockRight = ({ project }) => {
+const BlockRight = ({
+  project,
+  carouselUp
+}) => {
   const size = useWindowSize();
 
   const openInNewTab = (url) => {
@@ -14,13 +17,16 @@ const BlockRight = ({ project }) => {
     <div
       className="blockRight_container"
       style={{
+        transitionDuration: '.5s',
+        marginTop: carouselUp ? '0px' : 'calc(180px - 1vw)',
         width: size.blockWidthBig
           ? `calc( ${size.blockRightWidth}vw - (${size.itemWidth}vw *3))`
           : size.blockWidthMobal ? `calc(80vw)`
           : `calc(100vw - (${size.itemWidth}vw + 44px))`,
-        height: size.blockWidthBig
-          ? `calc(98vh - (${size.itemHeight}vw) - 180px)`
-          : `auto`,
+        height:
+        size.blockWidthBig & !carouselUp ? `calc(100vh - 160px)` :
+        size.blockWidthBig  & carouselUp ? `calc(98vh - (${size.itemHeight}vw) - 180px)` :
+        `auto`
       }}
     >
       <div className="blockRight_projectTitle font_bangers">

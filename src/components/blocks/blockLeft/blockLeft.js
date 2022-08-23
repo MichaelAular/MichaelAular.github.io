@@ -29,9 +29,10 @@ const BlockLeft = ({
           ? `calc((${size.itemWidth + .3}vw *3))`
           : size.blockWidthMobal ? `calc(80vw)`
           : `calc(100vw - (${size.itemWidth}vw + 44px))`,
-        height: size.blockWidthBig & !carouselUp ? `calc(100vh - 180px)` :
-        size.blockWidthBig  & carouselUp ? `calc(98vh - (${size.itemHeight}vw) - 180px)`
-          : `auto`
+        height:
+        size.blockWidthBig & !carouselUp ? `calc(100vh - 160px)` :
+        size.blockWidthBig  & carouselUp ? `calc(98vh - (${size.itemHeight}vw) - 180px)` :
+        `auto`
       }}
     >
       <div className="blockLeft_video">

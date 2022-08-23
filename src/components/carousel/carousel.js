@@ -12,7 +12,7 @@ const Carousel = ({
   shader,
   setDisplayedProject,
   carouselUp,
-  setCarouselUp
+  setCarouselUp,
 }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [startTrigger, setStarttrigger] = useState(false);
@@ -67,11 +67,37 @@ const Carousel = ({
   return (
     <div className="carouselContainer">
       <div
+        className="showAndHideButton"
+        style={{
+          bottom: `${carouselUp ? `calc(${size.itemHeight}vw + 40px)` : `10px`}`,
+        }}
+        onClick={() => {
+          setCarouselUp(!carouselUp);
+        }}
+      >
+        <div
+          className="showhideArrow"
+          style={{
+            rotate: `${carouselUp ? "-90deg" : "90deg"}`,
+            transitionDuration: ".5s",
+          }}
+        >
+          <ArrowLeft />
+        </div>
+      </div>
+      <div
+        className="smallBlock"
+        style={{
+          bottom: `${carouselUp ? `calc(${size.itemHeight}vw + 25px)` : `-5px`}`,
+        }}
+      />
+
+      <div
         className="carousel"
         style={{
           height: `${size.itemHeight}vw`,
-          bottom: `${carouselUp ? "1vh" : `calc(${-size.itemHeight}vw - 1vw`}`,
-          transitionDuration: ".5s"
+          bottom: `${carouselUp ? `1vh` : `calc(${-size.itemHeight}vw - 20px`}`,
+          transitionDuration: ".5s",
         }}
         onMouseLeave={() => {
           setShader(false);
@@ -80,25 +106,6 @@ const Carousel = ({
           setShader(true);
         }}
       >
-        <div className="showAndHideButton"
-        style = {{
-          bottom: `calc(${size.itemHeight}vw + 32px)`,
-        }}
-        onClick = {() => {  setCarouselUp(!carouselUp) }}
-        >
-          <div className="showhideArrow"
-          style = {{
-            rotate: `${carouselUp ? "-90deg" : "90deg"}`,
-            transitionDuration: ".5s",
-            }}>
-            <ArrowLeft className="shArrow"/>
-          </div>
-        </div>
-        <div className="smallBlock"
-         style={{
-          bottom: `calc(${size.itemHeight}vw + 10px)`,
-        }}/>
-
         <div
           className="carouselText font_marker"
           style={{
@@ -134,11 +141,15 @@ const Carousel = ({
         </div>
 
         <div
-          className={`carouselBackBlock ${!shader ? "removeCarouselShader" : ""}`}
+          className={`carouselBackBlock ${
+            !shader ? "removeCarouselShader" : ""
+          }`}
           style={{
             height: `calc(${size.itemHeight}vw + 32px)`,
-            backgroundColor: `${shader ? "var(--darkCarousel)" : "var(--tonecolor)"}`
-                }}
+            backgroundColor: `${
+              shader ? "var(--darkCarousel)" : "var(--tonecolor)"
+            }`,
+          }}
         />
         <div
           className="carouselLane"
