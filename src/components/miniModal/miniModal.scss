@@ -2,7 +2,7 @@
   position: absolute;
   background-color: var(--tonecolor);
   z-index: 999;
-  animation: imgGrow 250ms ease-in;
+  animation: imgGrow 250ms ease-in-out;
   animation-fill-mode: forwards;
   text-align: justify;
   border-radius: 10px;
@@ -16,7 +16,7 @@
   flex-direction: column;
   background-color: var(--tonecolor);
   z-index: 999;
-  animation: imgGrowLeft 250ms ease-in;
+  animation: imgGrowLeft 250ms ease-in-out;
   animation-fill-mode: forwards;
   text-align: justify;
   border-radius: 10px;
@@ -30,7 +30,7 @@
   flex-direction: column;
   background-color: var(--tonecolor);
   z-index: 999;
-  animation: imgGrowRight 250ms ease-in;
+  animation: imgGrowRight 250ms ease-in-out;
   animation-fill-mode: forwards;
   text-align: justify;
   border-radius: 10px;
