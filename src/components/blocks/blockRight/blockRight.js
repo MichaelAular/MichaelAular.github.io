@@ -18,13 +18,13 @@ const BlockRight = ({
       className="blockRight_container"
       style={{
         transitionDuration: '.5s',
-        marginTop: carouselUp ? '0px' : 'calc(180px - 1vw)',
+        marginTop: carouselUp ? '0px' : `calc((${size.itemHeight / 2 }vw) + 1vh + 90px )`,
         width: size.blockWidthBig
           ? `calc( ${size.blockRightWidth}vw - (${size.itemWidth}vw *3))`
           : size.blockWidthMobal ? `calc(80vw)`
           : `calc(100vw - (${size.itemWidth}vw + 44px))`,
         height:
-        size.blockWidthBig & !carouselUp ? `calc(100vh - 160px)` :
+        size.blockWidthBig & !carouselUp ? `calc(100vh - 170px)` :
         size.blockWidthBig  & carouselUp ? `calc(98vh - (${size.itemHeight}vw) - 180px)` :
         `auto`
       }}
