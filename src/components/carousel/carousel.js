@@ -96,7 +96,7 @@ const Carousel = ({
         className="carousel"
         style={{
           height: `${size.itemHeight}vw`,
-          bottom: `${carouselUp ? `1vh` : `calc(${-size.itemHeight}vw - 20px`}`,
+          bottom: `${carouselUp ? `0` : `calc(${-size.itemHeight}vw - 20px`}`,
           transitionDuration: ".5s",
         }}
         onMouseLeave={() => {
@@ -173,7 +173,7 @@ const Carousel = ({
             setDisplayedProject={setDisplayedProject}
           />
         </div>
-        <div className="indicators" style={{ top: "15vw" }}>
+        <div className="indicators">
           {startTrigger && (
             <button
               className="prevButton indicatorContainer"

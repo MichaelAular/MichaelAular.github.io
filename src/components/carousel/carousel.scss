@@ -82,11 +82,11 @@
 }
 
 .indicators {
-  position: absolute;
+  position: relative;
   width: 100vw;
   left: 0px;
-  margin-top: 55vw;
-  transition-duration: 0s;
+  transition: none;
+  top: -16px
 }
 
 .prevButton {
@@ -96,7 +96,7 @@
 }
 
 .nextButton {
-  position: relative;
+ position: absolute;
   cursor: pointer;
   pointer-events: all;
 }
