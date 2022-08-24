@@ -20,8 +20,6 @@ const BlockRight = ({ project, carouselUp }) => {
         ? "0px"
         : (window.innerWidth >= 1400) & !carouselUp
         ? `calc(${size.itemHeight+1}vw + 12px)`
-        // : (window.innerWidth < 1400) & carouselUp
-        // ? `calc(${size.itemHeight + 1}vw)`
         : "0px",
         width: size.blockWidthBig
           ? `calc( ${size.blockRightWidth}vw - (${size.itemWidth}vw *3))`

@@ -26,12 +26,24 @@ const NavBar = ({
 
   return (
     <div className="navBar">
-      <div className="navItemContainer">
       <div
         className="navItemblock navitemleft"
-        style={{ left: `calc(${size.itemWidth} * .5vw)`}}
+        style={{ left: 
+          (window.innerWidth < 400)
+          ? ``
+          : (window.innerWidth < 450)
+          ? `0vw`
+          : (window.innerWidth < 601)
+          ? `2vw`
+          : (window.innerWidth < 800)
+          ? `calc(${size.itemWidth * .38}vw)`
+          : `calc(${size.itemWidth * .5}vw)`,}}
         >
-        <ColorSelector colorSet={colorSet} setColorSet={setColorSet} />
+        <ColorSelector
+        colorSet={colorSet}
+        setColorSet={setColorSet}
+        className="colorSelector"
+        />
         <div className="naw font_pressStart"
         onClick={() => window.location = 'mailto:yourmail@gmail.com'}>
 
@@ -40,16 +52,27 @@ const NavBar = ({
       </div>
 
       <div
-        className="navItemblock navitemright" 
-        style={{ left:  window.innerWidth<800 && `calc(${size.itemWidth} * .5vw)`,
-                  right: window.innerWidth>800 && `calc(${size.itemWidth} * .5vw)`
-              }}
+        className="navItemblock navitemright"
+        style={{right:
+          (window.innerWidth < 400)
+          ? ``
+          : (window.innerWidth < 450)
+          ? `-7vw`
+          : (window.innerWidth < 601)
+          ? `-1.2vw`
+          : (window.innerWidth < 800)
+          ? `calc(${size.itemWidth * .3}vw)`
+          : `calc(${size.itemWidth * .5}vw)`,}}
          >
-        <DoodleSwitch doodle={doodle} setDoodle={setDoodle} />
-        <AboutMe />
-        </div>
-      </div>
+        <DoodleSwitch
+        doodle={doodle}
+        setDoodle={setDoodle}
+        />
+        <AboutMe
+        className="aboutMe"
+        />
 
+      </div>
     </div>
   );
 };
