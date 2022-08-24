@@ -3,10 +3,7 @@ import useWindowSize from "../../../hooks/windowsize";
 import LearnMore from "../../../assets/icons/learnMore";
 import GitHubLogo from "../../../assets/icons/GitHubLogo";
 
-const BlockRight = ({
-  project,
-  carouselUp
-}) => {
+const BlockRight = ({ project, carouselUp }) => {
   const size = useWindowSize();
 
   const openInNewTab = (url) => {
@@ -17,16 +14,26 @@ const BlockRight = ({
     <div
       className="blockRight_container"
       style={{
-        transitionDuration: '.5s',
-        marginTop: carouselUp ? '0px' : `calc((${size.itemHeight / 2 }vw) + 1vh + 90px )`,
+        transitionDuration: ".5s",
+        marginTop:
+        (window.innerWidth >= 1400) & carouselUp
+        ? "0px"
+        : (window.innerWidth >= 1400) & !carouselUp
+        ? `calc(${size.itemHeight+1}vw + 12px)`
+        // : (window.innerWidth < 1400) & carouselUp
+        // ? `calc(${size.itemHeight + 1}vw)`
+        : "0px",
         width: size.blockWidthBig
           ? `calc( ${size.blockRightWidth}vw - (${size.itemWidth}vw *3))`
-          : size.blockWidthMobal ? `calc(80vw)`
+          : size.blockWidthMobal
+          ? `calc(80vw)`
           : `calc(100vw - (${size.itemWidth}vw + 44px))`,
         height:
-        size.blockWidthBig & !carouselUp ? `calc(100vh - 170px)` :
-        size.blockWidthBig  & carouselUp ? `calc(98vh - (${size.itemHeight}vw) - 180px)` :
-        `auto`
+          size.blockWidthBig & !carouselUp
+            ? `calc(100vh - 170px)`
+            : size.blockWidthBig & carouselUp
+            ? `calc((100vh - 112px) - (${size.itemHeight + 4}vw) )`
+            : `auto`,
       }}
     >
       <div className="blockRight_projectTitle font_bangers">

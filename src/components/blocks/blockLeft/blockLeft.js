@@ -15,7 +15,7 @@ const BlockLeft = ({
   setTitleOpen2,
   setTitleOpen3,
   setModalProject,
-  carouselUp
+  carouselUp,
 }) => {
   const size = useWindowSize();
 
@@ -23,16 +23,39 @@ const BlockLeft = ({
     <div
       className="blockLeft_container"
       style={{
-        transitionDuration: '.5s',
-        marginTop: carouselUp ? '0px' : `calc((${size.itemHeight / 2 }vw) + 1vh + 90px )`,
+        transitionDuration: ".5s",
+
+
+
+
+        marginTop:
+        (window.innerWidth >= 1400) & carouselUp
+        ? "0px"
+        : (window.innerWidth >= 1400) & !carouselUp
+        ? `calc(${size.itemHeight+1}vw + 12px)`
+        // : (window.innerWidth < 1400) & carouselUp
+        // ? `calc(${size.itemHeight + 1}vw)`
+        : "0px",
+
+
+
+        marginBottom:
+          carouselUp & (window.innerWidth < 1400)
+            ? `calc(${size.itemHeight+2}vw + 32px)`
+            : !carouselUp & (window.innerWidth < 1400)
+            ? `calc(1vw + 16px)`
+            : "0px",
         width: size.blockWidthBig
-          ? `calc((${size.itemWidth + .3}vw *3))`
-          : size.blockWidthMobal ? `calc(80vw)`
+          ? `calc((${size.itemWidth + 0.3}vw *3))`
+          : size.blockWidthMobal
+          ? `calc(80vw)`
           : `calc(100vw - (${size.itemWidth}vw + 44px))`,
         height:
-        size.blockWidthBig & !carouselUp ? `calc(100vh - 170px)` :
-        size.blockWidthBig  & carouselUp ? `calc(98vh - (${size.itemHeight}vw) - 180px)` :
-        `auto`
+          size.blockWidthBig & !carouselUp
+            ? `calc(100vh - 170px)`
+            : size.blockWidthBig & carouselUp
+            ? `calc((100vh - 112px) - (${size.itemHeight + 4}vw) )`
+            : `auto`,
       }}
     >
       <div className="blockLeft_video">
@@ -50,17 +73,17 @@ const BlockLeft = ({
 
       <div className="blockLeft_pictures">
         <Pictures
-        project={project}
-        setShader={setShader}
-        shader={shader}
-        setPicOpen1={setPicOpen1}
-        setPicOpen2={setPicOpen2}
-        setPicOpen3={setPicOpen3}
-        setTitleOpen1={setTitleOpen1}
-        setTitleOpen2={setTitleOpen2}
-        setTitleOpen3={setTitleOpen3}
-        setModalProject={setModalProject}
-      />
+          project={project}
+          setShader={setShader}
+          shader={shader}
+          setPicOpen1={setPicOpen1}
+          setPicOpen2={setPicOpen2}
+          setPicOpen3={setPicOpen3}
+          setTitleOpen1={setTitleOpen1}
+          setTitleOpen2={setTitleOpen2}
+          setTitleOpen3={setTitleOpen3}
+          setModalProject={setModalProject}
+        />
       </div>
     </div>
   );

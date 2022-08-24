@@ -10,7 +10,11 @@ const HideShowButton = ({ carouselUp, setCarouselUp }) => {
       <div
         className="showAndHideButton"
         style={{
-          bottom: `${`calc(${size.itemHeight}vw + 33px)` }`
+          bottom: `${`calc(${size.itemHeight}vw + 33px)` }`,
+          backgroundColor: `${carouselUp
+            ? "var(--element)"
+            : "var(--maincolor)"
+          }`,
         }}
         onClick={() => {
           setCarouselUp(!carouselUp);
