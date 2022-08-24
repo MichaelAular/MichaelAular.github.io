@@ -49,6 +49,7 @@
   animation: imgAnimation 1.6s ease-in;
   animation-delay: 300ms;
   animation-fill-mode: forwards;
+  user-select: none;
 }
 
 .modal-content {

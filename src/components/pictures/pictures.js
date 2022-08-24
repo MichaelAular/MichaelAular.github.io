@@ -28,21 +28,11 @@ const Pictures = ({
           <HandDrawnRight />
         </div>
       </div>
-
-      {/* <div linedUpPictureContainer> */}
       <div
         className="pictures_img"
         style={{
           backgroundImage:
             "url(" + require("../../assets/img/photo/" + project.image1) + ")",
-          // width:
-          //   size.length === 4
-          //     ? `${size.pictureWidth * 1.33}vw`
-          //     : `${size.pictureWidth}vw`,
-          // height:
-          //   size.length === 4
-          //     ? `${size.pictureWidth * 0.8}vw`
-          //     : `${size.pictureWidth * 0.52}vw`,
         }}
         onClick={() => {
           setPicOpen1(true);
@@ -57,14 +47,6 @@ const Pictures = ({
         style={{
           backgroundImage:
             "url(" + require("../../assets/img/photo/" + project.image2) + ")",
-          // width:
-          //   size.length === 4
-          //     ? `${size.pictureWidth * 1.33}vw`
-          //     : `${size.pictureWidth}vw`,
-          // height:
-          //   size.length === 4
-          //     ? `${size.pictureWidth * 0.8}vw`
-          //     : `${size.pictureWidth * 0.52}vw`,
         }}
         onClick={() => {
           setPicOpen2(true);
@@ -79,14 +61,6 @@ const Pictures = ({
         style={{
           backgroundImage:
             "url(" + require("../../assets/img/photo/" + project.image3) + ")",
-          // width:
-          //   size.length === 4
-          //     ? `${size.pictureWidth * 1.33}vw`
-          //     : `${size.pictureWidth}vw`,
-          // height:
-          //   size.length === 4
-          //     ? `${size.pictureWidth * 0.8}vw`
-          //     : `${size.pictureWidth * 0.52}vw`,
         }}
         onClick={() => {
           setPicOpen3(true);

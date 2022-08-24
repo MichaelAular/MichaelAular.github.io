@@ -24,21 +24,12 @@ const BlockLeft = ({
       className="blockLeft_container"
       style={{
         transitionDuration: ".5s",
-
-
-
-
         marginTop:
         (window.innerWidth >= 1400) & carouselUp
         ? "0px"
         : (window.innerWidth >= 1400) & !carouselUp
         ? `calc(${size.itemHeight+1}vw + 12px)`
-        // : (window.innerWidth < 1400) & carouselUp
-        // ? `calc(${size.itemHeight + 1}vw)`
         : "0px",
-
-
-
         marginBottom:
           carouselUp & (window.innerWidth < 1400)
             ? `calc(${size.itemHeight+2}vw + 32px)`
