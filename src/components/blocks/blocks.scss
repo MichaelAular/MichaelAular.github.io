@@ -4,11 +4,11 @@
     top: 95px;
     display: flex;
     flex-direction: row;
-    gap: 1vw;
+    gap: calc(1vw - 6px);
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    // transform: translateX(calc(1vw - 3px))
+    transform: translateX(calc(1vw - 6px));
 }
 
 @media only screen and (max-width: 1399px) {
@@ -23,5 +23,18 @@
     .blockRight{
         order: 1;
         margin-bottom: 1vw;
+    }
+}
+
+@media only screen and (max-width: 1794px) {
+    .blockContainer {
+    gap: calc(1vw - 3px);
+    transform: translateX(calc(3px));
+    }
+}
+
+@media only screen and (max-width: 997px) {
+    .blockContainer {
+    transform: translateX(calc(0px));
     }
 }

@@ -40,3 +40,19 @@
     text-align: center;
   }
 }
+
+@media screen and (min-width: 2000px) {
+  .wrapper {
+    font-size: 50%;;
+  }
+}
+@media screen and (min-width: 2700px) {
+  .wrapper {
+    font-size: 60%;;
+  }
+}
+@media screen and (min-width: 3000px) {
+  .wrapper {
+    font-size: 75%;;
+  }
+}

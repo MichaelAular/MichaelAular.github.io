@@ -29,22 +29,20 @@ const NavBar = ({
       <div
         className="navItemblock navitemleft"
         style={{ left: 
-          (window.innerWidth < 400)
+          (window.innerWidth < 480)
           ? ``
-          : (window.innerWidth < 450)
-          ? `0vw`
           : (window.innerWidth < 601)
           ? `2vw`
           : (window.innerWidth < 800)
           ? `calc(${size.itemWidth * .38}vw)`
-          : `calc(${size.itemWidth * .5}vw)`,}}
+          : `calc(${(size.itemWidth * .5) + .5}vw)`,}}
         >
         <ColorSelector
         colorSet={colorSet}
         setColorSet={setColorSet}
         className="colorSelector"
         />
-        <div className="naw font_pressStart"
+        <div className="naw font_bangers"
         onClick={() => window.location = 'mailto:yourmail@gmail.com'}>
 
           michael.aular<br/>@yacht.nl<br/>
@@ -54,14 +52,12 @@ const NavBar = ({
       <div
         className="navItemblock navitemright"
         style={{right:
-          (window.innerWidth < 400)
+          (window.innerWidth < 480)
           ? ``
-          : (window.innerWidth < 450)
-          ? `-7vw`
           : (window.innerWidth < 601)
           ? `-1.2vw`
           : (window.innerWidth < 800)
-          ? `calc(${size.itemWidth * .3}vw)`
+          ? `12vw`
           : `calc(${size.itemWidth * .5}vw)`,}}
          >
         <DoodleSwitch
