@@ -1,6 +1,6 @@
 import "./intro.scss";
 
-const Intro = ({ setIntro }) => {
+const Intro = ({ setIntro, setColorSet }) => {
     const introVideo = require("../../assets/video/BioMe.mp4");
 
   return (

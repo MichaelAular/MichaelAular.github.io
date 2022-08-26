@@ -1,0 +1,46 @@
+.BG_Element_Container{
+    position: fixed;
+    z-index: -2;
+}
+
+.BG_Element {
+    position: relative;
+    animation-name: BG_ElementPulse;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+
+.BGE_pos1 {
+    top: 10vh;
+    border-bottom: 5vh solid transparent;
+    border-top: 3vh solid transparent;
+	height: 25vh;
+}
+
+.BGE_pos2 {
+    top: 10vh;
+    border-bottom: 3vh solid transparent;
+    border-top: 10vh solid transparent;
+	height: 6vh;
+    transform: rotate(180deg)
+}
+
+.BGE_pos3 {
+    top: 5vh;
+    border-bottom: 1vh solid transparent;
+    border-top: 8vh solid transparent;
+	height: 14vh;
+}
+
+.BGE_pos4 {
+    top: 7vh;
+    border-bottom: 1vh solid transparent;
+    border-top: 3vh solid transparent;
+	height: 14vh;
+}
+
+@keyframes BG_ElementPulse {
+    0% { border-left: 100vw solid var(--backgroundPulse); }
+    75% { border-left: 100vw solid var(--backgroundPulseLight); }
+    100% { border-left: 100vw solid var(--backgroundPulse); }
+}

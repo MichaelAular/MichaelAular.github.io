@@ -19,6 +19,8 @@
   --tonecolor1: rgba(185, 190, 210, 1);
   --tonecolor1_Transp: rgba(185, 190, 210, 0.7);
   --darkcolor1: rgba(0, 25, 75, 1);
+  --backgroundPulse1: rgb(197, 217, 223);
+  --backgroundPulseLight1: rgb(189, 199, 202);
 
   /// colorset 2 ///
   --maincolor2: rgb(100, 0, 75);
@@ -27,6 +29,8 @@
   --tonecolor2: rgba(192, 192, 212, 1);
   --tonecolor2_Transp: rgba(192, 192, 212, 0.7);
   --darkcolor2: rgba(75, 0, 0, 1);
+  --backgroundPulse2: rgb(217, 197, 223);
+  --backgroundPulseLight2: rgb(209, 199, 212);
 
   /// colorset 3 ///
   --maincolor3: rgb(150, 150, 0);
@@ -35,6 +39,8 @@
   --tonecolor3: rgba(195, 195, 215, 1);
   --tonecolor3_Transp: rgba(195, 195, 215, 0.7);
   --darkcolor3: rgba(35, 35, 0, 1);
+  --backgroundPulse3: rgb(212, 211, 191);
+  --backgroundPulseLight3: rgb(197, 197, 186);
 
   /// Adjustable colorset ///
   --maincolor: var(--maincolor1);
@@ -42,9 +48,9 @@
   --tonecolor: var(--tonecolor1);
   --tonecolorTransp: var(--tonecolor1_Transp);
   --darkcolor: var(--darkcolor1);
-
+  --backgroundPulse: var(--backgroundPulse1);
+  --backgroundPulseLight: var(--backgroundPulseLight1);
   --doodle: var(--transparent);
   --doodlePositive: var(--blackish);
   --doodleNegative: var(--maincolor);
-
 }

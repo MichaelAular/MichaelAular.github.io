@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./assets/css/main.scss";
 import projectData from "./projectData.json";
+import BackgroundElements from "./components/background/backgroundElements";
 import NavBar from "./components/Navbar/navBar";
 import Carousel from "./components/carousel/carousel";
 import Blocks from "./components/blocks/blocks";
 import Shader from "./components/shader/shader";
 import PictureModal from "./components/pictures/pictureModal";
 import Intro from "./components/intro/intro";
-
 
 const App = () => {
   const projects = projectData;
@@ -28,7 +28,9 @@ const App = () => {
   return (
     intro ? <Intro
     setIntro={setIntro}
-    /> :
+    setColorSet={setColorSet}
+    />
+     :
     <div className="App">
       <Shader shader={shader} />
       <NavBar
@@ -76,6 +78,7 @@ const App = () => {
         setTitleOpen3={setTitleOpen3}
         setShader={setShader}
       />
+      <BackgroundElements/>
     </div>
   );
 };

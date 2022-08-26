@@ -14,6 +14,8 @@ const ColorSelector = ({colorSet, setColorSet}) => {
             document.documentElement.style.setProperty('--tonecolor', 'var(--tonecolor1)')
             document.documentElement.style.setProperty('--tonecolorTransp', 'var(--tonecolor1_Transp)')
             document.documentElement.style.setProperty('--darkcolor', 'var(--darkcolor1)')
+            document.documentElement.style.setProperty('--backgroundPulse', 'var(--backgroundPulse1)')
+            document.documentElement.style.setProperty('--backgroundPulseLight', 'var(--backgroundPulseLight1)')
         }}
       />
       <button
@@ -25,6 +27,8 @@ const ColorSelector = ({colorSet, setColorSet}) => {
             document.documentElement.style.setProperty('--tonecolor', 'var(--tonecolor2)')
             document.documentElement.style.setProperty('--tonecolorTransp', 'var(--tonecolor2_Transp)')
             document.documentElement.style.setProperty('--darkcolor', 'var(--darkcolor2)')
+            document.documentElement.style.setProperty('--backgroundPulse', 'var(--backgroundPulse2)')
+            document.documentElement.style.setProperty('--backgroundPulseLight', 'var(--backgroundPulseLight2)')
          }}
       />
       <button
@@ -36,6 +40,8 @@ const ColorSelector = ({colorSet, setColorSet}) => {
             document.documentElement.style.setProperty('--tonecolor', 'var(--tonecolor3)')
             document.documentElement.style.setProperty('--tonecolorTransp', 'var(--tonecolor3_Transp)')
             document.documentElement.style.setProperty('--darkcolor', 'var(--darkcolor3)')
+            document.documentElement.style.setProperty('--backgroundPulse', 'var(--backgroundPulse3)')
+            document.documentElement.style.setProperty('--backgroundPulseLight', 'var(--backgroundPulseLight3)')
          }}
       />
 
