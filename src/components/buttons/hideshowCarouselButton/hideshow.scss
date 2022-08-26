@@ -5,17 +5,14 @@
   height: 23px;
   left: 1vw;
   border-radius: 50%;
-  border: 5px solid var(--showhide);
-  background-color: var(--element);
+  border: 5px solid var(--tonecolor);
+  background-color: var(--tonecolor);
   align-items: center;
   justify-content: center;
   cursor: pointer;
   pointer-events: all;
   z-index: 5;
   transition-duration: 0.5s;
-  &:hover {
-    background-color: var(--accentcolor);
-  }
 }
 
 .smallBlock {
@@ -24,7 +21,7 @@
   height: 17px;
   left: calc(1vw);
   z-index: -100;
-  background-color: var(--showhide);
+  background-color: var(--tonecolor);
   pointer-events: none;
   transition-duration: 0.5s;
   z-index: 4;
@@ -35,6 +32,6 @@
   width: 12px;
   rotate: -90deg;
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0.7;
   transform: translateX(-2px);
 }

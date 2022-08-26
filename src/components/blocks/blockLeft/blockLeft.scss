@@ -8,6 +8,8 @@
   border-radius: 0.2vw;
   overflow-y: scroll;
   pointer-events: all;
+  box-shadow: -.1vw .1vw 1vw var(--halfshadow);
+  // border: 1px solid red;
 }
 .blockLeft_video {
   position: relative;

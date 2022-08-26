@@ -5,9 +5,10 @@
 
 .BG_Element {
     position: relative;
+    opacity: .7;
     animation-name: BG_ElementPulse;
     animation-iteration-count: infinite;
-    animation-duration: 20s;
+    animation-duration: 25s;
 }
 
 .BGE_pos1 {
@@ -41,6 +42,6 @@
 
 @keyframes BG_ElementPulse {
     0% { border-left: 100vw solid var(--backgroundPulse); }
-    75% { border-left: 100vw solid var(--backgroundPulseLight); }
+    50% { border-left: 100vw solid var(--backgroundPulseLight); }
     100% { border-left: 100vw solid var(--backgroundPulse); }
 }
