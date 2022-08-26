@@ -12,12 +12,9 @@
   --darkCarousel: rgba(87, 88, 93, 1);
   --offWhite: rgba(222, 252, 250, 1);
 
-  /// alpha ///
-  --alpha: 1;
-
   /// colorset 1 ///
   --maincolor1: rgb(0, 150, 150);
-  --doodle1: 0, 150, 150;
+  --doodle1: rgba(0, 150, 150, 1);
   --accentcolor1: rgba(0, 255, 255, 1);
   --tonecolor1: rgba(185, 190, 210, 1);
   --tonecolor1_Transp: rgba(185, 190, 210, 0.7);
@@ -25,7 +22,7 @@
 
   /// colorset 2 ///
   --maincolor2: rgb(100, 0, 75);
-  --doodle2: 100, 0, 75;
+  --doodle2: rgba(100, 0, 75, 1);
   --accentcolor2: rgba(255, 0, 100, 1);
   --tonecolor2: rgba(192, 192, 212, 1);
   --tonecolor2_Transp: rgba(192, 192, 212, 0.7);
@@ -33,19 +30,20 @@
 
   /// colorset 3 ///
   --maincolor3: rgb(150, 150, 0);
-  --doodle3: 150, 150, 0;
+  --doodle3: rgba(150, 150, 0, 1);
   --accentcolor3: rgba(255, 255, 0, 1);
   --tonecolor3: rgba(195, 195, 215, 1);
   --tonecolor3_Transp: rgba(195, 195, 215, 0.7);
   --darkcolor3: rgba(35, 35, 0, 1);
 
-  /// colorset used ///
+  /// Adjustable colorset ///
   --maincolor: var(--maincolor1);
   --accentcolor: var(--accentcolor1);
   --tonecolor: var(--tonecolor1);
   --tonecolorTransp: var(--tonecolor1_Transp);
   --darkcolor: var(--darkcolor1);
-  --doodle: rgba(var(--doodle1), var(--alpha));
+
+  --doodle: var(--transparent);
   --doodlePositive: var(--blackish);
   --doodleNegative: var(--maincolor);
 

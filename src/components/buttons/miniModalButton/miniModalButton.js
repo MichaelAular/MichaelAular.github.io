@@ -1,7 +1,5 @@
 import "./miniModalButton.scss";
 
-
-
 const MiniModalButton = ({
     size,
     setDisplayedProject,

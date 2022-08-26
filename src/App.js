@@ -14,7 +14,6 @@ const App = () => {
   const [colorSet, setColorSet] = useState(1);
   const [shader, setShader] = useState(false);
   const [doodle, setDoodle] = useState(false);
-  const [startup, setStartup] = useState(true);
   const [displayedProject, setDisplayedProject] = useState(0);
   const [picOpen1, setPicOpen1] = useState(false);
   const [picOpen2, setPicOpen2] = useState(false);
@@ -37,8 +36,7 @@ const App = () => {
         setColorSet={setColorSet}
         doodle={doodle}
         setDoodle={setDoodle}
-        startup={startup}
-        setStartup={setStartup}
+
       />
       <Blocks
         projects={projects}

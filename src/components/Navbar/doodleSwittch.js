@@ -20,7 +20,10 @@ const DoodleSwitch = ({ doodle, setDoodle }) => {
     }
 
     if (doodle === true) {
-      document.documentElement.style.setProperty("--doodle", "var(--maincolor)");
+      document.documentElement.style.setProperty(
+        "--doodle",
+        "var(--maincolor)"
+      );
       document.documentElement.style.setProperty(
         "--doodleNegative",
         "var(--blackish)"

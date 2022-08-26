@@ -9,26 +9,15 @@ const NavBar = ({
   setColorSet,
   doodle,
   setDoodle,
-  startup,
-  setStartup
  }) => {
 
   const size = useWindowSize();
-  const sleep = (milliseconds) => { return new Promise((resolve) => setTimeout(resolve, milliseconds)) };
-  const startupRun = async ()=> {
-    await sleep(3000)
-    setStartup(false)
-    document.documentElement.style.setProperty('--alpha', 0)
-    setDoodle(false)
-  }
-
-  startup && startupRun();
 
   return (
     <div className="navBar">
       <div
         className="navItemblock navitemleft"
-        style={{ left: 
+        style={{ left:
           (window.innerWidth < 480)
           ? ``
           : (window.innerWidth < 601)
