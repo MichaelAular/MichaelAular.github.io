@@ -26,6 +26,7 @@ const Intro = ({ setIntro, setColorSet }) => {
           <b>Portfolio</b>
           <br />
           <span className="name">Michael Aular</span>
+          <span className="clickGo">click GO to skip</span>
         </div>
       </div>
     </div>

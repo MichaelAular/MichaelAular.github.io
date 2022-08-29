@@ -1,4 +1,4 @@
-.introContainer{
+.introContainer {
   width: 100%;
   height: 100%;
   z-index: -999;
@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
 }
-.name{
+.name {
   font-size: 4.2vw;
   animation: smallerName;
   animation-fill-mode: forwards;
@@ -35,14 +35,16 @@
   text-shadow: 1px 1px 3px var(--blackish);
   font-size: 4vw;
   font-family: "Permanent Marker", cursive;
+  margin-bottom: 0.5vw;
+  margin-top: 0.5vw;
   cursor: pointer;
   &:hover {
-    animation: buttonRoll .4s forwards;
+    animation: buttonRoll 0.4s forwards;
   }
 }
-.introButtonText{
+.introButtonText {
   rotate: -10deg;
-  opacity: .9;
+  opacity: 0.9;
   color: white;
   animation: goBlink 2s;
   animation-iteration-count: infinite;
@@ -56,6 +58,10 @@
   animation-delay: 1s;
 }
 .introStartButtonContainer {
+  background-color: var(--halfblack);
+  padding-left: 0.5vw;
+  padding-right: 3vw;
+  border-radius: 5vw;
   position: relative;
   z-index: 1;
   display: flex;
@@ -66,62 +72,107 @@
   animation: lowerButtonContainer, raiseButtonContainer;
   animation-fill-mode: forwards;
   animation-duration: 1.5s, 1.5s;
-  animation-delay: 1s, 20s;
+  animation-delay: 1s, 200000s;
 }
-.introVideoWrapper{
+.introVideoWrapper {
   position: absolute;
   display: flex;
   align-self: auto;
   align-content: center;
   padding-top: -56.25%;
   top: auto;
-  width: 100% ;
+  width: 100%;
+}
+
+.clickGo {
+  position: absolute;
+  top: -3vw;
+  width: 130%;
+  left:1vw;
+  opacity: 0;
+  font-size: 1.5vw;
+  animation: clickGoBlink;
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+  animation-delay: 2.5s;
+}
+
+@keyframes clickGoBlink {
+  0% {
+    opacity: 0;
+    color: var(--maincolor);
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    color: var(--accentcolor)
+  }
 }
 
 @keyframes lowerButtonContainer {
   100% {
-    transform:
-    translateX(30vw)
-    translateY(calc(53vh));
+    transform: translateY(calc(53vh)) scale(0.6);
   }
 }
 @media only screen and (max-width: 1200px) {
   @keyframes lowerButtonContainer {
     100% {
-      transform:
-      translateX(30vw)
-      translateY(calc(51vh))
-      scale(1.2)
+      transform: translateY(calc(51vh)) scale(.8);
     }
   }
 }
 @media only screen and (max-width: 800px) {
   @keyframes lowerButtonContainer {
     100% {
-      transform:
-      translateX(25vw)
-      translateY(calc(49vh))
-      scale(1.4)
+      transform: translateY(calc(49vh)) scale(1.4);
     }
   }
 }
 @media only screen and (max-width: 600px) {
   @keyframes lowerButtonContainer {
     100% {
-      margin-bottom: 18vw;
-      transform:
-      translateX(12vw)
-      translateY(calc(44vh))
-      scale(2.5)
+      transform: translateY(calc(44vh)) scale(2);
     }
   }
 }
 @keyframes raiseButtonContainer {
   100% {
-    transform:
-    translateX(0vw)
-    translateY(0vw)
-    scale(2)
+    transform: translateY(0vw) scale(1.2);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  @keyframes raiseButtonContainer {
+    100% {
+      transform: translateY(0vw) scale(1.4);
+    }
+  }
+}
+@media only screen and (max-width: 800px) {
+  @keyframes raiseButtonContainer {
+    100% {
+      transform: translateY(0vw) scale(2);
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  @keyframes raiseButtonContainer {
+    100% {
+      transform: translateY(0vw) scale(2.2);
+    }
   }
 }
 @keyframes smallerName {
@@ -131,42 +182,46 @@
   }
 }
 @keyframes lineHeight {
-  0% {line-height: 0.8;}
-  100% {line-height: 0.53;}
+  0% {
+    line-height: 0.8;
+  }
+  100% {
+    line-height: 0.53;
+  }
 }
 @keyframes goBlink {
   0% {
-    color: white
+    color: white;
   }
   10% {
-    color: var(--offWhite)
+    color: var(--offWhite);
   }
   30% {
-    color: white
+    color: white;
   }
   45% {
-    color: var(--offWhite)
+    color: var(--offWhite);
   }
   60% {
-    color: white
+    color: white;
   }
   100% {
-    color: white
+    color: white;
   }
 }
 
-@keyframes buttonRoll{
+@keyframes buttonRoll {
   0% {
-    transform:
-    rotate(0deg)
-   }
+    transform: rotate(0deg);
+    // translateY(-.5vw);
+  }
   100% {
-    transform:
-    rotate(360deg)
+    transform: rotate(360deg);
+    // translateY(-.5vw);
   }
 }
 @media (max-aspect-ratio: 8/5) {
-  .introVideoWrapper{
+  .introVideoWrapper {
     height: 100%;
     width: auto;
   }
