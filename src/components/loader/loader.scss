@@ -1,0 +1,20 @@
+.spinner {
+    position: relative;
+    border: 7vw solid var(--maincolor);
+    border-top: 7vw solid transparent;
+    border-radius: 50%;
+    width: 25vw;
+    max-width: 220px;
+    height: 25vw;
+    max-height: 220px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

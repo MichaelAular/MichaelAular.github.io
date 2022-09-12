@@ -1,225 +1,80 @@
 .introContainer {
+  position: fixed;
+  display: flex;
   width: 100%;
   height: 100%;
-  z-index: -999;
-  background-color: #0b0b0b;
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 4.2vw;
-  font-family: Arial, Helvetica, sans-serif;
-  top: 0;
-  left: 0;
-}
-.name {
-  font-size: 4.2vw;
-  animation: smallerName;
-  animation-fill-mode: forwards;
-  animation-duration: 1.5s;
-  animation-delay: 1s;
-}
-.introStartButton {
-  position: relative;
-  z-index: 1;
-  display: flex;
   justify-content: center;
   align-items: center;
-  border: 1vw solid #009696;
-  border-top: 1vw solid transparent;
-  background-color: transparent;
-  border-radius: 50%;
-  width: 8vw;
-  height: 8vw;
-  text-shadow: 1px 1px 3px var(--blackish);
-  font-size: 4vw;
-  font-family: "Permanent Marker", cursive;
-  margin-bottom: 0.5vw;
-  margin-top: 0.5vw;
-  cursor: pointer;
-  &:hover {
-    animation: buttonRoll 0.4s forwards;
-  }
 }
-.introButtonText {
-  rotate: -10deg;
-  opacity: 0.9;
-  color: white;
-  animation: goBlink 2s;
-  animation-iteration-count: infinite;
-  animation-delay: 18s;
-}
-.introTitle {
-  position: relative;
-  line-height: 0.8;
-  animation: lineHeight 1s forwards;
-  text-shadow: 1px 1px 2px var(--blackish);
-  animation-delay: 1s;
-}
-.introStartButtonContainer {
-  background-color: var(--halfblack);
-  padding-left: 0.5vw;
-  padding-right: 3vw;
-  border-radius: 5vw;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1vw;
-  margin-bottom: 14vw;
-  animation: lowerButtonContainer, raiseButtonContainer;
-  animation-fill-mode: forwards;
-  animation-duration: 1.5s, 1.5s;
-  animation-delay: 1s, 20s;
-}
+
 .introVideoWrapper {
   position: absolute;
   display: flex;
-  align-self: auto;
   align-content: center;
-  padding-top: -56.25%;
   top: auto;
   width: 100%;
 }
 
-.clickGo {
-  position: absolute;
-  top: -3vw;
-  width: 130%;
-  left:1vw;
-  opacity: 0;
-  font-size: 1.5vw;
-  animation: clickGoBlink;
-  animation-fill-mode: forwards;
-  animation-duration: 5s;
-  animation-delay: 2.5s;
+.introButtonContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 2vw;
+  animation: lowerButtonContainer 2s forwards;
 }
 
-@keyframes clickGoBlink {
-  0% {
-    opacity: 0;
-    color: var(--maincolor);
-  }
-  30% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  70% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    color: var(--accentcolor)
-  }
+.loaderbutton {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  border: none;
+  align-items:  center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.skipText {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  width: 0;
+  height: 4vh;
+  color: var(--maincolor);
+  border-right: 0.3em solid transparent;
+  font-size: 2vh;
+  animation: textgrow 2s forwards, typing 2.5s 2.5s steps(13, end) forwards, blink-caret .5s 2.5s infinite;
 }
 
 @keyframes lowerButtonContainer {
   100% {
-    transform: translateY(calc(53vh)) scale(0.6);
-  }
-}
-@media only screen and (max-width: 1200px) {
-  @keyframes lowerButtonContainer {
-    100% {
-      transform: translateY(calc(51vh)) scale(.8);
-    }
-  }
-}
-@media only screen and (max-width: 800px) {
-  @keyframes lowerButtonContainer {
-    100% {
-      transform: translateY(calc(49vh)) scale(1.4);
-    }
-  }
-}
-@media only screen and (max-width: 600px) {
-  @keyframes lowerButtonContainer {
-    100% {
-      transform: translateY(calc(44vh)) scale(2);
-    }
-  }
-}
-@keyframes raiseButtonContainer {
-  100% {
-    transform: translateY(0vw) scale(1.2);
-  }
-}
-@media only screen and (max-width: 1200px) {
-  @keyframes raiseButtonContainer {
-    100% {
-      transform: translateY(0vw) scale(1.4);
-    }
-  }
-}
-@media only screen and (max-width: 800px) {
-  @keyframes raiseButtonContainer {
-    100% {
-      transform: translateY(0vw) scale(2);
-    }
-  }
-}
-@media only screen and (max-width: 600px) {
-  @keyframes raiseButtonContainer {
-    100% {
-      transform: translateY(0vw) scale(2.2);
-    }
-  }
-}
-@keyframes smallerName {
-  100% {
-    font-size: 2.62vw;
-    padding-left: 0.1vw;
-  }
-}
-@keyframes lineHeight {
-  0% {
-    line-height: 0.8;
-  }
-  100% {
-    line-height: 0.53;
-  }
-}
-@keyframes goBlink {
-  0% {
-    color: white;
-  }
-  10% {
-    color: var(--offWhite);
-  }
-  30% {
-    color: white;
-  }
-  45% {
-    color: var(--offWhite);
-  }
-  60% {
-    color: white;
-  }
-  100% {
-    color: white;
+    transform: translateY(calc(42vh)) scale(0.05);
   }
 }
 
-@keyframes buttonRoll {
-  0% {
-    transform: rotate(0deg);
-    // translateY(-.5vw);
-  }
+@keyframes textgrow {
   100% {
-    transform: rotate(360deg);
-    // translateY(-.5vw);
+    transform:
+    scale(10)
+    translateY(3vh);
   }
 }
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 105%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {border-color: transparent;}
+  50% {border-color: var(--accentcolor);}
+}
+
 @media (max-aspect-ratio: 8/5) {
   .introVideoWrapper {
     height: 100%;

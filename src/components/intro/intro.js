@@ -1,33 +1,30 @@
 import "./intro.scss";
+import Loader from "../loader/loader";
 
 const Intro = ({ setIntro }) => {
-    const introVideo = require("../../assets/video/BioMe.mp4");
+  const introVideo = require("../../assets/video/BioMe.mp4");
 
   return (
     <div className="introContainer">
       <div className="introVideoWrapper">
         <video
-        muted
-        style={{
-          minWidth: "100vw",
-        }}
-        playsInline
-        alt="All the devices"
-        src={introVideo}
-        autoPlay
+          muted
+          style={{
+            minWidth: "100vw",
+          }}
+          playsInline
+          alt="All the devices"
+          src={introVideo}
+          autoPlay
         />
-        </div>
+      </div>
 
-      <div className="introStartButtonContainer">
-        <button className="introStartButton" onClick={() => setIntro(false)}>
-          <span className="introButtonText">GO!</span>
+      <div className="introButtonContainer">
+        <button className="loaderbutton"
+        onClick={()=> setIntro(false)}>
+          <Loader className="loader" />
+          <div className="skipText font_pressStart">click to skip</div>
         </button>
-        <div className="introTitle">
-          <b>Portfolio</b>
-          <br />
-          <span className="name">Michael Aular</span>
-          <span className="clickGo">click GO to skip</span>
-        </div>
       </div>
     </div>
   );

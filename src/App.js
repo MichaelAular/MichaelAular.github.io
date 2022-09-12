@@ -9,7 +9,7 @@ import Shader from "./components/shader/shader";
 import PictureModal from "./components/pictures/pictureModal";
 import Intro from "./components/intro/intro";
 import { IMAGES } from "./assets/img/photo/Images";
-
+import Loader from "./components/loader/loader";
 
 const App = () => {
   const projects = projectData;
@@ -30,85 +30,87 @@ const App = () => {
 
   useEffect(() => {
     const loadImage = (image) => {
-
       return new Promise((resolve, reject) => {
-        const loadImg = new Image()
-        loadImg.src = image.url
-        loadImg.onload =()=> {resolve(image.url)}
-        loadImg.onerror = err => reject(err)
+        const loadImg = new Image();
+        loadImg.src = image.url;
+        loadImg.onload = () => {
+          resolve(image.url);
+        };
+        loadImg.onerror = (err) => reject(err);
+      });
+    };
 
-        console.log("loadImg.src: ",loadImg.src)
-        console.log("loadImg.onload: ",loadImg.onload)
-      })
-
-    }
-
-    Promise.all(IMAGES.map(image => loadImage(image)))
+    Promise.all(IMAGES.map((image) => loadImage(image)))
       .then(() => setImgsLoaded(true))
-      .catch(err => console.log("Failed to load images", err))
-  }, [])
+      .catch((err) => console.log("Failed to load images", err));
+  }, []);
 
   return (
     <>
       <main className="images">
-        { imgsLoaded ? (
-           intro ?
-           <Intro setIntro={setIntro} /> :
-          <div className="App">
-             <Shader shader={shader} />
-             <NavBar
-               colorSet={colorSet}
-               setColorSet={setColorSet}
-               doodle={doodle}
-               setDoodle={setDoodle}
-             />
-             <Blocks
-               projects={projects}
-               setShader={setShader}
-               shader={shader}
-               displayedProject={displayedProject}
-               setPicOpen1={setPicOpen1}
-               setPicOpen2={setPicOpen2}
-               setPicOpen3={setPicOpen3}
-               setTitleOpen1={setTitleOpen1}
-               setTitleOpen2={setTitleOpen2}
-               setTitleOpen3={setTitleOpen3}
-               setModalProject={setModalProject}
-               carouselUp={carouselUp}
-             />
-
-             <Carousel
-               projects={projects}
-               setShader={setShader}
-               shader={shader}
-               setDisplayedProject={setDisplayedProject}
-               carouselUp={carouselUp}
-               setCarouselUp={setCarouselUp}
-             />
-             <PictureModal
-               project={modalProject}
-               picOpen1={picOpen1}
-               picOpen2={picOpen2}
-               picOpen3={picOpen3}
-               setPicOpen1={setPicOpen1}
-               setPicOpen2={setPicOpen2}
-               setPicOpen3={setPicOpen3}
-               titleOpen1={titleOpen1}
-               titleOpen2={titleOpen2}
-               titleOpen3={titleOpen3}
-               setTitleOpen1={setTitleOpen1}
-               setTitleOpen2={setTitleOpen2}
-               setTitleOpen3={setTitleOpen3}
-               setShader={setShader}
-             />
-             <BackgroundElements />
-           </div>
+        {!imgsLoaded ? (
+          <div className="loaderContainer">
+          <Loader />
+          <div className="loaderText font_pressStart">
+                LOADING
+            </div>
+            </div>
+        ) : intro ? (
+          <Intro setIntro={setIntro} />
         ) : (
-          <h1>Loading images...</h1>)
-        }
+          <div className="App">
+            <Shader shader={shader} />
+            <NavBar
+              colorSet={colorSet}
+              setColorSet={setColorSet}
+              doodle={doodle}
+              setDoodle={setDoodle}
+            />
+            <Blocks
+              projects={projects}
+              setShader={setShader}
+              shader={shader}
+              displayedProject={displayedProject}
+              setPicOpen1={setPicOpen1}
+              setPicOpen2={setPicOpen2}
+              setPicOpen3={setPicOpen3}
+              setTitleOpen1={setTitleOpen1}
+              setTitleOpen2={setTitleOpen2}
+              setTitleOpen3={setTitleOpen3}
+              setModalProject={setModalProject}
+              carouselUp={carouselUp}
+            />
+
+            <Carousel
+              projects={projects}
+              setShader={setShader}
+              shader={shader}
+              setDisplayedProject={setDisplayedProject}
+              carouselUp={carouselUp}
+              setCarouselUp={setCarouselUp}
+            />
+            <PictureModal
+              project={modalProject}
+              picOpen1={picOpen1}
+              picOpen2={picOpen2}
+              picOpen3={picOpen3}
+              setPicOpen1={setPicOpen1}
+              setPicOpen2={setPicOpen2}
+              setPicOpen3={setPicOpen3}
+              titleOpen1={titleOpen1}
+              titleOpen2={titleOpen2}
+              titleOpen3={titleOpen3}
+              setTitleOpen1={setTitleOpen1}
+              setTitleOpen2={setTitleOpen2}
+              setTitleOpen3={setTitleOpen3}
+              setShader={setShader}
+            />
+            <BackgroundElements />
+          </div>
+        )}
       </main>
     </>
-  )
-}
+  );
+};
 
 export default App;
