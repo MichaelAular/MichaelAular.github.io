@@ -3,6 +3,16 @@ import Loader from "../loader/loader";
 
 const Intro = ({ setIntro }) => {
   const introVideo = require("../../assets/video/BioMe.mp4");
+  const sleep = (milliseconds) => {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+  };
+
+  const  timerIntro = async () => {
+    await sleep(22500);
+    setIntro(false);
+  };
+
+  timerIntro()
 
   return (
     <div className="introContainer">
@@ -20,8 +30,7 @@ const Intro = ({ setIntro }) => {
       </div>
 
       <div className="introButtonContainer">
-        <button className="loaderbutton"
-        onClick={()=> setIntro(false)}>
+        <button className="loaderbutton" onClick={() => setIntro(false)}>
           <Loader className="loader" />
           <div className="skipText font_pressStart">click to skip</div>
         </button>
