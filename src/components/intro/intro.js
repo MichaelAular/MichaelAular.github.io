@@ -10,6 +10,7 @@ const Intro = ({ setIntro }) => {
   const  timerIntro = async () => {
     await sleep(22500);
     setIntro(false);
+    document.documentElement.style.setProperty('--background', 'rgba(195, 200, 215, 1)')
   };
 
   timerIntro()
@@ -30,7 +31,12 @@ const Intro = ({ setIntro }) => {
       </div>
 
       <div className="introButtonContainer">
-        <button className="loaderbutton" onClick={() => setIntro(false)}>
+        <button className="loaderbutton"
+        onClick={() => {
+        setIntro(false)
+        document.documentElement.style.setProperty('--background', 'rgba(195, 200, 215, 1)')}
+
+        }>
           <Loader className="loader" />
           <div className="skipText font_pressStart">click to skip</div>
         </button>
