@@ -23,7 +23,7 @@ const PictureModal = ({
     <div className={`pictureModal_Container ${picOpen1 ? "show" : "hide"}`}>
       <div className="pictureModal_Picture"
         style={{
-        backgroundImage: "url("+require("../../assets/img/photo/"+project.image1)+")" }}
+        backgroundImage: "url(" +require( "../../assets/img/photo/" +project.image1)+ ")" }}
         onClick={() => {
           setPicOpen1(false);
           setShader(false);
