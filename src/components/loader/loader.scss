@@ -55,8 +55,8 @@
   width: 0vw;
   overflow: hidden;
   font-size: 20vw;
-  border-right: 0.2em solid var(--accentcolor);
-  animation: typing 1.5s 3s steps(9, end) forwards, blink-caret .5s infinite;
+  border-right: 0.2em solid transparent;
+  animation: typing 1.5s 3s steps(9, end) forwards, blink-caret .5s 3s infinite;
 }
 
 @keyframes typing {
