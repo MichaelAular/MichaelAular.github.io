@@ -30,7 +30,7 @@
   height: 25vw;
 }
 
-.loaderButtonAnimation { animation: grow 1.5s 1.5s linear forwards; }
+.loaderButtonAnimation { animation: grow 3s 1.5s linear forwards; }
 .loaderButton {
   position: relative;
   display: flex;
@@ -54,7 +54,7 @@
   overflow: hidden;
   font-size: 20vw;
   border-right: 0.2em solid var(--accentcolor);
-  animation: typing 1s 3s steps(9, end) forwards, blink-caret .5s infinite;
+  animation: typing 1.5s 3s steps(9, end) forwards, blink-caret .5s infinite;
 }
 
 @keyframes typing {
@@ -95,8 +95,6 @@
     rotate(315deg)
     translateX(-2.5vw)
     translateY(-2.5vw)
-    // scale(.1);
-    // scale(.05);
   }
 }
 @keyframes spinOverlay {
@@ -121,22 +119,29 @@
     width: 25vw;
     transform:
     rotate(45deg)
-    translatex(-28.9vw)
-    translateY(-23.33vw);
+    translatex(-100%)
+    translateY(-100%);
     background-color: transparent;
   }
-  50% {
+  25% {
     border-color: white;
+  }
+  50% {
+    width: 25vw;
+    transform:
+    rotate(45deg)
+    translateX(-100%)
+    translateY(-100%);
   }
   100% {
     opacity: 1;
     width: 75vw;
-    transform:
-    rotate(45deg)
-    translatex(-21vw)
-    translateY(-5.7vw);
     background-color: var(--halfshadow);
     border-color: white;
+    transform:
+    rotate(45deg)
+    translateX(-50%)
+    translateY(-50%)
   }
 }
 

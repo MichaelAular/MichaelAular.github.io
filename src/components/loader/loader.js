@@ -1,7 +1,6 @@
 import "./loader.scss";
 
 const Loader = ({ imgsLoaded }) => {
-    console.log("imgsLoaded: ",imgsLoaded)
 
   const spinnerClassName =()=> {
       if (imgsLoaded === true) return "spinner spinnerAnimation";

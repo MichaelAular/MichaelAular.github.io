@@ -15,7 +15,6 @@ const Intro = ({
     setIntro(false);
     document.documentElement.style.setProperty('--background', 'rgba(195, 200, 215, 1)')
   };
-
   timerIntro()
 
   return (
@@ -38,7 +37,6 @@ const Intro = ({
         onClick={() => {
         setIntro(false)
         document.documentElement.style.setProperty('--background', 'rgba(195, 200, 215, 1)')}
-
         }>
           <Loader
           className="loader"

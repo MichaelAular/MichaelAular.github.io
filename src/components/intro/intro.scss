@@ -34,23 +34,16 @@
   cursor: pointer;
 }
 
-
-
 @keyframes lowerButtonContainer {
   50% {
     transform:
     scale(.05);
   }
   100% {
-    transform: translateY(calc(46vh))
+    transform:
+    translateY(calc(46vh))
     scale(.05);
   }
-}
-
-@keyframes blink-caret {
-  from,
-  to {border-color: transparent;}
-  50% {border-color: var(--accentcolor);}
 }
 
 @media (max-aspect-ratio: 8/5) {
