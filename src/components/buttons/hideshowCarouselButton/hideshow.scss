@@ -5,8 +5,8 @@
   height: 23px;
   left: 1vw;
   border-radius: 50%;
-  border: 5px solid var(--tonecolor);
-  background-color: var(--tonecolor);
+  border: 5px solid var(--element);
+  background-color: var(--element);
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -21,7 +21,7 @@
   height: 17px;
   left: calc(1vw);
   z-index: -100;
-  background-color: var(--tonecolor);
+  background-color: var(--element);
   pointer-events: none;
   transition-duration: 0.5s;
   z-index: 4;

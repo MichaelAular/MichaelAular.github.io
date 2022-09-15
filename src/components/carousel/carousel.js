@@ -117,7 +117,7 @@ const Carousel = ({
           style={{
             height: `calc(${size.itemHeight}vw + 32px)`,
             backgroundColor: `${
-              shader ? "var(--darkCarousel)" : "var(--tonecolor)"
+              shader ? "var(--darkCarousel)" : "var(--element)"
             }`,
           }}
         />

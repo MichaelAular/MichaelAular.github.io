@@ -15,12 +15,10 @@ body {
 }
 
 .loaderContainer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  gap: 2vw;
   justify-content: center;
   align-items: center;
 }

@@ -1,14 +1,17 @@
 import "./intro.scss";
 import Loader from "../loader/loader";
 
-const Intro = ({ setIntro }) => {
+const Intro = ({
+  setIntro,
+  imgsLoaded
+}) => {
   const introVideo = require("../../assets/video/BioMe.mp4");
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
 
   const  timerIntro = async () => {
-    await sleep(22500);
+    await sleep(23500);
     setIntro(false);
     document.documentElement.style.setProperty('--background', 'rgba(195, 200, 215, 1)')
   };
@@ -37,8 +40,10 @@ const Intro = ({ setIntro }) => {
         document.documentElement.style.setProperty('--background', 'rgba(195, 200, 215, 1)')}
 
         }>
-          <Loader className="loader" />
-          <div className="skipText font_pressStart">click to skip</div>
+          <Loader
+          className="loader"
+          imgsLoaded={imgsLoaded}
+          />
         </button>
       </div>
     </div>

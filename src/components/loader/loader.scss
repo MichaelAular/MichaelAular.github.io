@@ -1,20 +1,152 @@
-.spinner {
-    position: relative;
-    border: 7vw solid var(--maincolor);
-    border-top: 7vw solid transparent;
-    border-radius: 50%;
-    width: 25vw;
-    max-width: 220px;
-    height: 25vw;
-    max-height: 220px;
-    animation: spin 1s linear infinite;
+.LaaderAnimation { animation: loader 1.5s linear forwards; }
+.loader {
+  position: relative;
+  transform: translateX(0vw);
 }
 
-@keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+.spinnerAnimationInf { animation: spinInf 3s linear infinite; }
+.spinnerAnimation { animation: spin 3s linear forwards; }
+.spinner {
+  position: relative;
+  border: 4vw solid var(--maincolor);
+  border-bottom: 4vw solid transparent;
+  border-right: 4vw solid transparent;
+  border-radius: 50%;
+  width: 25vw;
+  height: 25vw;
+}
+
+.overlayAnimationInf { animation: spinOverlayInf 3s linear infinite; }
+.overlayAnimation { animation: spinOverlay 1.5s linear forwards; }
+.spinnerOverlay {
+  position: relative;
+  top: -4vw;
+  left: -4vw;
+  border: 4vw solid var(--maincolor);
+  border-bottom: 4vw solid transparent;
+  border-left: 4vw solid transparent;
+  border-radius: 50%;
+  width: 25vw;
+  height: 25vw;
+}
+
+.loaderButtonAnimation { animation: grow 1.5s 1.5s linear forwards; }
+.loaderButton {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 25vw;
+  height: 25vw;
+  border: 4vw solid var(--maincolor);
+  border-radius:25vw;
+  opacity: 0;
+}
+
+.bigFont {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 0vw;
+  height: 22vw;
+  overflow: hidden;
+  font-size: 20vw;
+  border-right: 0.2em solid var(--accentcolor);
+  animation: typing 1s 3s steps(9, end) forwards, blink-caret .5s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0vw;
   }
+  to {
+    width: 50vw;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {border-color: transparent;}
+  50% {border-color: var(--accentcolor);}
+}
+
+@keyframes spinInf {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes spinOverlayInf {
+  0% { transform: rotate(-45deg); }
+  50% { transform: rotate(45deg); }
+  100% { transform: rotate(-45deg); }
+}
+@keyframes spin {
+  25% { transform: rotate(315deg); }
+  50% {
+    transform:
+    rotate(315deg)
+    translateX(0vw)
+    translateY(0vw)
+    // scale(.1);
+  }
+  100% {border-color: transparent;
+    transform:
+    rotate(315deg)
+    translateX(-2.5vw)
+    translateY(-2.5vw)
+    // scale(.1);
+    // scale(.05);
+  }
+}
+@keyframes spinOverlay {
+  50% {
+    transform: rotate(-90deg);
+  }
+  99% {
+    transform: rotate(90deg);
+    border: 4vw solid var(--maincolor);
+    border-bottom: 4vw solid transparent;
+    border-left: 4vw solid transparent;
+  }
+  100% {
+    transform: rotate(90deg);
+    border: 4vw solid transparent;
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 1;
+    width: 25vw;
+    transform:
+    rotate(45deg)
+    translatex(-28.9vw)
+    translateY(-23.33vw);
+    background-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    opacity: 1;
+    width: 75vw;
+    transform:
+    rotate(45deg)
+    translatex(-21vw)
+    translateY(-5.7vw);
+    background-color: var(--halfshadow);
+    border-color: white;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform:
+    translateX(0vw)
+  }
+  100% {
+    transform:
+    translateX(-25vw)
+  }
+}

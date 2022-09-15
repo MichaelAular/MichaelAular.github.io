@@ -50,16 +50,19 @@ const App = () => {
       <main className="images">
         {!imgsLoaded ? (
           <div className="loaderContainer">
-          <Loader />
-          <div className="loaderText font_pressStart">
-                LOADING
-            </div>
+          <Loader
+          imgsLoaded={imgsLoaded}
+          />
             </div>
         ) : intro ? (
-          <Intro setIntro={setIntro} />
+          <Intro
+          setIntro={setIntro}
+          imgsLoaded={imgsLoaded}
+          />
         ) : (
           <div className="App">
-            <Shader shader={shader} />
+            <Shader
+            shader={shader} />
             <NavBar
               colorSet={colorSet}
               setColorSet={setColorSet}
