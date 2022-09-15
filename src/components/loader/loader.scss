@@ -32,7 +32,7 @@
 
 .loaderButtonAnimation { animation: grow 3s 1.5s linear forwards; }
 .loaderButton {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,6 +43,9 @@
   border: 4vw solid var(--maincolor);
   border-radius:25vw;
   opacity: 0;
+  left: -4vw;
+  top: -4vw;
+  rotate: 45deg;
 }
 
 .bigFont {
@@ -50,7 +53,6 @@
   text-align: center;
   color: white;
   width: 0vw;
-  height: 22vw;
   overflow: hidden;
   font-size: 20vw;
   border-right: 0.2em solid var(--accentcolor);
@@ -58,18 +60,14 @@
 }
 
 @keyframes typing {
-  from {
-    width: 0vw;
-  }
-  to {
-    width: 50vw;
-  }
+  from { width: 0vw; }
+  to { width: 50vw; }
 }
 
 @keyframes blink-caret {
   from,
   to {border-color: transparent;}
-  50% {border-color: var(--accentcolor);}
+  50% {border-color: var(--accentcolor)}
 }
 
 @keyframes spinInf {
@@ -88,7 +86,6 @@
     rotate(315deg)
     translateX(0vw)
     translateY(0vw)
-    // scale(.1);
   }
   100% {border-color: transparent;
     transform:
@@ -98,11 +95,9 @@
   }
 }
 @keyframes spinOverlay {
-  50% {
-    transform: rotate(-90deg);
+  50% { transform: rotate(-90deg);
   }
   99% {
-    transform: rotate(90deg);
     border: 4vw solid var(--maincolor);
     border-bottom: 4vw solid transparent;
     border-left: 4vw solid transparent;
@@ -114,34 +109,16 @@
 }
 
 @keyframes grow {
-  0% {
-    opacity: 1;
-    width: 25vw;
-    transform:
-    rotate(45deg)
-    translatex(-100%)
-    translateY(-100%);
-    background-color: transparent;
-  }
-  25% {
-    border-color: white;
-  }
-  50% {
-    width: 25vw;
-    transform:
-    rotate(45deg)
-    translateX(-100%)
-    translateY(-100%);
-  }
+  0% { opacity: 1;
+       width: 25vw;
+       background-color: transparent; }
+  25% { border-color: white; }
+  50% { width: 25vw; }
   100% {
     opacity: 1;
     width: 75vw;
     background-color: var(--halfshadow);
     border-color: white;
-    transform:
-    rotate(45deg)
-    translateX(-50%)
-    translateY(-50%)
   }
 }
 
@@ -155,3 +132,22 @@
     translateX(-25vw)
   }
 }
+
+// @media (max-aspect-ratio: 8/5) {
+
+//   @keyframes grow {
+//     0% {
+//       opacity: 1;
+//       width: 25vw;
+//       background-color: transparent; }
+//     25% { border-color: white; }
+//     50% { width: 25vw; }
+//     100% {
+//       opacity: 1;
+//       width: 75vw;
+//       background-color: var(--halfshadow);
+//       border-color: red;
+//     }
+//   }
+
+// }
