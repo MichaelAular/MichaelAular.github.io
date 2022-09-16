@@ -56,3 +56,9 @@
     font-size: 75%;;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    background-clip: unset;
+  }
+}

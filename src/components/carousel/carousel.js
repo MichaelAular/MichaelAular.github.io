@@ -150,7 +150,6 @@ const Carousel = ({
               style={{
                 height: `calc(${size.itemHeight}vw + 32px)`,
                 width: `${size.itemWidth * 0.5}vw`,
-                left: `-.3vw`,
               }}
               onClick={() => {
                 clickable && updateIndexPrev(activeIndex - size.length);
@@ -173,7 +172,6 @@ const Carousel = ({
             style={{
               height: `calc(${size.itemHeight}vw + 32px)`,
               width: `${size.itemWidth * 0.5 + (6 - size.length) * 0.2}vw`,
-              right: `-.7vw`,
             }}
             onClick={() => {
               clickable && updateIndexNext(activeIndex + size.length);

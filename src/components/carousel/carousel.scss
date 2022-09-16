@@ -6,13 +6,6 @@
   width: 100vw;
   pointer-events: none;
   z-index: 500;
-  &:hover {
-    z-index: 400;
-    .indicatorContainer {
-      transition-duration: 0.5s;
-      background-color: transparent;
-    }
-  }
 }
 
 .carouselBackBlock {
@@ -48,15 +41,16 @@
 }
 
 .prevButton {
-  left: 0px;
   cursor: pointer;
   pointer-events: all;
+  left: -.3vw;
 }
 
 .nextButton {
  position: absolute;
   cursor: pointer;
   pointer-events: all;
+  right: -.7vw;
 }
 
 .indicatorContainer {
@@ -165,4 +159,9 @@
     bottom: -180%;
     left: -80%;
   }
+}
+
+@media only screen and (max-width: 600px) {
+.nextButton { right: 0 }
+.prevButton { left: 0 }
 }
