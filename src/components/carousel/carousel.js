@@ -15,46 +15,49 @@ const Carousel = ({
   carouselUp,
   setCarouselUp,
 }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [startTrigger, setStarttrigger] = useState(false);
+
+
+  const size = useWindowSize();
+ 
+  const [activeIndex, setActiveIndex] = useState(1);
   const [animationState, setAnimationState] = useState(false);
   const [clickable, setClickable] = useState(true);
-  const size = useWindowSize();
   const projectLength = Object.keys(projects).length;
   const fullLaneLength = projectLength + size.length * 2;
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
-  const switchClickableOn = () => {
-    setClickable(true);
-  };
-  const switchClickableOff = () => {
-    setClickable(false);
-  };
+
+  console.log("active Index: ", activeIndex)
 
   const updateIndexNext = async (newIndex) => {
-    switchClickableOff();
+    console.log("newIndex: ", newIndex);
+    setClickable(false);
     setAnimationState(true);
-    setStarttrigger(true);
+
+
     setActiveIndex(newIndex);
     await sleep(800);
-    switchClickableOn();
+    setClickable(true);
     checkIndexNext(newIndex);
   };
 
   const updateIndexPrev = async (newIndex) => {
-    switchClickableOff();
+    console.log("newIndex: ", newIndex);
+    setClickable(false);
     setAnimationState(true);
+
+
     setActiveIndex(newIndex);
     await sleep(800);
-    switchClickableOn();
+    setClickable(true);
     checkIndexPrev(newIndex);
   };
 
-  const checkIndexNext = (newIndex) => {
-    if (newIndex > fullLaneLength - size.length * 2) {
+  const checkIndexNext = (activeIndex) => {
+    if (activeIndex + size.length > fullLaneLength - (size.length * 2)) {
       setAnimationState(false);
-      setActiveIndex(size.length * 2 - (fullLaneLength - newIndex));
+      setActiveIndex(size.length * 2 - (fullLaneLength - activeIndex));
     }
   };
 
@@ -124,7 +127,7 @@ const Carousel = ({
         <div
           className="carouselLane"
           style={{
-            transform: `translateX(-${activeIndex * (size.itemWidth + 1.3)}vw)`,
+            transform: `translateX(-${(activeIndex + size.length) * (size.itemWidth + 1.3)}vw)`,
             transition: `${
               animationState && "transform 0." + size.length + "s"
             }`,
@@ -135,7 +138,6 @@ const Carousel = ({
             className="carouselItemInCarousel"
             projects={projects}
             projectLength={projectLength}
-            startTrigger={startTrigger}
             size={size}
             activeIndex={activeIndex}
             setShader={setShader}
@@ -144,7 +146,6 @@ const Carousel = ({
           />
         </div>
         <div className="indicators">
-          {startTrigger && (
             <button
               className="prevButton indicatorContainer"
               style={{
@@ -165,7 +166,7 @@ const Carousel = ({
                 <ArrowLeft className="indicatorArrow" />
               </div>
             </button>
-          )}
+
 
           <button
             className="nextButton indicatorContainer"

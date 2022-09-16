@@ -5,11 +5,11 @@ const CarouselItems = ({
   projects,
   projectLength,
   size,
-  startTrigger,
   activeIndex,
   setDisplayedProject,
   setShader
   }) => {
+
   const trueLane =
     projects &&
     projects.map((projects, index) => {
@@ -30,12 +30,12 @@ const CarouselItems = ({
               ? rightIndexLastPage
               : rightIndex
           }
-          startTrigger={startTrigger}
           setDisplayedProject={setDisplayedProject}
           setShader={setShader}
         />
       );
     });
+
 
   let lastLane = [];
   for (let i = 0; i <= size.length; i++) {
@@ -47,10 +47,11 @@ const CarouselItems = ({
     firstLane.unshift(trueLane[trueLane.length - i]);
   }
 
+
   return (
     <div className="carouselItemContainer">
       <div className="carouselItem">
-        {startTrigger && firstLane}
+        {firstLane}
         {trueLane}
         {lastLane}
       </div>

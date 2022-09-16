@@ -8,7 +8,6 @@ const Thumbnail = ({
   index,
   leftIndex,
   rightIndex,
-  startTrigger,
   setDisplayedProject,
   setShader
 }) => {
@@ -55,7 +54,6 @@ const Thumbnail = ({
       index={index}
       leftIndex={leftIndex}
       rightIndex={rightIndex}
-      startTrigger={startTrigger}
       setDisplayedProject={setDisplayedProject}
       setShader={setShader}
       className="thumb_minimodal"
