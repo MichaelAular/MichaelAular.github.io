@@ -9,7 +9,7 @@ const Thumbnail = ({
   leftIndex,
   rightIndex,
   setDisplayedProject,
-  setShader
+  setShader,
 }) => {
   const size = useWindowSize();
   const [modalState, setModalState] = useState(false);
@@ -22,6 +22,7 @@ const Thumbnail = ({
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
+
 
   useEffect(() => {
     const hovermodal = async () => {

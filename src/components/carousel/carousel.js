@@ -15,39 +15,31 @@ const Carousel = ({
   carouselUp,
   setCarouselUp,
 }) => {
-
-
   const size = useWindowSize();
- 
   const [activeIndex, setActiveIndex] = useState(1);
   const [animationState, setAnimationState] = useState(false);
   const [clickable, setClickable] = useState(true);
+  const [firstRunDone, setFirstRunDone] = useState(false);
   const projectLength = Object.keys(projects).length;
   const fullLaneLength = projectLength + size.length * 2;
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
 
-  console.log("active Index: ", activeIndex)
-
   const updateIndexNext = async (newIndex) => {
-    console.log("newIndex: ", newIndex);
+
     setClickable(false);
     setAnimationState(true);
-
-
     setActiveIndex(newIndex);
+    setFirstRunDone(true);
     await sleep(800);
     setClickable(true);
     checkIndexNext(newIndex);
   };
 
   const updateIndexPrev = async (newIndex) => {
-    console.log("newIndex: ", newIndex);
     setClickable(false);
     setAnimationState(true);
-
-
     setActiveIndex(newIndex);
     await sleep(800);
     setClickable(true);
@@ -151,9 +143,10 @@ const Carousel = ({
               style={{
                 height: `calc(${size.itemHeight}vw + 32px)`,
                 width: `${size.itemWidth * 0.5}vw`,
+                opacity: !firstRunDone ? '1' : '.8',
               }}
               onClick={() => {
-                clickable && updateIndexPrev(activeIndex - size.length);
+                clickable & firstRunDone && updateIndexPrev(activeIndex - size.length);
               }}
             >
               <div
@@ -161,6 +154,7 @@ const Carousel = ({
                 style={{
                   height: `${size.itemHeight}vw`,
                   width: `${size.itemHeight * 0.5}vw`,
+                  opacity: firstRunDone ? `.4` : '0',
                 }}
               >
                 <ArrowLeft className="indicatorArrow" />

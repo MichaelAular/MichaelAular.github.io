@@ -7,7 +7,7 @@ const CarouselItems = ({
   size,
   activeIndex,
   setDisplayedProject,
-  setShader
+  setShader,
   }) => {
 
   const trueLane =
@@ -24,7 +24,7 @@ const CarouselItems = ({
           size={size}
           activeIndex={activeIndex}
           index={index}
-          leftIndex={leftIndex}
+          leftIndex={leftIndex}yyyy
           rightIndex={
             leftIndex + (size.length - 1) > projectLength
               ? rightIndexLastPage

@@ -41,7 +41,7 @@
   }
   100% {
     transform:
-    translateY(calc(46vh))
+    translateY(calc(50vh - 50px))
     scale(.05);
   }
 }
@@ -59,7 +59,7 @@
     }
     100% {
       transform:
-      translateY(calc(46vh))
+      translateY(calc(50vh - 50px))
       scale(.2);
     }
   }
