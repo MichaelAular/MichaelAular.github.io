@@ -16,48 +16,47 @@ const Carousel = ({
   setCarouselUp,
 }) => {
   const size = useWindowSize();
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [animationState, setAnimationState] = useState(false);
   const [clickable, setClickable] = useState(true);
   const [firstRunDone, setFirstRunDone] = useState(false);
   const projectLength = Object.keys(projects).length;
-  const fullLaneLength = projectLength + size.length * 2;
+  const fullLaneLength = projectLength + size.length * 2 + 2;
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
 
-  const updateIndexNext = async (newIndex) => {
-
-    setClickable(false);
-    setAnimationState(true);
-    setActiveIndex(newIndex);
+  const checkIndexNext = async (activeIndex) => {
+    await sleep(800);
+    if (activeIndex > projectLength) {
+      setAnimationState(false);
+      setActiveIndex( activeIndex - projectLength);
+    }
+    console.log("activeIndex: ", activeIndex);
+    setClickable(true);
+  };
+  const checkIndexPrev = async (activeIndex) => {
+    await sleep(800);
+    if (activeIndex < size.length  +1 ) {
+      setAnimationState(false);
+      setActiveIndex( projectLength  + activeIndex)
+    }
+    console.log("activeIndex: ", activeIndex);
+    setClickable(true);
+  };
+  const updateIndexNext = (newIndex) => {
     setFirstRunDone(true);
-    await sleep(800);
-    setClickable(true);
-    checkIndexNext(newIndex);
-  };
-
-  const updateIndexPrev = async (newIndex) => {
     setClickable(false);
-    setAnimationState(true);
     setActiveIndex(newIndex);
-    await sleep(800);
-    setClickable(true);
+    checkIndexNext(newIndex);
+    setAnimationState(true);
+  };
+
+  const updateIndexPrev = (newIndex) => {
+    setClickable(false);
+    setActiveIndex(newIndex);
     checkIndexPrev(newIndex);
-  };
-
-  const checkIndexNext = (activeIndex) => {
-    if (activeIndex + size.length > fullLaneLength - (size.length * 2)) {
-      setAnimationState(false);
-      setActiveIndex(size.length * 2 - (fullLaneLength - activeIndex));
-    }
-  };
-
-  const checkIndexPrev = (activeIndex) => {
-    if (activeIndex < size.length + 1) {
-      setAnimationState(false);
-      setActiveIndex(fullLaneLength - size.length * 2 + activeIndex);
-    }
+    setAnimationState(true);
   };
 
   return (
@@ -119,7 +118,7 @@ const Carousel = ({
         <div
           className="carouselLane"
           style={{
-            transform: `translateX(-${(activeIndex + size.length) * (size.itemWidth + 1.3)}vw)`,
+            transform: `translateX(-${activeIndex * (size.itemWidth + 1.3)}vw)`,
             transition: `${
               animationState && "transform 0." + size.length + "s"
             }`,
@@ -138,29 +137,29 @@ const Carousel = ({
           />
         </div>
         <div className="indicators">
-            <button
-              className="prevButton indicatorContainer"
+          <button
+            className="prevButton indicatorContainer"
+            style={{
+              height: `calc(${size.itemHeight}vw + 32px)`,
+              width: `${size.itemWidth * 0.5}vw`,
+              opacity: !firstRunDone ? "1" : ".8",
+            }}
+            onClick={() => {
+              clickable & firstRunDone &&
+                updateIndexPrev(activeIndex - size.length);
+            }}
+          >
+            <div
+              className="arrowContainer arrowLeft"
               style={{
-                height: `calc(${size.itemHeight}vw + 32px)`,
-                width: `${size.itemWidth * 0.5}vw`,
-                opacity: !firstRunDone ? '1' : '.8',
-              }}
-              onClick={() => {
-                clickable & firstRunDone && updateIndexPrev(activeIndex - size.length);
+                height: `${size.itemHeight}vw`,
+                width: `${size.itemHeight * 0.5}vw`,
+                opacity: firstRunDone ? `.4` : "0",
               }}
             >
-              <div
-                className="arrowContainer arrowLeft"
-                style={{
-                  height: `${size.itemHeight}vw`,
-                  width: `${size.itemHeight * 0.5}vw`,
-                  opacity: firstRunDone ? `.4` : '0',
-                }}
-              >
-                <ArrowLeft className="indicatorArrow" />
-              </div>
-            </button>
-
+              <ArrowLeft className="indicatorArrow" />
+            </div>
+          </button>
 
           <button
             className="nextButton indicatorContainer"
