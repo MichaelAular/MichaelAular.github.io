@@ -21,7 +21,6 @@ const Carousel = ({
   const [clickable, setClickable] = useState(true);
   const [firstRunDone, setFirstRunDone] = useState(false);
   const projectLength = Object.keys(projects).length;
-  const fullLaneLength = projectLength + size.length * 2 + 2;
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
@@ -32,7 +31,6 @@ const Carousel = ({
       setAnimationState(false);
       setActiveIndex( activeIndex - projectLength);
     }
-    console.log("activeIndex: ", activeIndex);
     setClickable(true);
   };
   const checkIndexPrev = async (activeIndex) => {
@@ -41,7 +39,6 @@ const Carousel = ({
       setAnimationState(false);
       setActiveIndex( projectLength  + activeIndex)
     }
-    console.log("activeIndex: ", activeIndex);
     setClickable(true);
   };
   const updateIndexNext = (newIndex) => {

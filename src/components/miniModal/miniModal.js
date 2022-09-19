@@ -10,10 +10,8 @@ const MiniModal = ({
   carouselText,
   projectTitle,
   projectDescription,
-  startTrigger,
   index,
-  leftIndex,
-  rightIndex,
+  activeIndex,
   setDisplayedProject,
   setShader,
 }) => {
@@ -31,11 +29,10 @@ const MiniModal = ({
   };
 
   const modPos = () => {
-    if (size.length === 1) return "modal-container";
-    if (index === leftIndex) return "modal-container_left";
-    if (index === rightIndex) return "modal-container_right";
-    if ((startTrigger === false) & (index === size.length - 1))
-      return "modal-container_right";
+    console.log(index)
+    console.log(activeIndex)
+    if (index === activeIndex + (6 -size.length)) return "modal-container_left";
+    if (index === activeIndex + 5) return "modal-container_right";
     return "modal-container";
   };
 

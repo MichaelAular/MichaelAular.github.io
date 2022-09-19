@@ -13,23 +13,14 @@ const CarouselItems = ({
   const trueLane =
     projects &&
     projects.map((projects, index) => {
-      const leftIndex = (projectLength - size.length + activeIndex - 1) % projectLength;
-      const rightIndex = leftIndex + size.length - 1;
-      const rightIndexLastPage = leftIndex + (size.length - 1) - projectLength;
-
       return (
         <Thumbnail
           key={projects.id}
           project={projects}
+          projectLength={projectLength}
           size={size}
           activeIndex={activeIndex}
           index={index}
-          leftIndex={leftIndex}yyyy
-          rightIndex={
-            leftIndex + (size.length - 1) > projectLength
-              ? rightIndexLastPage
-              : rightIndex
-          }
           setDisplayedProject={setDisplayedProject}
           setShader={setShader}
         />

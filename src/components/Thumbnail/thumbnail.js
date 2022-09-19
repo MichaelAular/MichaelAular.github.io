@@ -5,9 +5,9 @@ import MiniModal from "../miniModal/miniModal";
 
 const Thumbnail = ({
   project,
+  projectLenght,
+  activeIndex,
   index,
-  leftIndex,
-  rightIndex,
   setDisplayedProject,
   setShader,
 }) => {
@@ -44,6 +44,7 @@ const Thumbnail = ({
     >
 <div className="miniModal">
       <MiniModal
+      projectLenght={projectLenght}
       thumbImage={thumbImage}
       modalState={modalState}
       hovered={hovered}
@@ -53,8 +54,7 @@ const Thumbnail = ({
       projectTitle={projectTitle}
       projectDescription = {projectDescription}
       index={index}
-      leftIndex={leftIndex}
-      rightIndex={rightIndex}
+      activeIndex={activeIndex}
       setDisplayedProject={setDisplayedProject}
       setShader={setShader}
       className="thumb_minimodal"

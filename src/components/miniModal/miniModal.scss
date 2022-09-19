@@ -7,7 +7,7 @@
   text-align: justify;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: -2px 2px 20px var(--shadow), inset 5px -5px 5px var(--light);
+  box-shadow: -2px 2px 5px var(--shadow), inset 5px -5px 5px var(--light);
 }
 
 .modal-container_left {
@@ -21,7 +21,7 @@
   text-align: justify;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: -2px 2px 20px var(--shadow), inset 5px -5px 5px var(--light);
+  box-shadow: -2px 2px 5px var(--shadow), inset 5px -5px 5px var(--light);
 }
 
 .modal-container_right {
@@ -35,7 +35,8 @@
   text-align: justify;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: -2px 2px 20px var(--shadow), inset 5px -5px 5px var(--light);
+  box-shadow: -2px 2px 5px var(--shadow), inset 5px -5px 5px var(--light);
+  transform: translateX(-2vw) ;
 }
 
 .modal-image {
@@ -63,7 +64,7 @@
   animation: contentGrow 180ms ease-out;
   animation-delay: 120ms;
   animation-fill-mode: forwards;
-  height: fit-content
+  height: fit-content;
 }
 
 .modal-title {
@@ -77,8 +78,8 @@
 .modal-project-description {
   position: relative;
   font-size: 0.7em;
-  margin-top:  1vh;
-  margin-bottom:  1vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   height: fit-content;
 }
 
@@ -103,56 +104,35 @@
 }
 
 @keyframes typing {
-  from {width: 0;}
-  to {width: 85%;
+  from {
+    width: 0;
+  }
+  to {
+    width: 85%;
   }
 }
 
 @keyframes blink-caret {
   from,
-  to {border-color: transparent;}
-  50% {border-color: var(--accentcolor);}
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accentcolor);
+  }
 }
 
 @keyframes imgGrow {
   from {
-    transform:
-    translateY(-30px)
+    transform: translateY(-30px);
   }
   to {
     bottom: 30px;
-    transform:
-    scale(120%)
+    transform: scale(120%);
   }
 }
 
-@keyframes imgGrowLeft {
-  from {
-    transform:
-    translateX(0.6vw)
-    translateY(-30px)
-  }
-  to {
-    bottom: 30px;
-    transform:
-    scale(120%)
-    translateX(2.03vw)
-  }
-}
 
-@keyframes imgGrowRight {
-  from {
-    transform:
-    translateX(-0.6vw)
-    translateY(-30px)
-  }
-  to {
-    bottom: 30px;
-    transform:
-    scale(120%)
-    translateX(-2.03vw)
-  }
-}
 
 @keyframes imgAnimation {
   0% {
@@ -172,24 +152,125 @@
 }
 
 @keyframes contentGrow {
-  from { height: 0 }
+  from {
+    height: 0;
+  }
 }
-
-
-
-
 
 @media only screen and (max-width: 600px) {
-@keyframes imgGrow {
-  from {
-    transform:
-    translateY(-30px)
-  }
-  to {
-    bottom: 30px;
-    transform:
-    scale(110%)
-    translateX(-3vw)
+  @keyframes imgGrow {
+    from {
+      transform: translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(110%) translateX(-3vw);
+    }
   }
 }
+
+@media only screen and (min-width: 600px) {
+  @keyframes imgGrowLeft {
+    from {
+      transform: translateX(0.6vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(3.8vw);
+    }
+  }
+
+  @keyframes imgGrowRight {
+    from {
+      transform: translateX-(-2.7vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(-8vw);
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  @keyframes imgGrowLeft {
+    from {
+      transform: translateX(0.6vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(2.9vw);
+    }
+  }
+  @keyframes imgGrowRight {
+    from {
+      transform: translateX-(-2.7vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(-5.5vw);
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  @keyframes imgGrowLeft {
+    from {
+      transform: translateX(0.6vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(2.4vw);
+    }
+  }
+  @keyframes imgGrowRight {
+    from {
+      transform: translateX-(-2.7vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(-4.3vw);
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  @keyframes imgGrowLeft {
+    from {
+      transform: translateX(0.6vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(1.9vw);
+    }
+  }
+  @keyframes imgGrowRight {
+    from {
+      transform: translateX-(-2.7vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(-3.3vw);
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  @keyframes imgGrowLeft {
+    from {
+      transform: translateX(.6vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(1.7vw);
+    }
+  }
+  @keyframes imgGrowRight {
+    from {
+      transform: translateX-(-2.7vw) translateY(-30px);
+    }
+    to {
+      bottom: 30px;
+      transform: scale(120%) translateX(-2.7vw);
+    }
+  }
 }
