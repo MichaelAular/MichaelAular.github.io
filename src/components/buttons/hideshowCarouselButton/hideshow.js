@@ -13,7 +13,7 @@ const HideShowButton = ({ carouselUp, setCarouselUp }) => {
           bottom: `${`calc(${size.itemHeight}vw + 33px)` }`,
           backgroundColor: `${carouselUp
             ? "var(--text)"
-            : "var(--accentcolor)"
+            : "var(--maincolor)"
           }`,
         }}
         onClick={() => {

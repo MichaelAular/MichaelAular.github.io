@@ -32,6 +32,9 @@ const Thumbnail = ({
     hovermodal();
   }, [hovered]);
 
+
+  
+
   return (
     <div
       className="Thumbnail"

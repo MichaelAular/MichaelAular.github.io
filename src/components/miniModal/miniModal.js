@@ -21,6 +21,9 @@ const MiniModal = ({
   if (!hovered) {
     return null;
   }
+  if (window.innerWidth<=600) {
+    return null;
+  }
 
   const dots = () => {
     if (`${projectDescription.length}` > 360) {
@@ -28,16 +31,29 @@ const MiniModal = ({
     }
   };
 
+ 
+
   const modPos = () => {
-    console.log(index)
-    console.log(activeIndex)
-    if (index === activeIndex + (6 -size.length)) return "modal-container_left";
-    if (index === activeIndex + 5) return "modal-container_right";
-    return "modal-container";
+    let leftPos = (activeIndex + (6 -size.length));
+    console.log("leftPos: ", leftPos)
+    if (leftPos > 6) {
+      leftPos = leftPos - 7
+    }
+
+    let rightPos = activeIndex + 5;
+    if (rightPos > 6) {
+      rightPos = rightPos - 7
+    }
+
+    if (index === leftPos) return "modal-container_left";
+    if (index === rightPos) return "modal-container_right";
+    else return "modal-container";
   };
 
   return (
-    <div className={modPos()} style={{ width: size.itemWidth * 1.2 + "vw" }}>
+    <div
+    className={modPos()}
+    style={{ width: size.itemWidth * 1.2 + "vw" }}>
       <div
         className="modal-image"
         style={{
@@ -51,11 +67,13 @@ const MiniModal = ({
       </div>
       <div
         className="modal-content" >
-        <div className="modal-title typewriter font_bangers">
+        <div
+        className="modal-title typewriter font_bangers">
           {projectTitle}
         </div>
 
-        <div className="modal-project-description">
+        <div
+          className="modal-project-description">
           {projectDescription.substring(0, 290)}
           {dots()}
         </div>
