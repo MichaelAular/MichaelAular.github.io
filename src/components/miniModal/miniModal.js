@@ -24,27 +24,21 @@ const MiniModal = ({
   if (window.innerWidth<=600) {
     return null;
   }
-
   const dots = () => {
     if (`${projectDescription.length}` > 360) {
       return "...";
     }
   };
-
- 
-
   const modPos = () => {
     let leftPos = (activeIndex + (6 -size.length));
     console.log("leftPos: ", leftPos)
     if (leftPos > 6) {
       leftPos = leftPos - 7
     }
-
     let rightPos = activeIndex + 5;
     if (rightPos > 6) {
       rightPos = rightPos - 7
     }
-
     if (index === leftPos) return "modal-container_left";
     if (index === rightPos) return "modal-container_right";
     else return "modal-container";

@@ -23,7 +23,6 @@ const Thumbnail = ({
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };
 
-
   useEffect(() => {
     const hovermodal = async () => {
       await sleep(500);
@@ -31,9 +30,6 @@ const Thumbnail = ({
     };
     hovermodal();
   }, [hovered]);
-
-
-  
 
   return (
     <div
@@ -43,6 +39,9 @@ const Thumbnail = ({
       }}
       onMouseEnter={() => {
         setHovered(true)
+      }}
+      onClick={() => {
+        setDisplayedProject(index)
       }}
     >
 <div className="miniModal">

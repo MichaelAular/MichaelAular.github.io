@@ -14,10 +14,12 @@ const MiniModalButton = ({
     }
 
     return(
-    <button className="font_marker miniModal_button"
+    <button className="font_bangers miniModal_button"
     style={{
         width: "fit-content",
-        height: size.itemWidth * .11 +"vw"
+        height: size.itemWidth * .11 +"vw",
+        paddingLeft: "1vw",
+        paddingRight: "1vw"
     }}
     onClick={clickEvent}>
      LEARN MORE

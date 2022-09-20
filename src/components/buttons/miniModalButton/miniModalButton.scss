@@ -1,21 +1,23 @@
 .miniModal_button {
   position: relative;
   display: flex;
+  cursor: pointer;
   align-items: center;
   background-color: var(--maincolor);
   border: 1px solid var(--light);
-  color: var(--text);
+  color: var(--blackish);
   border-radius: 1vw 0 1vw 0;
+  margin-bottom: .5vw;
+  font-size: 20px;
   transform: skewX(-10deg);
   box-shadow: inset -1px 1px 0.8vw var(--halfshadow),
               inset 0.1vw -0.1vw 0.3vw var(--light);
-  animation: cssAnimation 0s 500ms forwards;
   visibility: hidden;
-  cursor: pointer;
+  animation: cssAnimation 0s 500ms forwards;
   transition-duration: 200ms;
   &:hover {
     box-shadow: 1px -1px 0.6vw var(--halfshadow),
-      inset -2px 2px 0.6vw var(--light);
+    inset -2px 2px 0.6vw var(--light);
     color: var(--accentcolor)
   }
 }
