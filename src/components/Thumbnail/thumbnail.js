@@ -18,7 +18,7 @@ const Thumbnail = ({
   const carouselText = projectUsed.code;
   const projectTitle = projectUsed.title;
   const projectDescription = projectUsed.description;
-  const thumbImage = projectUsed.image;
+  const thumbImage = projectUsed.thumbImage;
   const sleep = (milliseconds) => {
     return new Promise((resolve) => setTimeout(resolve, milliseconds));
   };

@@ -1,25 +1,10 @@
 export const IMAGES = [
-    // { id: "image_01", url: require("./000/bio01.png") },
-    // { id: "image_02", url: require("./000/bio02.png") },
-    // { id: "image_03", url: require("./000/bio03.png") },
-    // { id: "image_00", url: require("./000/bio00.png") },
-    { id: "image_04", url: require("./001/projectNetflix00.png") },
-    // { id: "image_04", url: require("./001/projectNetflix01.png") },
-    // { id: "image_06", url: require("./001/projectNetflix02.png") },
-    // { id: "image_07", url: require("./001/projectNetflix03.png") },
-    { id: "image_08", url: require("./002/weather00.png") },
-    { id: "image_09", url: require("./002/weather01.png") },
-    { id: "image_10", url: require("./002/weather02.png") },
-    { id: "image_11", url: require("./002/weather03.png") },
-    { id: "image_12", url: require("./003/PatroAfero00.png") },
-    // { id: "image_13", url: require("./003/PatroAfero01.png") },
-    // { id: "image_14", url: require("./003/PatroAfero02.png") },
-    // { id: "image_15", url: require("./003/PatroAfero03.png") },
-    { id: "image_16", url: require("./004/Clockwork00.png") },
-    // { id: "image_17", url: require("./004/Clockwork01.png") },
-    // { id: "image_18", url: require("./004/Clockwork02.png") },
-    // { id: "image_19", url: require("./004/Clockwork03.png") },
-    { id: "image_20", url: require("./underConstruction.jpg") }
+    { id: "image_01", url: require("./001/projectNetflix_thumb.png") },
+    { id: "image_02", url: require("./002/weather_thumb.png") },
+    { id: "image_03", url: require("./002/weather_thumb.png") },
+    { id: "image_04", url: require("./002/weather_thumb.png") },
+    { id: "image_05", url: require("./002/weather_thumb.png") },
+    { id: "image_06", url: require("./003/PatroAfero_thumb.png") },
+    { id: "image_07", url: require("./004/Clockwork_thumb.png") },
+    { id: "image_08", url: require("./underConstruction_thumb.png") }
 ];
-
-// "url(" + require("../../assets/img/photo/" + project.image1) + ")",

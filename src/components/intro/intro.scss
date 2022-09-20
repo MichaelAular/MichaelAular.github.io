@@ -20,7 +20,7 @@
   justify-content: center;
   position: relative;
   padding: 2vw;
-  animation: lowerButtonContainer 6s forwards;
+  animation: lowerButtonContainer 4s forwards;
 }
 
 .loaderbutton {
@@ -35,7 +35,7 @@
 }
 
 @keyframes lowerButtonContainer {
-  50% {
+  75% {
     transform:
     scale(.05);
   }
@@ -53,7 +53,7 @@
   }
 
   @keyframes lowerButtonContainer {
-    50% {
+    75% {
       transform:
       scale(.2);
     }
