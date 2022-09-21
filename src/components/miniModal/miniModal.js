@@ -31,7 +31,6 @@ const MiniModal = ({
   };
   const modPos = () => {
     let leftPos = (activeIndex + (6 -size.length));
-    console.log("leftPos: ", leftPos)
     if (leftPos > 6) {
       leftPos = leftPos - 7
     }

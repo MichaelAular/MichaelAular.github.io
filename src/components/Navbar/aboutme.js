@@ -12,7 +12,9 @@ const AboutMe = () => {
       className="aboutMe_Container"
     >
       <div className="aboutMe_Button font_bangers"
-      onClick={() => { setAboutMeOpen(true) }}
+      onClick={() => {
+        setAboutMeOpen(!aboutMeOpen)
+        }}
       >michael aular</div>
 
       <div className="BeardIconContainer">
